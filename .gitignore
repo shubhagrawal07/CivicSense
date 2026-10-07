@@ -1,3 +1,5 @@
 CLAUDE.md
 docs
 uploads
+*.pdf
+.claude
