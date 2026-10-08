@@ -3,3 +3,17 @@ docs
 uploads
 *.pdf
 .claude
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+.DS_Store
+ml/datasets/*
+!ml/datasets/.gitkeep
+ml/models/*.pt
+ml/models/*.pkl
