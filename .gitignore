@@ -1,5 +1,5 @@
 CLAUDE.md
-docs
+# docs
 uploads
 *.pdf
 .claude
@@ -13,7 +13,7 @@ __pycache__/
 node_modules/
 dist/
 .DS_Store
-ml/datasets/*
+# ml/datasets/*
 !ml/datasets/.gitkeep
 ml/models/*.pt
 ml/models/*.pkl

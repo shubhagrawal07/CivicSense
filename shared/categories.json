@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "fallback": "other",
+  "categories": [
+    {
+      "key": "pothole",
+      "label": "Pothole",
+      "subcategories": [
+        { "key": "pothole_single", "label": "Single pothole" },
+        { "key": "road_surface_broken", "label": "Broken road surface" }
+      ]
+    },
+    {
+      "key": "open_manhole",
+      "label": "Open manhole",
+      "subcategories": [
+        { "key": "lid_missing", "label": "Cover missing" },
+        { "key": "lid_broken", "label": "Cover broken or loose" }
+      ]
+    },
+    {
+      "key": "garbage",
+      "label": "Garbage",
+      "subcategories": [
+        { "key": "missed_collection", "label": "Collection missed" },
+        { "key": "bin_overflow", "label": "Bin overflowing" },
+        { "key": "illegal_dumping", "label": "Illegal dumping" }
+      ]
+    },
+    {
+      "key": "streetlight",
+      "label": "Streetlight",
+      "subcategories": [
+        { "key": "light_off", "label": "Light not working" },
+        { "key": "light_flickering", "label": "Light flickering" },
+        { "key": "pole_damaged", "label": "Pole damaged" }
+      ]
+    },
+    {
+      "key": "water_leakage",
+      "label": "Water leakage",
+      "subcategories": [
+        { "key": "pipe_leak", "label": "Pipe leak" },
+        { "key": "pipe_burst", "label": "Pipe burst" }
+      ]
+    },
+    {
+      "key": "electricity_outage",
+      "label": "Electricity outage",
+      "subcategories": [
+        { "key": "power_cut", "label": "Power cut" },
+        { "key": "exposed_wire", "label": "Exposed or fallen wire" },
+        { "key": "transformer_issue", "label": "Transformer problem" }
+      ]
+    },
+    {
+      "key": "drainage_sewage",
+      "label": "Drainage and sewage",
+      "subcategories": [
+        { "key": "drain_blocked", "label": "Drain blocked" },
+        { "key": "sewage_overflow", "label": "Sewage overflow" },
+        { "key": "waterlogging", "label": "Waterlogging" }
+      ]
+    },
+    {
+      "key": "damaged_infrastructure",
+      "label": "Damaged public infrastructure",
+      "subcategories": [
+        { "key": "footpath", "label": "Footpath" },
+        { "key": "railing_or_divider", "label": "Railing or divider" },
+        { "key": "public_furniture", "label": "Public furniture" },
+        { "key": "signage", "label": "Signs and boards" }
+      ]
+    },
+    {
+      "key": "road_obstruction",
+      "label": "Road obstruction",
+      "subcategories": [
+        { "key": "fallen_tree", "label": "Fallen tree" },
+        { "key": "debris", "label": "Debris or materials on road" }
+      ]
+    },
+    {
+      "key": "other",
+      "label": "Other",
+      "subcategories": []
+    }
+  ]
+}
