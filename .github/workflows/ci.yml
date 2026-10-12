@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    outputs:
+      has_js: ${{ steps.check.outputs.has_js }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        name: Detect JS/Node project
+        run: |
+          if find . -name "package.json" -not -path "*/node_modules/*" | grep -q .; then
+            echo "has_js=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_js=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Run ruff check
+        run: ruff check .
+      - name: Run ruff format check
+        run: ruff format --check .
+
+  python-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: [backend, ml]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          pip install pytest
+          if [ -f "${{ matrix.dir }}/requirements.txt" ]; then
+            pip install -r "${{ matrix.dir }}/requirements.txt"
+          fi
+          if [ -f "${{ matrix.dir }}/requirements-dev.txt" ]; then
+            pip install -r "${{ matrix.dir }}/requirements-dev.txt"
+          fi
+      - name: Run pytest
+        run: |
+          if [ -d "${{ matrix.dir }}" ]; then
+            pytest "${{ matrix.dir }}" || { code=$?; [ $code -eq 5 ] && exit 0 || exit $code; }
+          else
+            echo "No ${{ matrix.dir }} directory, skipping."
+          fi
+
+  js-lint:
+    needs: detect
+    if: needs.detect.outputs.has_js == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies and run lint
+        run: |
+          while IFS= read -r -d '' pkg; do
+            dir=$(dirname "$pkg")
+            echo "::group::npm lint in $dir"
+            (cd "$dir" && npm ci && npm run lint --if-present)
+            echo "::endgroup::"
+          done < <(find . -name "package.json" -not -path "*/node_modules/*" -print0)
