@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     jwt_secret: str = ""
     jwt_expire_minutes: int = 60
     upload_dir: str = "uploads"
+    text_model_path: str = "ml/models/text_classifier.joblib"
+    text_confidence_threshold: float = 0.5
 
     @property
     def database_url(self) -> str:
@@ -33,6 +35,11 @@ class Settings(BaseSettings):
     @property
     def upload_path(self) -> Path:
         path = Path(self.upload_dir)
+        return path if path.is_absolute() else ROOT_DIR / path
+
+    @property
+    def text_model_file(self) -> Path:
+        path = Path(self.text_model_path)
         return path if path.is_absolute() else ROOT_DIR / path
 
 

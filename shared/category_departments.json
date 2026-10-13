@@ -1,0 +1,12 @@
+{
+  "pothole": "Roads and Infrastructure",
+  "open_manhole": "Drainage and Sewerage",
+  "garbage": "Solid Waste Management",
+  "streetlight": "Street Lighting",
+  "water_leakage": "Water Supply",
+  "electricity_outage": "Electricity",
+  "drainage_sewage": "Drainage and Sewerage",
+  "damaged_infrastructure": "Roads and Infrastructure",
+  "road_obstruction": "Roads and Infrastructure",
+  "other": "General"
+}

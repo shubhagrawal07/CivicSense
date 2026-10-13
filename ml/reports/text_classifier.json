@@ -1,0 +1,319 @@
+{
+ "accuracy": 0.783,
+ "test_rows": 69,
+ "labels": [
+  "pothole",
+  "open_manhole",
+  "garbage",
+  "streetlight",
+  "water_leakage",
+  "electricity_outage",
+  "drainage_sewage",
+  "damaged_infrastructure",
+  "road_obstruction",
+  "other"
+ ],
+ "per_class": {
+  "pothole": {
+   "precision": 0.833,
+   "recall": 0.714,
+   "f1": 0.769,
+   "support": 7
+  },
+  "open_manhole": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "support": 6
+  },
+  "garbage": {
+   "precision": 0.778,
+   "recall": 0.875,
+   "f1": 0.824,
+   "support": 8
+  },
+  "streetlight": {
+   "precision": 0.8,
+   "recall": 0.571,
+   "f1": 0.667,
+   "support": 7
+  },
+  "water_leakage": {
+   "precision": 0.833,
+   "recall": 0.833,
+   "f1": 0.833,
+   "support": 6
+  },
+  "electricity_outage": {
+   "precision": 0.8,
+   "recall": 0.5,
+   "f1": 0.615,
+   "support": 8
+  },
+  "drainage_sewage": {
+   "precision": 0.5,
+   "recall": 0.667,
+   "f1": 0.571,
+   "support": 6
+  },
+  "damaged_infrastructure": {
+   "precision": 0.857,
+   "recall": 0.857,
+   "f1": 0.857,
+   "support": 7
+  },
+  "road_obstruction": {
+   "precision": 0.727,
+   "recall": 1.0,
+   "f1": 0.842,
+   "support": 8
+  },
+  "other": {
+   "precision": 0.833,
+   "recall": 0.833,
+   "f1": 0.833,
+   "support": 6
+  }
+ },
+ "confusion_matrix": [
+  [
+   5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0
+  ],
+  [
+   0,
+   6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   7,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   4,
+   0,
+   1,
+   1,
+   0,
+   0,
+   1
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   5,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   1,
+   0,
+   0,
+   4,
+   1,
+   0,
+   2,
+   0
+  ],
+  [
+   0,
+   0,
+   1,
+   0,
+   1,
+   0,
+   4,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   6,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   8,
+   0
+  ],
+  [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   5
+  ]
+ ],
+ "by_threshold": [
+  {
+   "threshold": 0.3,
+   "share_kept": 0.913,
+   "accuracy_on_kept": 0.81
+  },
+  {
+   "threshold": 0.4,
+   "share_kept": 0.812,
+   "accuracy_on_kept": 0.839
+  },
+  {
+   "threshold": 0.5,
+   "share_kept": 0.565,
+   "accuracy_on_kept": 0.949
+  },
+  {
+   "threshold": 0.6,
+   "share_kept": 0.478,
+   "accuracy_on_kept": 0.939
+  },
+  {
+   "threshold": 0.7,
+   "share_kept": 0.391,
+   "accuracy_on_kept": 0.926
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The tar has completely come off and the road is just gravel now",
+   "true": "pothole",
+   "predicted": "road_obstruction",
+   "confidence": 0.469
+  },
+  {
+   "text": "Uneven broken road, ambulances have to slow down to a crawl",
+   "true": "pothole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.441
+  },
+  {
+   "text": "Overflowing bin outside the hospital gate",
+   "true": "garbage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.729
+  },
+  {
+   "text": "Light near the underpass goes on and off every few seconds",
+   "true": "streetlight",
+   "predicted": "drainage_sewage",
+   "confidence": 0.428
+  },
+  {
+   "text": "Streetlights are on during the day, wasting electricity. Please fix urgently.",
+   "true": "streetlight",
+   "predicted": "electricity_outage",
+   "confidence": 0.45
+  },
+  {
+   "text": "Women feel unsafe walking here because the street lamps are out. Complained before but nothing happened.",
+   "true": "streetlight",
+   "predicted": "other",
+   "confidence": 0.241
+  },
+  {
+   "text": "Clear water flowing on the road every morning when supply comes",
+   "true": "water_leakage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.42
+  },
+  {
+   "text": "bijli nahi hai 6 ghante se",
+   "true": "electricity_outage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.249
+  },
+  {
+   "text": "Cable snapped during the storm and is lying on the road",
+   "true": "electricity_outage",
+   "predicted": "road_obstruction",
+   "confidence": 0.36
+  },
+  {
+   "text": "bijli nahi hai 6 ghante se. Kindly take action.",
+   "true": "electricity_outage",
+   "predicted": "garbage",
+   "confidence": 0.342
+  },
+  {
+   "text": "Cable snapped during the storm and is lying on the road. Please fix urgently.",
+   "true": "electricity_outage",
+   "predicted": "road_obstruction",
+   "confidence": 0.258
+  },
+  {
+   "text": "water logging",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.905
+  },
+  {
+   "text": "Behind the vegetable market, the gutter is choked with plastic and silt",
+   "true": "drainage_sewage",
+   "predicted": "garbage",
+   "confidence": 0.432
+  },
+  {
+   "text": "Street name board rusted and unreadable",
+   "true": "damaged_infrastructure",
+   "predicted": "streetlight",
+   "confidence": 0.303
+  },
+  {
+   "text": "Thank you for fixing the road last week!",
+   "true": "other",
+   "predicted": "pothole",
+   "confidence": 0.488
+  }
+ ]
+}
