@@ -21,6 +21,7 @@ LOCAL_DIR = WORK_DIR / "local"
 
 CLAUDE_MODEL = "claude-haiku-5-5"
 OLLAMA_URL = "http://localhost:11434/api/chat"
+OLLAMA_TAGS_URL = "http://localhost:11434/api/tags"
 SIMILARITY_LIMIT = 0.85
 
 SUBCATEGORY_NOTES = {
@@ -221,12 +222,12 @@ def submit_claude(args):
     print("batch", batch.id, "submitted,", len(plan), "requests")
 
 
-def ask_ollama(model, prompt):
+def ask_ollama(model, prompt, temperature):
     body = json.dumps(
         {
             "model": model,
             "stream": False,
-            "options": {"temperature": 0.9, "num_predict": 1500},
+            "options": {"temperature": temperature, "num_predict": 1500},
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
@@ -240,23 +241,55 @@ def ask_ollama(model, prompt):
         return json.load(resp)["message"]["content"]
 
 
+def check_ollama(model):
+    try:
+        with urllib.request.urlopen(OLLAMA_TAGS_URL, timeout=10) as resp:
+            installed = [m["name"] for m in json.load(resp)["models"]]
+    except (urllib.error.URLError, OSError) as err:
+        raise SystemExit(
+            f"cannot reach Ollama at {OLLAMA_TAGS_URL} ({err}). Start it with "
+            "`ollama serve` or open the Ollama app."
+        )
+    if model not in installed and f"{model}:latest" not in installed:
+        raise SystemExit(f"model {model} is not installed, run `ollama pull {model}`")
+
+
+def same_plan_as_saved(plan):
+    if not MANIFEST_FILE.exists():
+        return True
+    saved = json.loads(MANIFEST_FILE.read_text())
+    old = {r["id"]: r["prompt"] for r in saved["requests"]}
+    return all(old.get(spec["id"]) == spec["prompt"] for spec in plan)
+
+
 def run_ollama(args):
     plan = make_plan(args, "ollama")
     if args.dry_run:
         show_dry_run(plan)
         return
+    check_ollama(args.model)
+    has_replies = LOCAL_DIR.exists() and any(LOCAL_DIR.glob("r*.txt"))
+    if has_replies and not same_plan_as_saved(plan):
+        raise SystemExit(
+            "saved replies in raw_v2/local were made from a different plan "
+            "(other --per-class, --seed or --per-request). Delete that folder "
+            "to start over, or rerun with the old options."
+        )
     save_manifest("ollama", args.model, args, plan)
     LOCAL_DIR.mkdir(parents=True, exist_ok=True)
     todo = [s for s in plan if not (LOCAL_DIR / f"{s['id']}.txt").exists()]
     print(f"{len(plan) - len(todo)} done already, {len(todo)} to go")
+    failed = 0
     for i, spec in enumerate(todo, start=1):
         try:
-            text = ask_ollama(args.model, spec["prompt"])
-        except urllib.error.URLError as err:
-            raise SystemExit(
-                f"cannot reach Ollama at {OLLAMA_URL} ({err.reason}). Start it "
-                f"and run `ollama pull {args.model}` first."
-            )
+            text = ask_ollama(args.model, spec["prompt"], args.temperature)
+        except (urllib.error.URLError, OSError, KeyError, ValueError) as err:
+            failed += 1
+            print(f"{spec['id']} failed: {err}")
+            if failed >= 5:
+                raise SystemExit("too many failures in a row, stopping")
+            continue
+        failed = 0
         (LOCAL_DIR / f"{spec['id']}.txt").write_text(text)
         if i % 10 == 0:
             print(f"{i}/{len(todo)}")
@@ -408,6 +441,7 @@ def main():
     p = sub.add_parser("run-local", help="generate with a local Ollama model")
     add_plan_options(p)
     p.add_argument("--model", default="llama3.2:3b")
+    p.add_argument("--temperature", type=float, default=0.9)
     p.set_defaults(func=run_ollama)
 
     p = sub.add_parser("collect")
