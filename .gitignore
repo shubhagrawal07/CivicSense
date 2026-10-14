@@ -12,6 +12,7 @@ __pycache__/
 .ruff_cache/
 node_modules/
 dist/
+*.tsbuildinfo
 .DS_Store
 ml/datasets/*
 !ml/datasets/.gitkeep
