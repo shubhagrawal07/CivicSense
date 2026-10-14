@@ -5,7 +5,7 @@ from sqlalchemy import select
 from app.core.config import ROOT_DIR, settings
 from app.models import Department
 
-DEFAULT_DEPARTMENT = "General"
+DEFAULT_DEPARTMENT = "General Grievance"
 
 
 def _load_mapping():
