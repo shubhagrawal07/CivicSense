@@ -1,6 +1,7 @@
 from datetime import date, datetime
 
-from sqlalchemy import Date, DateTime, Enum, ForeignKey, String, Text
+from geoalchemy2 import Geometry
+from sqlalchemy import Date, DateTime, Enum, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.db import Base
@@ -27,6 +28,9 @@ class Authority(Base):
     contacts: Mapped[list["AuthorityContact"]] = relationship(
         back_populates="authority", cascade="all, delete-orphan"
     )
+    areas: Mapped[list["JurisdictionArea"]] = relationship(
+        back_populates="authority", cascade="all, delete-orphan"
+    )
 
 
 class AuthorityContact(Base):
@@ -44,6 +48,25 @@ class AuthorityContact(Base):
     )
 
     authority: Mapped["Authority"] = relationship(back_populates="contacts")
+
+
+# an authority with no areas is the citywide default for its department
+class JurisdictionArea(Base):
+    __tablename__ = "jurisdiction_areas"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    authority_id: Mapped[int] = mapped_column(ForeignKey("authorities.id"), index=True)
+    label: Mapped[str] = mapped_column(String(200))
+    area = mapped_column(Geometry("MULTIPOLYGON", srid=4326), nullable=False)
+    # higher wins when several areas cover the same point
+    priority: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    source_url: Mapped[str | None] = mapped_column(String(1000))
+    verification_status: Mapped[VerificationStatus] = mapped_column(
+        Enum(VerificationStatus, name="verification_status"),
+        default=VerificationStatus.UNVERIFIED,
+    )
+
+    authority: Mapped["Authority"] = relationship(back_populates="areas")
 
 
 class GovernmentSource(Base):
