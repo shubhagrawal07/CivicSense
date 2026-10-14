@@ -7,9 +7,20 @@ CHECKED_ON = date(2026, 10, 14)
 BMC_SITE = "https://www.mcgm.gov.in"
 BMC_HELPLINE_SOURCE = "https://portal.mcgm.gov.in"
 ADANI_SITE = "https://www.adanielectricity.com"
+IITB_SITE = "https://www.iitb.ac.in"
+IITB_SUPPORT = "https://support.iitb.ac.in/support/login.jsp"
+IITB_CAMPUS_SOURCE = "https://www.openstreetmap.org/relation/8546708"
+IITB_AREA_NAME = "IIT Bombay campus, Powai"
 
 V = VerificationStatus.VERIFIED
 U = VerificationStatus.UNVERIFIED
+
+
+def iitb_contacts():
+    return [
+        (ContactType.WEBSITE, IITB_SITE, IITB_SITE, CHECKED_ON, V),
+        (ContactType.COMPLAINT_PORTAL, IITB_SUPPORT, IITB_SUPPORT, CHECKED_ON, V),
+    ]
 
 
 def bmc_contacts():
@@ -23,6 +34,7 @@ def bmc_contacts():
 AUTHORITIES = {
     "Roads / Public Works": [
         ("BMC Roads Department", "Mumbai", bmc_contacts()),
+        ("IIT Bombay Civil Maintenance", IITB_AREA_NAME, iitb_contacts()),
     ],
     "Drainage / Sewerage": [
         ("BMC Storm Water Drains and Sewerage Departments", "Mumbai", bmc_contacts()),
@@ -32,6 +44,7 @@ AUTHORITIES = {
     ],
     "Sanitation / Solid Waste": [
         ("BMC Solid Waste Management Department", "Mumbai", bmc_contacts()),
+        ("IIT Bombay Public Health Office", IITB_AREA_NAME, iitb_contacts()),
     ],
     "Electricity": [
         (
@@ -56,11 +69,30 @@ AUTHORITIES = {
                 ),
             ],
         ),
+        ("IIT Bombay Electrical Maintenance", IITB_AREA_NAME, iitb_contacts()),
     ],
     "General Grievance": [
         ("Brihanmumbai Municipal Corporation", "Mumbai", bmc_contacts()),
+        (
+            "IIT Bombay Campus Administration",
+            IITB_AREA_NAME,
+            iitb_contacts()
+            + [(ContactType.HELPLINE, "+91 22 2572 2545", IITB_CAMPUS_SOURCE, None, U)],
+        ),
     ],
 }
+
+# authority name, label, geojson file in this folder, priority, source, status
+# priority: 0 citywide default, 10 ward, 20 special bodies such as a campus
+AREAS = [
+    (name, "IIT Bombay campus", "iitb_campus.geojson", 20, IITB_CAMPUS_SOURCE, U)
+    for name in (
+        "IIT Bombay Civil Maintenance",
+        "IIT Bombay Public Health Office",
+        "IIT Bombay Electrical Maintenance",
+        "IIT Bombay Campus Administration",
+    )
+]
 
 # domain, url, department name or None, authority name or None
 SOURCES = [
@@ -76,5 +108,12 @@ SOURCES = [
         ADANI_SITE,
         "Electricity",
         "Adani Electricity Mumbai Limited",
+    ),
+    ("iitb.ac.in", IITB_SITE, None, "IIT Bombay Campus Administration"),
+    (
+        "support.iitb.ac.in",
+        IITB_SUPPORT,
+        None,
+        "IIT Bombay Campus Administration",
     ),
 ]

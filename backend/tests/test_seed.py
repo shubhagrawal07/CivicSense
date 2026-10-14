@@ -1,6 +1,12 @@
 from sqlalchemy import func, select
 
-from app.models import Authority, AuthorityContact, Department, GovernmentSource
+from app.models import (
+    Authority,
+    AuthorityContact,
+    Department,
+    GovernmentSource,
+    JurisdictionArea,
+)
 from app.models.enums import VerificationStatus
 from app.seed import DEPARTMENTS, seed_authorities, seed_departments
 
@@ -21,7 +27,12 @@ def test_authority_seed_is_repeatable(db):
     def counts():
         return [
             db.scalar(select(func.count()).select_from(model))
-            for model in (Authority, AuthorityContact, GovernmentSource)
+            for model in (
+                Authority,
+                AuthorityContact,
+                GovernmentSource,
+                JurisdictionArea,
+            )
         ]
 
     seed_departments(db)

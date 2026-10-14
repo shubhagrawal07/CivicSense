@@ -1,9 +1,20 @@
-from sqlalchemy import select
+import json
+from pathlib import Path
+
+from sqlalchemy import func, select
 from sqlalchemy.dialects.postgresql import insert
 
 from app.core.db import SessionLocal
-from app.models import Authority, AuthorityContact, Department, GovernmentSource
-from app.seed_data.mumbai import AUTHORITIES, SOURCES
+from app.models import (
+    Authority,
+    AuthorityContact,
+    Department,
+    GovernmentSource,
+    JurisdictionArea,
+)
+from app.seed_data.mumbai import AREAS, AUTHORITIES, SOURCES
+
+SEED_DATA = Path(__file__).parent / "seed_data"
 
 DEPARTMENTS = [
     ("Roads / Public Works", "Potholes, road obstructions, damaged infrastructure"),
@@ -21,6 +32,34 @@ def seed_departments(db):
     )
     db.execute(stmt.on_conflict_do_nothing(index_elements=["name"]))
     db.commit()
+
+
+def seed_areas(db):
+    for authority_name, label, filename, priority, source_url, status in AREAS:
+        authority_id = db.scalar(
+            select(Authority.id).where(Authority.name == authority_name)
+        )
+        found = db.scalar(
+            select(JurisdictionArea.id).where(
+                JurisdictionArea.authority_id == authority_id,
+                JurisdictionArea.label == label,
+            )
+        )
+        if found is not None:
+            continue
+        collection = json.loads((SEED_DATA / filename).read_text())
+        geometry = json.dumps(collection["features"][0]["geometry"])
+        shape = func.ST_Multi(func.ST_SetSRID(func.ST_GeomFromGeoJSON(geometry), 4326))
+        db.add(
+            JurisdictionArea(
+                authority_id=authority_id,
+                label=label,
+                area=shape,
+                priority=priority,
+                source_url=source_url,
+                verification_status=status,
+            )
+        )
 
 
 def seed_authorities(db):
@@ -61,6 +100,7 @@ def seed_authorities(db):
                         )
                     )
     db.flush()
+    seed_areas(db)
     for domain, url, dept_name, authority_name in SOURCES:
         if db.scalar(
             select(GovernmentSource.id).where(GovernmentSource.source_url == url)
