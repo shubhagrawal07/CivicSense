@@ -4,14 +4,12 @@ from app.core.db import SessionLocal
 from app.models import Department
 
 DEPARTMENTS = [
-    ("Roads and Infrastructure", "Potholes, damaged roads, footpaths and bridges"),
-    ("Drainage and Sewerage", "Open manholes, blocked drains, sewage overflow"),
-    ("Solid Waste Management", "Garbage collection and illegal dumping"),
-    ("Street Lighting", "Broken or missing streetlights"),
-    ("Water Supply", "Pipe leaks, no supply, contaminated water"),
-    ("Electricity", "Power outages, exposed wires, damaged poles"),
-    ("Parks and Public Spaces", "Parks, playgrounds and public property"),
-    ("General", "Reports that do not fit any other department"),
+    ("Roads / Public Works", "Potholes, road obstructions, damaged infrastructure"),
+    ("Drainage / Sewerage", "Drainage and sewage problems, open manholes"),
+    ("Water Supply", "Water leakage"),
+    ("Sanitation / Solid Waste", "Garbage"),
+    ("Electricity", "Power outages, streetlights"),
+    ("General Grievance", "Reports that do not fit any other department"),
 ]
 
 
