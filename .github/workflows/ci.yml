@@ -30,9 +30,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.17.0
       - name: Run ruff check
         run: ruff check .
       - name: Run ruff format check
@@ -43,11 +43,30 @@ jobs:
     strategy:
       matrix:
         dir: [backend, ml]
+    env:
+      POSTGRES_USER: civicsense
+      POSTGRES_PASSWORD: ci_password
+      POSTGRES_DB: civicsense
+    services:
+      db:
+        image: imresamu/postgis:16-3.4
+        env:
+          POSTGRES_USER: civicsense
+          POSTGRES_PASSWORD: ci_password
+          POSTGRES_DB: civicsense
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U civicsense -d civicsense"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
+          cache: pip
       - name: Install dependencies
         run: |
           pip install pytest
@@ -57,6 +76,10 @@ jobs:
           if [ -f "${{ matrix.dir }}/requirements-dev.txt" ]; then
             pip install -r "${{ matrix.dir }}/requirements-dev.txt"
           fi
+      - name: Apply migrations
+        if: matrix.dir == 'backend'
+        working-directory: backend
+        run: alembic upgrade head
       - name: Run pytest
         run: |
           if [ -d "${{ matrix.dir }}" ]; then
