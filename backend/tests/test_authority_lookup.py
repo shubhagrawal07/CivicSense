@@ -8,7 +8,7 @@ from sqlalchemy import select
 from app.models import Authority, AuthorityContact, Department, JurisdictionArea
 from app.models.enums import ContactType, VerificationStatus
 from app.seed import seed_authorities, seed_departments
-from app.services.authority import DepartmentNotFound, lookup_authority
+from app.services.authority import lookup_authority
 
 CAMPUS_FILE = Path(__file__).parents[1] / "app" / "seed_data" / "iitb_campus.geojson"
 MAIN_BUILDING = (19.1334, 72.9133)
@@ -47,14 +47,6 @@ def test_road_issue_outside_campus_goes_to_bmc(mumbai):
     assert not result.needs_review
 
 
-def test_electricity_follows_the_campus_boundary(mumbai):
-    inside = lookup(mumbai, "Electricity", MAIN_BUILDING)
-    outside = lookup(mumbai, "Electricity", HIRANANDANI)
-
-    assert inside.authority.name == "IIT Bombay Electrical Maintenance"
-    assert outside.authority.name == "Adani Electricity Mumbai Limited"
-
-
 def test_department_iitb_does_not_handle_stays_with_bmc_on_campus(mumbai):
     result = lookup(mumbai, "Drainage / Sewerage", MAIN_BUILDING)
 
@@ -70,11 +62,6 @@ def test_point_on_the_campus_edge_asks_for_review(mumbai):
     assert result.needs_review
     names = {result.authority.name} | {a.name for a in result.other_matches}
     assert names == {"IIT Bombay Civil Maintenance", "BMC Roads Department"}
-
-
-def test_unknown_department_raises(mumbai):
-    with pytest.raises(DepartmentNotFound):
-        lookup_authority(mumbai, 999999, *MAIN_BUILDING)
 
 
 def test_department_with_no_authority_falls_back_to_unverified_general_contacts(

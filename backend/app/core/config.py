@@ -17,6 +17,10 @@ class Settings(BaseSettings):
     jwt_secret: str = ""
     jwt_expire_minutes: int = 60
     upload_dir: str = "uploads"
+    frontend_origin: str = "http://localhost:5173"
+    admin_name: str = "Admin"
+    admin_email: str = ""
+    admin_password: str = ""
 
     @property
     def database_url(self) -> str:

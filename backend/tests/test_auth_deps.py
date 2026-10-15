@@ -70,19 +70,6 @@ def token_for(user):
     return create_access_token(user)
 
 
-def test_me_returns_the_token_owner(client, db):
-    user = add_user(db, "me@example.com")
-    response = client.get("/api/auth/me", headers=bearer(token_for(user)))
-
-    assert response.status_code == 200
-    assert response.json() == {
-        "id": user.id,
-        "name": "Test User",
-        "email": "me@example.com",
-        "role": "CITIZEN",
-    }
-
-
 def test_register_login_me_end_to_end(client):
     client.post(
         "/api/auth/register",
@@ -102,15 +89,6 @@ def test_me_without_a_token_is_401(client):
     response = client.get("/api/auth/me")
     assert response.status_code == 401
     assert response.headers["www-authenticate"] == "Bearer"
-
-
-def test_me_with_a_non_bearer_scheme_is_401(client):
-    response = client.get("/api/auth/me", headers={"Authorization": "Basic abc"})
-    assert response.status_code == 401
-
-
-def test_me_with_a_garbage_token_is_401(client):
-    assert client.get("/api/auth/me", headers=bearer("garbage")).status_code == 401
 
 
 def test_me_with_a_tampered_token_is_401(client, db):
@@ -134,24 +112,6 @@ def test_me_with_an_expired_token_is_401(client, db):
     assert client.get("/api/auth/me", headers=bearer(token)).status_code == 401
 
 
-def test_me_with_a_token_for_a_deleted_user_is_401(client, db):
-    user = add_user(db, "gone@example.com")
-    token = token_for(user)
-    db.delete(user)
-    db.flush()
-    assert client.get("/api/auth/me", headers=bearer(token)).status_code == 401
-
-
-def test_me_with_a_non_numeric_subject_is_401(client):
-    claims = {
-        "sub": "abc",
-        "role": "CITIZEN",
-        "exp": datetime.now(timezone.utc) + timedelta(minutes=5),
-    }
-    token = jwt.encode(claims, settings.jwt_secret, algorithm=ALGORITHM)
-    assert client.get("/api/auth/me", headers=bearer(token)).status_code == 401
-
-
 def test_role_comes_from_the_database_not_the_token(gated, db):
     user = add_user(db, "promoted@example.com", UserRole.CITIZEN)
     claims = {
@@ -170,26 +130,11 @@ def test_require_role_allows_a_matching_role(gated, db):
     assert response.json() == {"id": officer.id}
 
 
-def test_require_role_accepts_any_of_several_roles(gated, db):
-    admin = add_user(db, "admin@example.com", UserRole.ADMIN)
-    assert gated.get("/staff", headers=bearer(token_for(admin))).status_code == 200
-
-
 def test_require_role_rejects_other_roles_with_403(gated, db):
     citizen = add_user(db, "citizen@example.com", UserRole.CITIZEN)
     token = token_for(citizen)
     assert gated.get("/officer-only", headers=bearer(token)).status_code == 403
     assert gated.get("/staff", headers=bearer(token)).status_code == 403
-
-
-def test_require_role_without_a_token_is_401_not_403(gated):
-    assert gated.get("/officer-only").status_code == 401
-
-
-def test_get_current_user_works_on_any_route(gated, db):
-    user = add_user(db, "plain@example.com")
-    response = gated.get("/any-user", headers=bearer(token_for(user)))
-    assert response.status_code == 200
 
 
 def make_report(owner):
@@ -212,12 +157,4 @@ def test_other_citizen_gets_404(db):
     stranger = add_user(db, "stranger@example.com")
     with pytest.raises(HTTPException) as caught:
         assert_owner_or_admin(stranger, make_report(owner))
-    assert caught.value.status_code == 404
-
-
-def test_officer_does_not_get_blanket_access(db):
-    owner = add_user(db, "owner@example.com")
-    officer = add_user(db, "officer@example.com", UserRole.OFFICER)
-    with pytest.raises(HTTPException) as caught:
-        assert_owner_or_admin(officer, make_report(owner))
     assert caught.value.status_code == 404

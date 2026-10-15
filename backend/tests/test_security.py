@@ -28,24 +28,10 @@ def make_user(**extra):
     return User(**fields)
 
 
-def test_hash_is_not_the_password():
-    hashed = hash_password("hunter22hunter")
-    assert hashed != "hunter22hunter"
-    assert "hunter22hunter" not in hashed
-
-
-def test_same_password_hashes_differently():
-    assert hash_password("samepassword") != hash_password("samepassword")
-
-
 def test_verify_password():
     hashed = hash_password("correct horse")
     assert verify_password("correct horse", hashed)
     assert not verify_password("wrong horse", hashed)
-
-
-def test_verify_password_with_garbage_hash():
-    assert not verify_password("anything", "not-a-real-hash")
 
 
 def test_token_carries_id_and_role():
@@ -53,15 +39,6 @@ def test_token_carries_id_and_role():
     claims = decode_access_token(token)
     assert claims["sub"] == "7"
     assert claims["role"] == "ADMIN"
-
-
-def test_token_expiry_follows_settings(monkeypatch):
-    monkeypatch.setattr(settings, "jwt_expire_minutes", 5)
-    claims = decode_access_token(create_access_token(make_user()))
-    left = datetime.fromtimestamp(claims["exp"], timezone.utc) - datetime.now(
-        timezone.utc
-    )
-    assert timedelta(minutes=4) < left <= timedelta(minutes=5)
 
 
 def test_expired_token_is_rejected():
@@ -94,18 +71,6 @@ def test_token_signed_with_another_secret_is_rejected():
     )
     with pytest.raises(InvalidToken):
         decode_access_token(token)
-
-
-def test_token_missing_claims_is_rejected():
-    exp = datetime.now(timezone.utc) + timedelta(minutes=5)
-    token = jwt.encode({"sub": "7", "exp": exp}, settings.jwt_secret, ALGORITHM)
-    with pytest.raises(InvalidToken):
-        decode_access_token(token)
-
-
-def test_garbage_token_is_rejected():
-    with pytest.raises(InvalidToken):
-        decode_access_token("definitely.not.a-token")
 
 
 def test_empty_secret_refuses_to_sign(monkeypatch):

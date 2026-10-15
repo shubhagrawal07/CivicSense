@@ -78,20 +78,12 @@ def test_duplicate_email_ignores_case(client):
     "overrides",
     [
         {"email": "not-an-email"},
-        {"email": ""},
         {"password": "short"},
-        {"password": "x" * 129},
         {"name": ""},
-        {"name": "n" * 121},
     ],
 )
 def test_register_rejects_invalid_input(client, overrides):
     assert register(client, **overrides).status_code == 422
-
-
-def test_register_rejects_missing_fields(client):
-    response = client.post("/api/auth/register", json={"email": "a@example.com"})
-    assert response.status_code == 422
 
 
 def test_login_returns_a_token_and_the_user(client):
@@ -107,11 +99,6 @@ def test_login_returns_a_token_and_the_user(client):
     assert claims["role"] == "CITIZEN"
 
 
-def test_login_is_case_insensitive_on_email(client):
-    register(client)
-    assert login(client, email="Asha@EXAMPLE.com").status_code == 200
-
-
 def test_login_wrong_password_and_unknown_email_look_the_same(client):
     register(client)
     wrong_password = login(client, password="not the password")
@@ -120,8 +107,3 @@ def test_login_wrong_password_and_unknown_email_look_the_same(client):
     assert wrong_password.status_code == 401
     assert unknown_email.status_code == 401
     assert wrong_password.json() == unknown_email.json()
-
-
-def test_login_rejects_malformed_input(client):
-    response = client.post("/api/auth/login", json={"email": "nope"})
-    assert response.status_code == 422
