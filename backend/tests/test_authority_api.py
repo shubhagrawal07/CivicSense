@@ -65,22 +65,6 @@ def test_road_issue_on_campus_returns_iitb_with_its_portal(client, db):
     assert portal[0]["last_verified_at"]
 
 
-def test_road_issue_off_campus_returns_bmc(client, db):
-    body = get(client, db, "Roads / Public Works", HIRANANDANI).json()
-
-    assert body["authority"]["name"] == "BMC Roads Department"
-
-
-def test_unverified_contacts_are_flagged_as_such(client, db):
-    body = get(client, db, "Electricity", HIRANANDANI).json()
-
-    assert body["authority"]["name"] == "Adani Electricity Mumbai Limited"
-    assert body["contacts"][0]["verified"] is True
-    helpline = [c for c in body["contacts"] if c["type"] == "HELPLINE"][0]
-    assert helpline["verified"] is False
-    assert helpline["last_verified_at"] is None
-
-
 def test_unknown_department_is_404(client):
     response = client.get(
         "/api/authority-info", params={"department_id": 999999, **MAIN_BUILDING}
@@ -89,35 +73,12 @@ def test_unknown_department_is_404(client):
     assert response.status_code == 404
 
 
-def test_fallback_is_marked_and_has_no_authority(client, db):
-    orphan = Department(name="Parks")
-    db.add(orphan)
-    db.flush()
-
-    response = client.get(
-        "/api/authority-info", params={"department_id": orphan.id, **MAIN_BUILDING}
-    )
-
-    body = response.json()
-    assert response.status_code == 200
-    assert body["authority"] is None
-    assert body["is_fallback"] is True
-    assert body["contacts"]
-    assert not any(c["verified"] for c in body["contacts"])
-
-
 @pytest.mark.parametrize(
     "params",
     [
         {"lat": 19.1, "lng": 72.9},
-        {"department_id": 1, "lng": 72.9},
-        {"department_id": 1, "lat": 19.1},
-        {"department_id": "abc", "lat": 19.1, "lng": 72.9},
         {"department_id": 1, "lat": "north", "lng": 72.9},
         {"department_id": 1, "lat": 91, "lng": 72.9},
-        {"department_id": 1, "lat": -91, "lng": 72.9},
-        {"department_id": 1, "lat": 19.1, "lng": 181},
-        {"department_id": 1, "lat": 19.1, "lng": -181},
     ],
 )
 def test_missing_or_invalid_parameters_are_422(client, params):

@@ -4,15 +4,21 @@ from pathlib import Path
 from sqlalchemy import func, select
 from sqlalchemy.dialects.postgresql import insert
 
+from app.core.config import settings
 from app.core.db import SessionLocal
+from app.core.security import hash_password
 from app.models import (
     Authority,
     AuthorityContact,
     Department,
     GovernmentSource,
     JurisdictionArea,
+    User,
 )
+from app.models.enums import UserRole
+from app.schemas.auth import MIN_PASSWORD_LENGTH
 from app.seed_data.mumbai import AREAS, AUTHORITIES, SOURCES
+from app.services.auth import normalize_email
 
 SEED_DATA = Path(__file__).parent / "seed_data"
 
@@ -121,10 +127,39 @@ def seed_authorities(db):
     db.commit()
 
 
+def seed_admin(db, name, email, password):
+    email = normalize_email(email)
+    if db.scalar(select(User.id).where(User.email == email)):
+        return False
+    db.add(
+        User(
+            name=name,
+            email=email,
+            password_hash=hash_password(password),
+            role=UserRole.ADMIN,
+        )
+    )
+    db.commit()
+    return True
+
+
 def main():
     with SessionLocal() as db:
         seed_departments(db)
         seed_authorities(db)
+
+        if not (settings.admin_email and settings.admin_password):
+            print("ADMIN_EMAIL or ADMIN_PASSWORD not set, skipping the admin user")
+        elif len(settings.admin_password) < MIN_PASSWORD_LENGTH:
+            raise SystemExit(
+                f"ADMIN_PASSWORD must be at least {MIN_PASSWORD_LENGTH} characters"
+            )
+        elif seed_admin(
+            db, settings.admin_name, settings.admin_email, settings.admin_password
+        ):
+            print(f"created admin {normalize_email(settings.admin_email)}")
+        else:
+            print("admin already exists, left unchanged")
 
 
 if __name__ == "__main__":
