@@ -1,6 +1,6 @@
 {
- "accuracy": 0.783,
- "test_rows": 69,
+ "accuracy": 0.737,
+ "test_rows": 350,
  "labels": [
   "pothole",
   "open_manhole",
@@ -15,112 +15,112 @@
  ],
  "per_class": {
   "pothole": {
-   "precision": 0.833,
-   "recall": 0.714,
-   "f1": 0.769,
-   "support": 7
+   "precision": 0.846,
+   "recall": 0.629,
+   "f1": 0.721,
+   "support": 35
   },
   "open_manhole": {
    "precision": 1.0,
-   "recall": 1.0,
-   "f1": 1.0,
-   "support": 6
+   "recall": 0.743,
+   "f1": 0.852,
+   "support": 35
   },
   "garbage": {
-   "precision": 0.778,
-   "recall": 0.875,
-   "f1": 0.824,
-   "support": 8
+   "precision": 0.808,
+   "recall": 0.6,
+   "f1": 0.689,
+   "support": 35
   },
   "streetlight": {
-   "precision": 0.8,
-   "recall": 0.571,
-   "f1": 0.667,
-   "support": 7
+   "precision": 0.939,
+   "recall": 0.886,
+   "f1": 0.912,
+   "support": 35
   },
   "water_leakage": {
-   "precision": 0.833,
-   "recall": 0.833,
-   "f1": 0.833,
-   "support": 6
+   "precision": 0.784,
+   "recall": 0.829,
+   "f1": 0.806,
+   "support": 35
   },
   "electricity_outage": {
-   "precision": 0.8,
-   "recall": 0.5,
-   "f1": 0.615,
-   "support": 8
+   "precision": 0.806,
+   "recall": 0.714,
+   "f1": 0.758,
+   "support": 35
   },
   "drainage_sewage": {
-   "precision": 0.5,
-   "recall": 0.667,
-   "f1": 0.571,
-   "support": 6
+   "precision": 0.676,
+   "recall": 0.714,
+   "f1": 0.694,
+   "support": 35
   },
   "damaged_infrastructure": {
-   "precision": 0.857,
-   "recall": 0.857,
-   "f1": 0.857,
-   "support": 7
+   "precision": 0.516,
+   "recall": 0.943,
+   "f1": 0.667,
+   "support": 35
   },
   "road_obstruction": {
-   "precision": 0.727,
-   "recall": 1.0,
-   "f1": 0.842,
-   "support": 8
+   "precision": 0.614,
+   "recall": 0.771,
+   "f1": 0.684,
+   "support": 35
   },
   "other": {
-   "precision": 0.833,
-   "recall": 0.833,
-   "f1": 0.833,
-   "support": 6
+   "precision": 0.731,
+   "recall": 0.543,
+   "f1": 0.623,
+   "support": 35
   }
  },
  "confusion_matrix": [
   [
+   22,
+   0,
+   0,
+   0,
+   0,
+   2,
+   0,
    5,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   1,
-   1,
-   0
+   4,
+   2
   ],
   [
    0,
-   6,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
-  ],
-  [
-   0,
-   0,
-   7,
-   0,
-   0,
-   0,
+   26,
    1,
    0,
-   0,
-   0
-  ],
-  [
-   0,
-   0,
+   1,
    0,
    4,
+   2,
+   0,
+   1
+  ],
+  [
+   0,
+   0,
+   21,
+   0,
+   0,
+   1,
+   3,
+   3,
+   7,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   31,
    0,
    1,
    1,
-   0,
+   1,
    0,
    1
   ],
@@ -129,99 +129,99 @@
    0,
    0,
    0,
-   5,
+   29,
    0,
+   2,
+   3,
    1,
-   0,
-   0,
    0
   ],
   [
-   0,
-   0,
-   1,
-   0,
-   0,
-   4,
    1,
    0,
    2,
-   0
+   0,
+   0,
+   25,
+   0,
+   5,
+   1,
+   1
   ],
   [
    0,
-   0,
-   1,
-   0,
-   1,
-   0,
-   4,
-   0,
-   0,
-   0
-  ],
-  [
-   0,
-   0,
-   0,
-   1,
    0,
    0,
    0,
    6,
    0,
+   25,
+   3,
+   1,
    0
   ],
   [
    0,
    0,
    0,
+   1,
    0,
+   1,
    0,
+   33,
    0,
-   0,
-   0,
-   8,
    0
+  ],
+  [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   27,
+   2
   ],
   [
    1,
    0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   5
+   2,
+   1,
+   1,
+   1,
+   2,
+   5,
+   3,
+   19
   ]
  ],
  "by_threshold": [
   {
    "threshold": 0.3,
-   "share_kept": 0.913,
-   "accuracy_on_kept": 0.81
+   "share_kept": 0.857,
+   "accuracy_on_kept": 0.8
   },
   {
    "threshold": 0.4,
-   "share_kept": 0.812,
-   "accuracy_on_kept": 0.839
+   "share_kept": 0.7,
+   "accuracy_on_kept": 0.841
   },
   {
    "threshold": 0.5,
-   "share_kept": 0.565,
-   "accuracy_on_kept": 0.949
+   "share_kept": 0.589,
+   "accuracy_on_kept": 0.888
   },
   {
    "threshold": 0.6,
-   "share_kept": 0.478,
-   "accuracy_on_kept": 0.939
+   "share_kept": 0.463,
+   "accuracy_on_kept": 0.907
   },
   {
    "threshold": 0.7,
-   "share_kept": 0.391,
-   "accuracy_on_kept": 0.926
+   "share_kept": 0.403,
+   "accuracy_on_kept": 0.908
   }
  ],
  "mistakes": [
@@ -229,91 +229,553 @@
    "text": "The tar has completely come off and the road is just gravel now",
    "true": "pothole",
    "predicted": "road_obstruction",
-   "confidence": 0.469
+   "confidence": 0.448
+  },
+  {
+   "text": "Two-wheeler riders falling because of a hole near the bus depot",
+   "true": "pothole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.302
+  },
+  {
+   "text": "road broken badly, patch work done last month already washed away",
+   "true": "pothole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.328
+  },
+  {
+   "text": "Craters everywhere on this stretch, auto drivers refuse to come here",
+   "true": "pothole",
+   "predicted": "road_obstruction",
+   "confidence": 0.261
+  },
+  {
+   "text": "rasta me bada gaddha hai, accident ho sakta hai",
+   "true": "pothole",
+   "predicted": "electricity_outage",
+   "confidence": 0.232
   },
   {
    "text": "Uneven broken road, ambulances have to slow down to a crawl",
    "true": "pothole",
+   "predicted": "road_obstruction",
+   "confidence": 0.47
+  },
+  {
+   "text": "Hole in the road about two feet wide outside building no. 4",
+   "true": "pothole",
    "predicted": "damaged_infrastructure",
-   "confidence": 0.441
+   "confidence": 0.306
+  },
+  {
+   "text": "pot hole near petrol pump",
+   "true": "pothole",
+   "predicted": "other",
+   "confidence": 0.527
+  },
+  {
+   "text": "The lane behind the market is broken up and full of pits",
+   "true": "pothole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.395
+  },
+  {
+   "text": "Lane 3, Shivaji Nagar - two-wheeler riders falling because of a hole near the bus depot",
+   "true": "pothole",
+   "predicted": "other",
+   "confidence": 0.207
+  },
+  {
+   "text": "road broken badly, patch work done last month already washed away. Someone will get hurt.",
+   "true": "pothole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.396
+  },
+  {
+   "text": "Near the railway station: craters everywhere on this stretch, auto drivers refuse to come here",
+   "true": "pothole",
+   "predicted": "road_obstruction",
+   "confidence": 0.195
+  },
+  {
+   "text": "Sector 7 - rasta me bada gaddha hai, accident ho sakta hai",
+   "true": "pothole",
+   "predicted": "electricity_outage",
+   "confidence": 0.224
+  },
+  {
+   "text": "Uncovered drain chamber in the middle of the lane, only a branch stuck in it as warning",
+   "true": "open_manhole",
+   "predicted": "drainage_sewage",
+   "confidence": 0.401
+  },
+  {
+   "text": "Someone stole the iron lid of the gutter chamber",
+   "true": "open_manhole",
+   "predicted": "drainage_sewage",
+   "confidence": 0.4
+  },
+  {
+   "text": "gutter ka dhakkan gayab hai",
+   "true": "open_manhole",
+   "predicted": "drainage_sewage",
+   "confidence": 0.479
+  },
+  {
+   "text": "Broken concrete slab over the chamber, you can see the sewer underneath",
+   "true": "open_manhole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.337
+  },
+  {
+   "text": "Cover on the storm water chamber has shattered",
+   "true": "open_manhole",
+   "predicted": "water_leakage",
+   "confidence": 0.274
+  },
+  {
+   "text": "Uncovered drain chamber in the middle of the lane, only a branch stuck in it as warning. Someone will get hurt.",
+   "true": "open_manhole",
+   "predicted": "drainage_sewage",
+   "confidence": 0.323
+  },
+  {
+   "text": "Someone stole the iron lid of the gutter chamber near the overbridge",
+   "true": "open_manhole",
+   "predicted": "other",
+   "confidence": 0.236
+  },
+  {
+   "text": "The cover on the sewer chamber has collapsed inward. Please fix urgently.",
+   "true": "open_manhole",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.451
+  },
+  {
+   "text": "gutter ka dhakkan gayab hai near the bus depot",
+   "true": "open_manhole",
+   "predicted": "garbage",
+   "confidence": 0.21
+  },
+  {
+   "text": "The public dustbin is overflowing onto the road",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.335
+  },
+  {
+   "text": "Stray dogs tearing open garbage bags all over the footpath",
+   "true": "garbage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.456
+  },
+  {
+   "text": "Huge heap of rubbish next to the vegetable market attracting flies",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.872
+  },
+  {
+   "text": "Bins overflowing after the festival, nobody cleared them",
+   "true": "garbage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.273
   },
   {
    "text": "Overflowing bin outside the hospital gate",
    "true": "garbage",
    "predicted": "drainage_sewage",
-   "confidence": 0.729
+   "confidence": 0.352
+  },
+  {
+   "text": "Hotel waste thrown on the road behind the restaurant every night",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.344
+  },
+  {
+   "text": "Truck dumped a load of debris and trash and drove off",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.89
+  },
+  {
+   "text": "The litter bin is broken and trash spills out",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.415
+  },
+  {
+   "text": "The public dustbin is overflowing onto the road. Please fix urgently.",
+   "true": "garbage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.305
+  },
+  {
+   "text": "At MG Road junction, people are dumping construction waste and household trash on the empty plot",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.376
+  },
+  {
+   "text": "Ward 12: stray dogs tearing open garbage bags all over the footpath",
+   "true": "garbage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.502
+  },
+  {
+   "text": "Near the railway station: huge heap of rubbish next to the vegetable market attracting flies",
+   "true": "garbage",
+   "predicted": "road_obstruction",
+   "confidence": 0.733
+  },
+  {
+   "text": "kachra uthaya nahi gaya teen din se. Please fix urgently.",
+   "true": "garbage",
+   "predicted": "electricity_outage",
+   "confidence": 0.368
+  },
+  {
+   "text": "Bins overflowing after the festival, nobody cleared them. Complained before but nothing happened.",
+   "true": "garbage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.311
+  },
+  {
+   "text": "Women feel unsafe walking here because the street lamps are out",
+   "true": "streetlight",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.159
   },
   {
    "text": "Light near the underpass goes on and off every few seconds",
    "true": "streetlight",
    "predicted": "drainage_sewage",
-   "confidence": 0.428
+   "confidence": 0.366
   },
   {
    "text": "Streetlights are on during the day, wasting electricity. Please fix urgently.",
    "true": "streetlight",
    "predicted": "electricity_outage",
-   "confidence": 0.45
+   "confidence": 0.457
   },
   {
    "text": "Women feel unsafe walking here because the street lamps are out. Complained before but nothing happened.",
    "true": "streetlight",
    "predicted": "other",
-   "confidence": 0.241
+   "confidence": 0.246
+  },
+  {
+   "text": "Fountain of water coming from under the road after the digging work",
+   "true": "water_leakage",
+   "predicted": "drainage_sewage",
+   "confidence": 0.398
+  },
+  {
+   "text": "Municipal tap at the corner keeps running, the valve is broken",
+   "true": "water_leakage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.248
   },
   {
    "text": "Clear water flowing on the road every morning when supply comes",
    "true": "water_leakage",
+   "predicted": "road_obstruction",
+   "confidence": 0.511
+  },
+  {
+   "text": "Fountain of water coming from under the road after the digging work in front of the post office",
+   "true": "water_leakage",
    "predicted": "drainage_sewage",
-   "confidence": 0.42
+   "confidence": 0.3
+  },
+  {
+   "text": "Municipal tap at the corner keeps running, the valve is broken. This has been going on for weeks.",
+   "true": "water_leakage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.332
+  },
+  {
+   "text": "Water continuously leaking from the valve chamber on the footpath. Please fix urgently.",
+   "true": "water_leakage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.502
+  },
+  {
+   "text": "Exposed live wires coming out of the junction box on the footpath",
+   "true": "electricity_outage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.713
   },
   {
    "text": "bijli nahi hai 6 ghante se",
    "true": "electricity_outage",
-   "predicted": "drainage_sewage",
-   "confidence": 0.249
+   "predicted": "garbage",
+   "confidence": 0.227
   },
   {
    "text": "Cable snapped during the storm and is lying on the road",
    "true": "electricity_outage",
+   "predicted": "pothole",
+   "confidence": 0.256
+  },
+  {
+   "text": "Wire touching the tree branches, it sparks when the wind blows",
+   "true": "electricity_outage",
    "predicted": "road_obstruction",
-   "confidence": 0.36
+   "confidence": 0.709
+  },
+  {
+   "text": "Overhead line has fallen on the wall of the school",
+   "true": "electricity_outage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.519
+  },
+  {
+   "text": "Load shedding without notice in our sector",
+   "true": "electricity_outage",
+   "predicted": "other",
+   "confidence": 0.44
+  },
+  {
+   "text": "Outside Gate 2 of the college, exposed live wires coming out of the junction box on the footpath",
+   "true": "electricity_outage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.835
   },
   {
    "text": "bijli nahi hai 6 ghante se. Kindly take action.",
    "true": "electricity_outage",
    "predicted": "garbage",
-   "confidence": 0.342
+   "confidence": 0.285
   },
   {
    "text": "Cable snapped during the storm and is lying on the road. Please fix urgently.",
    "true": "electricity_outage",
-   "predicted": "road_obstruction",
-   "confidence": 0.258
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.32
+  },
+  {
+   "text": "Outside Gate 2 of the college, the distribution box door is open and wires are exposed near the playground",
+   "true": "electricity_outage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.528
+  },
+  {
+   "text": "nali band hai, ganda pani road pe aa raha hai",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.426
+  },
+  {
+   "text": "Stagnant water near the bus stop for days, mosquitoes everywhere",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.299
+  },
+  {
+   "text": "Sewage leaking out onto the footpath outside the hospital",
+   "true": "drainage_sewage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.725
   },
   {
    "text": "water logging",
    "true": "drainage_sewage",
    "predicted": "water_leakage",
-   "confidence": 0.905
+   "confidence": 0.863
   },
   {
-   "text": "Behind the vegetable market, the gutter is choked with plastic and silt",
+   "text": "Roadside gutter clogged with leaves and mud",
    "true": "drainage_sewage",
-   "predicted": "garbage",
-   "confidence": 0.432
+   "predicted": "road_obstruction",
+   "confidence": 0.808
+  },
+  {
+   "text": "Dirty drain water mixing with drinking water supply",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.504
+  },
+  {
+   "text": "Near the railway station: road is waterlogged after every small rain",
+   "true": "drainage_sewage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.256
+  },
+  {
+   "text": "Near the railway station: nali band hai, ganda pani road pe aa raha hai",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.34
+  },
+  {
+   "text": "Outside Gate 2 of the college, nala not desilted before monsoon, already overflowing",
+   "true": "drainage_sewage",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.298
+  },
+  {
+   "text": "Stagnant water near the bus stop for days, mosquitoes everywhere near the bus depot",
+   "true": "drainage_sewage",
+   "predicted": "water_leakage",
+   "confidence": 0.248
   },
   {
    "text": "Street name board rusted and unreadable",
    "true": "damaged_infrastructure",
    "predicted": "streetlight",
-   "confidence": 0.303
+   "confidence": 0.235
+  },
+  {
+   "text": "Hoarding frame hanging dangerously over the road",
+   "true": "damaged_infrastructure",
+   "predicted": "electricity_outage",
+   "confidence": 0.232
+  },
+  {
+   "text": "Tree branch broken and hanging over the footpath",
+   "true": "road_obstruction",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.833
+  },
+  {
+   "text": "ped gir gaya hai road pe",
+   "true": "road_obstruction",
+   "predicted": "other",
+   "confidence": 0.191
+  },
+  {
+   "text": "Large rocks left on the road after the excavation work",
+   "true": "road_obstruction",
+   "predicted": "pothole",
+   "confidence": 0.452
+  },
+  {
+   "text": "Construction material stored on the footpath, pedestrians walk on the road",
+   "true": "road_obstruction",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.494
+  },
+  {
+   "text": "At MG Road junction, tree branch broken and hanging over the footpath",
+   "true": "road_obstruction",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.792
+  },
+  {
+   "text": "ped gir gaya hai road pe. Someone will get hurt.",
+   "true": "road_obstruction",
+   "predicted": "other",
+   "confidence": 0.24
+  },
+  {
+   "text": "Large rocks left on the road after the excavation work. This has been going on for weeks.",
+   "true": "road_obstruction",
+   "predicted": "pothole",
+   "confidence": 0.326
+  },
+  {
+   "text": "Pile of rubble from demolition occupying the footpath. Please fix urgently.",
+   "true": "road_obstruction",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.667
+  },
+  {
+   "text": "please help",
+   "true": "other",
+   "predicted": "drainage_sewage",
+   "confidence": 0.604
+  },
+  {
+   "text": "Problem near my house, please check",
+   "true": "other",
+   "predicted": "road_obstruction",
+   "confidence": 0.337
+  },
+  {
+   "text": "Shop owner has encroached the footpath with his stall",
+   "true": "other",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.841
+  },
+  {
+   "text": "Not working",
+   "true": "other",
+   "predicted": "electricity_outage",
+   "confidence": 0.462
+  },
+  {
+   "text": "Neighbours are parking cars in front of my gate",
+   "true": "other",
+   "predicted": "garbage",
+   "confidence": 0.201
+  },
+  {
+   "text": "Monkeys entering homes and damaging things",
+   "true": "other",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.2
   },
   {
    "text": "Thank you for fixing the road last week!",
    "true": "other",
    "predicted": "pothole",
-   "confidence": 0.488
+   "confidence": 0.455
+  },
+  {
+   "text": "Same problem as before, still not resolved",
+   "true": "other",
+   "predicted": "streetlight",
+   "confidence": 0.263
+  },
+  {
+   "text": "Illegal parking on both sides makes the road narrow",
+   "true": "other",
+   "predicted": "road_obstruction",
+   "confidence": 0.581
+  },
+  {
+   "text": "The ward office is always closed",
+   "true": "other",
+   "predicted": "drainage_sewage",
+   "confidence": 0.237
+  },
+  {
+   "text": "Pigeons nesting everywhere in the building compound",
+   "true": "other",
+   "predicted": "water_leakage",
+   "confidence": 0.252
+  },
+  {
+   "text": "Traffic police not present at the junction during peak hours",
+   "true": "other",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.274
+  },
+  {
+   "text": "Stray dogs chasing people in our area. Please fix urgently.",
+   "true": "other",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.473
+  },
+  {
+   "text": "Problem near my house, please check. Complained before but nothing happened.",
+   "true": "other",
+   "predicted": "road_obstruction",
+   "confidence": 0.229
+  },
+  {
+   "text": "Shop owner has encroached the footpath with his stall. This has been going on for weeks.",
+   "true": "other",
+   "predicted": "damaged_infrastructure",
+   "confidence": 0.768
+  },
+  {
+   "text": "Neighbours are parking cars in front of my gate. Kindly take action.",
+   "true": "other",
+   "predicted": "garbage",
+   "confidence": 0.281
   }
  ]
 }
