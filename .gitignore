@@ -1,5 +1,5 @@
 CLAUDE.md
-# docs
+docs
 uploads
 *.pdf
 .claude
@@ -17,3 +17,4 @@ dist/
 !ml/datasets/.gitkeep
 ml/models/*.pt
 ml/models/*.pkl
+ml/datasets/raw_v2
