@@ -17,6 +17,12 @@ class Settings(BaseSettings):
     jwt_secret: str = ""
     jwt_expire_minutes: int = 60
     upload_dir: str = "uploads"
+    max_image_bytes: int = 5 * 1024 * 1024
+    # report locations outside this box are refused; all four unset means no check
+    region_min_lat: float | None = None
+    region_max_lat: float | None = None
+    region_min_lng: float | None = None
+    region_max_lng: float | None = None
     text_model_path: str = "ml/models/text_classifier.joblib"
     text_confidence_threshold: float = 0.5
     frontend_origin: str = "http://localhost:5173"
