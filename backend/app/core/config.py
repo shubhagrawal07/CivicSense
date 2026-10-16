@@ -19,6 +19,10 @@ class Settings(BaseSettings):
     upload_dir: str = "uploads"
     text_model_path: str = "ml/models/text_classifier.joblib"
     text_confidence_threshold: float = 0.5
+    frontend_origin: str = "http://localhost:5173"
+    admin_name: str = "Admin"
+    admin_email: str = ""
+    admin_password: str = ""
 
     @property
     def database_url(self) -> str:

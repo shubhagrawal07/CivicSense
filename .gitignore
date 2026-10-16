@@ -17,4 +17,4 @@ dist/
 !ml/datasets/.gitkeep
 ml/models/*.pt
 ml/models/*.pkl
-ml/datasets/raw_v2/local/
+ml/datasets/raw_v2

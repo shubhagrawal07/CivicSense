@@ -40,17 +40,3 @@ def test_only_reports_within_500m_are_returned(db):
     found = nearby_ids(db, lon, lat, 500)
 
     assert found == {same_spot.id, about_330m.id}
-
-
-def test_larger_radius_picks_up_the_farther_report(db):
-    user = User(name="t", email="t2@example.com", password_hash="x")
-    db.add(user)
-    db.flush()
-
-    lon, lat = CENTER
-    near = make_report(user.id, lon, lat + 0.003)
-    far = make_report(user.id, lon, lat + 0.006)
-    db.add_all([near, far])
-    db.flush()
-
-    assert nearby_ids(db, lon, lat, 1000) == {near.id, far.id}

@@ -3,6 +3,7 @@ from app.models.authority import (
     AuthorityContact,
     Department,
     GovernmentSource,
+    JurisdictionArea,
 )
 from app.models.issue import Issue, IssueReport
 from app.models.report import Report
@@ -15,6 +16,7 @@ __all__ = [
     "Department",
     "GovernmentSource",
     "Issue",
+    "JurisdictionArea",
     "IssueReport",
     "Report",
     "StatusHistory",
