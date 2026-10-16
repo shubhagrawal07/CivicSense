@@ -54,3 +54,7 @@
 ## Out of scope for now
 
 Image data and labels, a much larger dataset, and any hierarchy deeper than one level of subcategories.
+
+## civic_text_v2.csv (generated)
+
+1000 training rows, 100 per category, made on 2026-10-13 with `llama3.2:3b` through Ollama using `ml/scripts/generate_text_dataset.py` (see `docs/dataset_generation.md`). `source` is `ollama` and `split` is `train`. Categories ended with 147 to 202 rows after de-duplication before being cut to 100. The text is noisy: some lines carry no topic, and the Hindi in roman script is often malformed. It is not reviewed line by line. It is the training set; `civic_text_v1.csv` is the test set. These two are the only datasets kept in the repo.

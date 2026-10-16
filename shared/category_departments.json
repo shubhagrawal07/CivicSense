@@ -1,0 +1,12 @@
+{
+  "pothole": "Roads / Public Works",
+  "open_manhole": "Drainage / Sewerage",
+  "garbage": "Sanitation / Solid Waste",
+  "streetlight": "Electricity",
+  "water_leakage": "Water Supply",
+  "electricity_outage": "Electricity",
+  "drainage_sewage": "Drainage / Sewerage",
+  "damaged_infrastructure": "Roads / Public Works",
+  "road_obstruction": "Roads / Public Works",
+  "other": "General Grievance"
+}
