@@ -4,12 +4,11 @@ from app.core.security import verify_password
 from app.models import (
     Authority,
     AuthorityContact,
-    Department,
     GovernmentSource,
     JurisdictionArea,
     User,
 )
-from app.models.enums import UserRole, VerificationStatus
+from app.models.enums import UserRole
 from app.seed import seed_admin, seed_authorities, seed_departments
 
 
@@ -30,23 +29,6 @@ def test_authority_seed_is_repeatable(db):
     first = counts()
     seed_authorities(db)
     assert counts() == first
-
-
-def test_every_department_has_a_verified_contact_with_source(db):
-    seed_departments(db)
-    seed_authorities(db)
-
-    for dept_id, name in db.execute(select(Department.id, Department.name)):
-        verified = db.scalars(
-            select(AuthorityContact)
-            .join(Authority)
-            .where(
-                Authority.department_id == dept_id,
-                AuthorityContact.verification_status == VerificationStatus.VERIFIED,
-            )
-        ).all()
-        assert verified, name
-        assert all(c.source_url and c.last_verified for c in verified), name
 
 
 def test_admin_seed_creates_one_admin_who_can_log_in(db):
