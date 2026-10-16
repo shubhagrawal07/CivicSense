@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "category_defaults": {
+    "open_manhole": "HIGH",
+    "electricity_outage": "HIGH",
+    "pothole": "MEDIUM",
+    "drainage_sewage": "MEDIUM",
+    "water_leakage": "MEDIUM",
+    "road_obstruction": "MEDIUM",
+    "streetlight": "LOW",
+    "garbage": "LOW",
+    "damaged_infrastructure": "LOW",
+    "other": "LOW"
+  },
+  "boost_keywords": [
+    "school",
+    "schools",
+    "child",
+    "children",
+    "kid",
+    "kids",
+    "hospital",
+    "accident",
+    "injured",
+    "live wire",
+    "sparking",
+    "flooding",
+    "flooded",
+    "open wire",
+    "open drain",
+    "open pit"
+  ]
+}
