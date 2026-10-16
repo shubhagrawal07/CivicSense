@@ -1,0 +1,1109 @@
+{
+ "backend": "ollama",
+ "model": "llama3.2:3b",
+ "created": "2026-10-13",
+ "per_class": 100,
+ "batch_id": null,
+ "requests": [
+  {
+   "id": "r0000",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0001",
+   "category": "pothole",
+   "subcategory": "road_surface_broken",
+   "style": "angry and frustrated",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - a road surface that is worn, cracked, sunken or patchy.\nTone: angry and frustrated.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0002",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "angry and frustrated",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: angry and frustrated.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0003",
+   "category": "pothole",
+   "subcategory": "road_surface_broken",
+   "style": "neutral and factual, like a field report",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - a road surface that is worn, cracked, sunken or patchy.\nTone: neutral and factual, like a field report.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0004",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "polite and formal",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: polite and formal.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0005",
+   "category": "pothole",
+   "subcategory": "road_surface_broken",
+   "style": "polite and formal",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - a road surface that is worn, cracked, sunken or patchy.\nTone: polite and formal.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0006",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "neutral and factual, like a field report",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: neutral and factual, like a field report.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0007",
+   "category": "pothole",
+   "subcategory": "road_surface_broken",
+   "style": "short and blunt, like a text message",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - a road surface that is worn, cracked, sunken or patchy.\nTone: short and blunt, like a text message.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0008",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "polite and formal",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: polite and formal.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0009",
+   "category": "pothole",
+   "subcategory": "road_surface_broken",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - a road surface that is worn, cracked, sunken or patchy.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0010",
+   "category": "pothole",
+   "subcategory": "pothole_single",
+   "style": "polite and formal",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Pothole - one pothole or crater in a road.\nTone: polite and formal.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0011",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "neutral and factual, like a field report",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: neutral and factual, like a field report.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0012",
+   "category": "open_manhole",
+   "subcategory": "lid_broken",
+   "style": "worried about children or safety",
+   "length": "one or two sentences",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole cover that is cracked, loose, sunken or broken.\nTone: worried about children or safety.\nLength: one or two sentences.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0013",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "short and blunt, like a text message",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: short and blunt, like a text message.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0014",
+   "category": "open_manhole",
+   "subcategory": "lid_broken",
+   "style": "an elderly person using simple words",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole cover that is cracked, loose, sunken or broken.\nTone: an elderly person using simple words.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0015",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "worried about children or safety",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: worried about children or safety.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0016",
+   "category": "open_manhole",
+   "subcategory": "lid_broken",
+   "style": "neutral and factual, like a field report",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole cover that is cracked, loose, sunken or broken.\nTone: neutral and factual, like a field report.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0017",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "worried about children or safety",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: worried about children or safety.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0018",
+   "category": "open_manhole",
+   "subcategory": "lid_broken",
+   "style": "polite and formal",
+   "length": "one or two sentences",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole cover that is cracked, loose, sunken or broken.\nTone: polite and formal.\nLength: one or two sentences.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0019",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: typed in a hurry with typos and little punctuation.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0020",
+   "category": "open_manhole",
+   "subcategory": "lid_broken",
+   "style": "polite and formal",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole cover that is cracked, loose, sunken or broken.\nTone: polite and formal.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0021",
+   "category": "open_manhole",
+   "subcategory": "lid_missing",
+   "style": "polite and formal",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Open manhole - a manhole or drain chamber with no cover.\nTone: polite and formal.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0022",
+   "category": "garbage",
+   "subcategory": "missed_collection",
+   "style": "worried about children or safety",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - garbage that was not collected on schedule.\nTone: worried about children or safety.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0023",
+   "category": "garbage",
+   "subcategory": "bin_overflow",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "3 to 6 words",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - public bins or containers overflowing.\nTone: typed in a hurry with typos and little punctuation.\nLength: 3 to 6 words.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0024",
+   "category": "garbage",
+   "subcategory": "illegal_dumping",
+   "style": "short and blunt, like a text message",
+   "length": "3 to 6 words",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - waste dumped or burnt in places it should not be.\nTone: short and blunt, like a text message.\nLength: 3 to 6 words.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0025",
+   "category": "garbage",
+   "subcategory": "missed_collection",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - garbage that was not collected on schedule.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0026",
+   "category": "garbage",
+   "subcategory": "bin_overflow",
+   "style": "long-winded, with extra background",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - public bins or containers overflowing.\nTone: long-winded, with extra background.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0027",
+   "category": "garbage",
+   "subcategory": "illegal_dumping",
+   "style": "polite and formal",
+   "length": "one short sentence",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - waste dumped or burnt in places it should not be.\nTone: polite and formal.\nLength: one short sentence.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0028",
+   "category": "garbage",
+   "subcategory": "missed_collection",
+   "style": "an elderly person using simple words",
+   "length": "one short sentence",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - garbage that was not collected on schedule.\nTone: an elderly person using simple words.\nLength: one short sentence.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0029",
+   "category": "garbage",
+   "subcategory": "bin_overflow",
+   "style": "an elderly person using simple words",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - public bins or containers overflowing.\nTone: an elderly person using simple words.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0030",
+   "category": "garbage",
+   "subcategory": "illegal_dumping",
+   "style": "neutral and factual, like a field report",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - waste dumped or burnt in places it should not be.\nTone: neutral and factual, like a field report.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0031",
+   "category": "garbage",
+   "subcategory": "missed_collection",
+   "style": "short and blunt, like a text message",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - garbage that was not collected on schedule.\nTone: short and blunt, like a text message.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0032",
+   "category": "garbage",
+   "subcategory": "bin_overflow",
+   "style": "long-winded, with extra background",
+   "length": "3 to 6 words",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Garbage - public bins or containers overflowing.\nTone: long-winded, with extra background.\nLength: 3 to 6 words.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0033",
+   "category": "streetlight",
+   "subcategory": "light_off",
+   "style": "short and blunt, like a text message",
+   "length": "one or two sentences",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that are dead, off, or on at the wrong time.\nTone: short and blunt, like a text message.\nLength: one or two sentences.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0034",
+   "category": "streetlight",
+   "subcategory": "light_flickering",
+   "style": "short and blunt, like a text message",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that flicker, blink or are very dim.\nTone: short and blunt, like a text message.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0035",
+   "category": "streetlight",
+   "subcategory": "pole_damaged",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - a streetlight pole that is bent, rusted, leaning or cracked.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0036",
+   "category": "streetlight",
+   "subcategory": "light_off",
+   "style": "neutral and factual, like a field report",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that are dead, off, or on at the wrong time.\nTone: neutral and factual, like a field report.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0037",
+   "category": "streetlight",
+   "subcategory": "light_flickering",
+   "style": "polite and formal",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that flicker, blink or are very dim.\nTone: polite and formal.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0038",
+   "category": "streetlight",
+   "subcategory": "pole_damaged",
+   "style": "long-winded, with extra background",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - a streetlight pole that is bent, rusted, leaning or cracked.\nTone: long-winded, with extra background.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0039",
+   "category": "streetlight",
+   "subcategory": "light_off",
+   "style": "short and blunt, like a text message",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that are dead, off, or on at the wrong time.\nTone: short and blunt, like a text message.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0040",
+   "category": "streetlight",
+   "subcategory": "light_flickering",
+   "style": "angry and frustrated",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that flicker, blink or are very dim.\nTone: angry and frustrated.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0041",
+   "category": "streetlight",
+   "subcategory": "pole_damaged",
+   "style": "short and blunt, like a text message",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - a streetlight pole that is bent, rusted, leaning or cracked.\nTone: short and blunt, like a text message.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0042",
+   "category": "streetlight",
+   "subcategory": "light_off",
+   "style": "angry and frustrated",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that are dead, off, or on at the wrong time.\nTone: angry and frustrated.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0043",
+   "category": "streetlight",
+   "subcategory": "light_flickering",
+   "style": "neutral and factual, like a field report",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Streetlight - streetlights that flicker, blink or are very dim.\nTone: neutral and factual, like a field report.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0044",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: typed in a hurry with typos and little punctuation.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0045",
+   "category": "water_leakage",
+   "subcategory": "pipe_burst",
+   "style": "worried about children or safety",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a burst or broken water main spraying water.\nTone: worried about children or safety.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0046",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "an elderly person using simple words",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: an elderly person using simple words.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0047",
+   "category": "water_leakage",
+   "subcategory": "pipe_burst",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a burst or broken water main spraying water.\nTone: typed in a hurry with typos and little punctuation.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0048",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "short and blunt, like a text message",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: short and blunt, like a text message.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0049",
+   "category": "water_leakage",
+   "subcategory": "pipe_burst",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a burst or broken water main spraying water.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0050",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "an elderly person using simple words",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: an elderly person using simple words.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0051",
+   "category": "water_leakage",
+   "subcategory": "pipe_burst",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a burst or broken water main spraying water.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0052",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0053",
+   "category": "water_leakage",
+   "subcategory": "pipe_burst",
+   "style": "neutral and factual, like a field report",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a burst or broken water main spraying water.\nTone: neutral and factual, like a field report.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0054",
+   "category": "water_leakage",
+   "subcategory": "pipe_leak",
+   "style": "worried about children or safety",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Water leakage - a slow or steady leak in a water pipe, tap or valve.\nTone: worried about children or safety.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0055",
+   "category": "electricity_outage",
+   "subcategory": "power_cut",
+   "style": "an elderly person using simple words",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - no electricity, repeated cuts, or voltage trouble.\nTone: an elderly person using simple words.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0056",
+   "category": "electricity_outage",
+   "subcategory": "exposed_wire",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - loose, hanging, sparking or exposed electric wires and boxes.\nTone: typed in a hurry with typos and little punctuation.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0057",
+   "category": "electricity_outage",
+   "subcategory": "transformer_issue",
+   "style": "polite and formal",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - a transformer that sparks, smokes, leaks oil or has failed.\nTone: polite and formal.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0058",
+   "category": "electricity_outage",
+   "subcategory": "power_cut",
+   "style": "worried about children or safety",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - no electricity, repeated cuts, or voltage trouble.\nTone: worried about children or safety.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0059",
+   "category": "electricity_outage",
+   "subcategory": "exposed_wire",
+   "style": "worried about children or safety",
+   "length": "3 to 6 words",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - loose, hanging, sparking or exposed electric wires and boxes.\nTone: worried about children or safety.\nLength: 3 to 6 words.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0060",
+   "category": "electricity_outage",
+   "subcategory": "transformer_issue",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - a transformer that sparks, smokes, leaks oil or has failed.\nTone: typed in a hurry with typos and little punctuation.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0061",
+   "category": "electricity_outage",
+   "subcategory": "power_cut",
+   "style": "long-winded, with extra background",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - no electricity, repeated cuts, or voltage trouble.\nTone: long-winded, with extra background.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0062",
+   "category": "electricity_outage",
+   "subcategory": "exposed_wire",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "3 to 6 words",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - loose, hanging, sparking or exposed electric wires and boxes.\nTone: typed in a hurry with typos and little punctuation.\nLength: 3 to 6 words.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0063",
+   "category": "electricity_outage",
+   "subcategory": "transformer_issue",
+   "style": "neutral and factual, like a field report",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - a transformer that sparks, smokes, leaks oil or has failed.\nTone: neutral and factual, like a field report.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0064",
+   "category": "electricity_outage",
+   "subcategory": "power_cut",
+   "style": "short and blunt, like a text message",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - no electricity, repeated cuts, or voltage trouble.\nTone: short and blunt, like a text message.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0065",
+   "category": "electricity_outage",
+   "subcategory": "exposed_wire",
+   "style": "worried about children or safety",
+   "length": "one short sentence",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Electricity outage - loose, hanging, sparking or exposed electric wires and boxes.\nTone: worried about children or safety.\nLength: one short sentence.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0066",
+   "category": "drainage_sewage",
+   "subcategory": "drain_blocked",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - a drain or gutter that is clogged and overflowing.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0067",
+   "category": "drainage_sewage",
+   "subcategory": "sewage_overflow",
+   "style": "angry and frustrated",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - sewage coming up or flowing where it should not.\nTone: angry and frustrated.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0068",
+   "category": "drainage_sewage",
+   "subcategory": "waterlogging",
+   "style": "long-winded, with extra background",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - rainwater standing on roads or in underpasses.\nTone: long-winded, with extra background.\nLength: one short sentence.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0069",
+   "category": "drainage_sewage",
+   "subcategory": "drain_blocked",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - a drain or gutter that is clogged and overflowing.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0070",
+   "category": "drainage_sewage",
+   "subcategory": "sewage_overflow",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - sewage coming up or flowing where it should not.\nTone: typed in a hurry with typos and little punctuation.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0071",
+   "category": "drainage_sewage",
+   "subcategory": "waterlogging",
+   "style": "angry and frustrated",
+   "length": "one or two sentences",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - rainwater standing on roads or in underpasses.\nTone: angry and frustrated.\nLength: one or two sentences.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0072",
+   "category": "drainage_sewage",
+   "subcategory": "drain_blocked",
+   "style": "neutral and factual, like a field report",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - a drain or gutter that is clogged and overflowing.\nTone: neutral and factual, like a field report.\nLength: one short sentence.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0073",
+   "category": "drainage_sewage",
+   "subcategory": "sewage_overflow",
+   "style": "angry and frustrated",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - sewage coming up or flowing where it should not.\nTone: angry and frustrated.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0074",
+   "category": "drainage_sewage",
+   "subcategory": "waterlogging",
+   "style": "angry and frustrated",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - rainwater standing on roads or in underpasses.\nTone: angry and frustrated.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0075",
+   "category": "drainage_sewage",
+   "subcategory": "drain_blocked",
+   "style": "worried about children or safety",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - a drain or gutter that is clogged and overflowing.\nTone: worried about children or safety.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0076",
+   "category": "drainage_sewage",
+   "subcategory": "sewage_overflow",
+   "style": "worried about children or safety",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Drainage and sewage - sewage coming up or flowing where it should not.\nTone: worried about children or safety.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0077",
+   "category": "damaged_infrastructure",
+   "subcategory": "footpath",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken, missing or uneven footpath tiles, kerbs or ramps.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0078",
+   "category": "damaged_infrastructure",
+   "subcategory": "railing_or_divider",
+   "style": "worried about children or safety",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - damaged railings, dividers, barriers or guard rails.\nTone: worried about children or safety.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0079",
+   "category": "damaged_infrastructure",
+   "subcategory": "public_furniture",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken benches, bus shelters, toilets, swings or park items.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0080",
+   "category": "damaged_infrastructure",
+   "subcategory": "signage",
+   "style": "worried about children or safety",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - fallen, bent or unreadable signs and boards.\nTone: worried about children or safety.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0081",
+   "category": "damaged_infrastructure",
+   "subcategory": "footpath",
+   "style": "long-winded, with extra background",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken, missing or uneven footpath tiles, kerbs or ramps.\nTone: long-winded, with extra background.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0082",
+   "category": "damaged_infrastructure",
+   "subcategory": "railing_or_divider",
+   "style": "polite and formal",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - damaged railings, dividers, barriers or guard rails.\nTone: polite and formal.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0083",
+   "category": "damaged_infrastructure",
+   "subcategory": "public_furniture",
+   "style": "polite and formal",
+   "length": "one short sentence",
+   "language": "Hindi written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken benches, bus shelters, toilets, swings or park items.\nTone: polite and formal.\nLength: one short sentence.\nLanguage: Hindi written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0084",
+   "category": "damaged_infrastructure",
+   "subcategory": "signage",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - fallen, bent or unreadable signs and boards.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0085",
+   "category": "damaged_infrastructure",
+   "subcategory": "footpath",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken, missing or uneven footpath tiles, kerbs or ramps.\nTone: typed in a hurry with typos and little punctuation.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0086",
+   "category": "damaged_infrastructure",
+   "subcategory": "railing_or_divider",
+   "style": "worried about children or safety",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - damaged railings, dividers, barriers or guard rails.\nTone: worried about children or safety.\nLength: one short sentence.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0087",
+   "category": "damaged_infrastructure",
+   "subcategory": "public_furniture",
+   "style": "worried about children or safety",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Damaged public infrastructure - broken benches, bus shelters, toilets, swings or park items.\nTone: worried about children or safety.\nLength: one short sentence.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0088",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "neutral and factual, like a field report",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: neutral and factual, like a field report.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0089",
+   "category": "road_obstruction",
+   "subcategory": "debris",
+   "style": "long-winded, with extra background",
+   "length": "one or two sentences",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - rubble, building material or junk left on the road.\nTone: long-winded, with extra background.\nLength: one or two sentences.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0090",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: typed in a hurry with typos and little punctuation.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0091",
+   "category": "road_obstruction",
+   "subcategory": "debris",
+   "style": "worried about children or safety",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - rubble, building material or junk left on the road.\nTone: worried about children or safety.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0092",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "typed in a hurry with typos and little punctuation",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: typed in a hurry with typos and little punctuation.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0093",
+   "category": "road_obstruction",
+   "subcategory": "debris",
+   "style": "long-winded, with extra background",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - rubble, building material or junk left on the road.\nTone: long-winded, with extra background.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0094",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "an elderly person using simple words",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: an elderly person using simple words.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0095",
+   "category": "road_obstruction",
+   "subcategory": "debris",
+   "style": "short and blunt, like a text message",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - rubble, building material or junk left on the road.\nTone: short and blunt, like a text message.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0096",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "short and blunt, like a text message",
+   "length": "two or three sentences with concrete details",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: short and blunt, like a text message.\nLength: two or three sentences with concrete details.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0097",
+   "category": "road_obstruction",
+   "subcategory": "debris",
+   "style": "an elderly person using simple words",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - rubble, building material or junk left on the road.\nTone: an elderly person using simple words.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0098",
+   "category": "road_obstruction",
+   "subcategory": "fallen_tree",
+   "style": "polite and formal",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Road obstruction - a fallen tree or heavy branches on or near the road.\nTone: polite and formal.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern."
+  },
+  {
+   "id": "r0099",
+   "category": "other",
+   "subcategory": "",
+   "style": "polite and formal",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: polite and formal.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0100",
+   "category": "other",
+   "subcategory": "",
+   "style": "long-winded, with extra background",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: long-winded, with extra background.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0101",
+   "category": "other",
+   "subcategory": "",
+   "style": "worried about children or safety",
+   "length": "3 to 6 words",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: worried about children or safety.\nLength: 3 to 6 words.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0102",
+   "category": "other",
+   "subcategory": "",
+   "style": "neutral and factual, like a field report",
+   "length": "one or two sentences",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: neutral and factual, like a field report.\nLength: one or two sentences.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0103",
+   "category": "other",
+   "subcategory": "",
+   "style": "long-winded, with extra background",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: long-winded, with extra background.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0104",
+   "category": "other",
+   "subcategory": "",
+   "style": "angry and frustrated",
+   "length": "one short sentence",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: angry and frustrated.\nLength: one short sentence.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0105",
+   "category": "other",
+   "subcategory": "",
+   "style": "an elderly person using simple words",
+   "length": "one short sentence",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: an elderly person using simple words.\nLength: one short sentence.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0106",
+   "category": "other",
+   "subcategory": "",
+   "style": "short and blunt, like a text message",
+   "length": "one or two sentences",
+   "language": "English mixed with Hindi words written in roman script",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: short and blunt, like a text message.\nLength: one or two sentences.\nLanguage: English mixed with Hindi words written in roman script.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0107",
+   "category": "other",
+   "subcategory": "",
+   "style": "an elderly person using simple words",
+   "length": "3 to 6 words",
+   "language": "plain English",
+   "places": "most of them name a landmark, area or street",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: an elderly person using simple words.\nLength: 3 to 6 words.\nLanguage: plain English.\nLocation: most of them name a landmark, area or street.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0108",
+   "category": "other",
+   "subcategory": "",
+   "style": "long-winded, with extra background",
+   "length": "two or three sentences with concrete details",
+   "language": "plain English",
+   "places": "none of them mention any location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: long-winded, with extra background.\nLength: two or three sentences with concrete details.\nLanguage: plain English.\nLocation: none of them mention any location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  },
+  {
+   "id": "r0109",
+   "category": "other",
+   "subcategory": "",
+   "style": "polite and formal",
+   "length": "two or three sentences with concrete details",
+   "language": "Hindi written in roman script",
+   "places": "about half of them mention a location",
+   "prompt": "Write 15 different complaint messages.\nTopic: Other - complaints that fit none of the other nine categories: noise, stray animals, parking, hawkers, pollution, queries about services, thanks, follow-ups with no detail, or messages too vague to classify.\nTone: polite and formal.\nLength: two or three sentences with concrete details.\nLanguage: Hindi written in roman script.\nLocation: about half of them mention a location.\n\nOutput one message per line. No numbering, no bullets, no quotes, no blank lines and nothing else. Vary the situation, the objects mentioned and the opening words, and do not reuse a sentence pattern.\nNone of the messages may be about: Pothole, Open manhole, Garbage, Streetlight, Water leakage, Electricity outage, Drainage and sewage, Damaged public infrastructure, Road obstruction."
+  }
+ ]
+}

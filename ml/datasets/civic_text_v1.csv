@@ -1,0 +1,351 @@
+id,text,category,subcategory,source,split
+t0001,"Huge pothole in the middle of the road, bikes keep skidding",pothole,pothole_single,handwritten,train
+t0002,"there is a deep pothole near the signal, my car tyre burst",pothole,pothole_single,handwritten,train
+t0003,"Road is full of potholes after the rains, very dangerous at night",pothole,road_surface_broken,handwritten,train
+t0004,pothole,pothole,pothole_single,handwritten,train
+t0005,The tar has completely come off and the road is just gravel now,pothole,road_surface_broken,handwritten,test
+t0006,"Big crater on the main road, water fills it and you can't see how deep it is",pothole,pothole_single,handwritten,train
+t0007,Two-wheeler riders falling because of a hole near the bus depot,pothole,pothole_single,handwritten,train
+t0008,"road broken badly, patch work done last month already washed away",pothole,road_surface_broken,handwritten,train
+t0009,"Please fill the pothole outside the school gate, kids walk around it into traffic",pothole,pothole_single,handwritten,test
+t0010,"Craters everywhere on this stretch, auto drivers refuse to come here",pothole,road_surface_broken,handwritten,train
+t0011,"rasta me bada gaddha hai, accident ho sakta hai",pothole,pothole_single,handwritten,train
+t0012,A pothole opened up right after the speed breaker,pothole,pothole_single,handwritten,test
+t0013,The road surface has sunk and cracked near the flyover ramp,pothole,road_surface_broken,handwritten,train
+t0014,"Deep pit on the road, someone has put a stone in it as a warning",pothole,pothole_single,handwritten,train
+t0015,"Uneven broken road, ambulances have to slow down to a crawl",pothole,road_surface_broken,handwritten,test
+t0016,potholes again!! third complaint this year,pothole,road_surface_broken,handwritten,train
+t0017,Hole in the road about two feet wide outside building no. 4,pothole,pothole_single,handwritten,train
+t0018,The newly laid road already has potholes forming at the edges,pothole,road_surface_broken,handwritten,train
+t0019,My scooter got damaged hitting a pothole that is hidden under rainwater,pothole,pothole_single,handwritten,train
+t0020,"Road resurfacing needed, there are more holes than road",pothole,road_surface_broken,handwritten,test
+t0021,pot hole near petrol pump,pothole,pothole_single,handwritten,train
+t0022,Large pothole causing traffic jam every morning as cars swerve around it,pothole,pothole_single,handwritten,train
+t0023,The lane behind the market is broken up and full of pits,pothole,road_surface_broken,handwritten,train
+t0024,Dangerous pothole on the highway service road,pothole,pothole_single,handwritten,train
+t0025,"Road caved in a little near the junction, looks like a pothole forming",pothole,pothole_single,handwritten,train
+t0026,"Near the railway station: huge pothole in the middle of the road, bikes keep skidding",pothole,pothole_single,augmented,train
+t0027,"there is a deep pothole near the signal, my car tyre burst at the corner of 4th cross",pothole,pothole_single,augmented,train
+t0028,"Road is full of potholes after the rains, very dangerous at night. Please fix urgently.",pothole,road_surface_broken,augmented,train
+t0029,The tar has completely come off and the road is just gravel now near the bus depot,pothole,road_surface_broken,augmented,test
+t0030,"Big crater on the main road, water fills it and you can't see how deep it is. Someone will get hurt.",pothole,pothole_single,augmented,train
+t0031,"Lane 3, Shivaji Nagar - two-wheeler riders falling because of a hole near the bus depot",pothole,pothole_single,augmented,train
+t0032,"road broken badly, patch work done last month already washed away. Someone will get hurt.",pothole,road_surface_broken,augmented,train
+t0033,"Sector 7 - please fill the pothole outside the school gate, kids walk around it into traffic",pothole,pothole_single,augmented,test
+t0034,"Near the railway station: craters everywhere on this stretch, auto drivers refuse to come here",pothole,road_surface_broken,augmented,train
+t0035,"Sector 7 - rasta me bada gaddha hai, accident ho sakta hai",pothole,pothole_single,augmented,train
+t0036,"Open manhole on the footpath, no cover at all",open_manhole,lid_missing,handwritten,train
+t0037,"Manhole cover missing near the bus stop, someone could fall in",open_manhole,lid_missing,handwritten,train
+t0038,The manhole lid is broken in half and sinking,open_manhole,lid_broken,handwritten,test
+t0039,open manhole,open_manhole,lid_missing,handwritten,train
+t0040,"Uncovered drain chamber in the middle of the lane, only a branch stuck in it as warning",open_manhole,lid_missing,handwritten,train
+t0041,"Kids play near an open manhole outside the park, please cover it urgently",open_manhole,lid_missing,handwritten,train
+t0042,Cracked manhole cover rocks when vehicles go over it,open_manhole,lid_broken,handwritten,train
+t0043,Someone stole the iron lid of the gutter chamber,open_manhole,lid_missing,handwritten,train
+t0044,Manhole is open since yesterday after the workers left,open_manhole,lid_missing,handwritten,train
+t0045,The cover on the sewer chamber has collapsed inward,open_manhole,lid_broken,handwritten,train
+t0046,gutter ka dhakkan gayab hai,open_manhole,lid_missing,handwritten,train
+t0047,"Manhole lid is sunken about 6 inches below road level, bikes bounce badly",open_manhole,lid_broken,handwritten,train
+t0048,A cow fell into an open manhole this morning,open_manhole,lid_missing,handwritten,train
+t0049,"Broken concrete slab over the chamber, you can see the sewer underneath",open_manhole,lid_broken,handwritten,train
+t0050,"No lid on the manhole at the corner, it is dark there at night",open_manhole,lid_missing,handwritten,train
+t0051,Manhole left open during desilting work and nobody is guarding it,open_manhole,lid_missing,handwritten,train
+t0052,the manhole cover is cracked and loose,open_manhole,lid_broken,handwritten,test
+t0053,Open chamber hole on the pedestrian crossing,open_manhole,lid_missing,handwritten,train
+t0054,"Plastic sheet placed over an open manhole, someone will step on it",open_manhole,lid_missing,handwritten,test
+t0055,"Manhole cover broken, half of it is missing",open_manhole,lid_broken,handwritten,train
+t0056,"Missing manhole cover on service road, very dangerous during rain",open_manhole,lid_missing,handwritten,train
+t0057,Cover on the storm water chamber has shattered,open_manhole,lid_broken,handwritten,train
+t0058,Elderly man almost fell into an uncovered manhole near the temple,open_manhole,lid_missing,handwritten,test
+t0059,"Manhole open, please send someone before an accident happens",open_manhole,lid_missing,handwritten,train
+t0060,Loose manhole lid flipped up when a truck passed,open_manhole,lid_broken,handwritten,test
+t0061,"Open manhole on the footpath, no cover at all in front of the post office",open_manhole,lid_missing,augmented,train
+t0062,"Manhole cover missing near the bus stop, someone could fall in opposite the temple",open_manhole,lid_missing,augmented,train
+t0063,The manhole lid is broken in half and sinking. Kindly take action.,open_manhole,lid_broken,augmented,test
+t0064,"Uncovered drain chamber in the middle of the lane, only a branch stuck in it as warning. Someone will get hurt.",open_manhole,lid_missing,augmented,train
+t0065,"Behind the vegetable market, kids play near an open manhole outside the park, please cover it urgently",open_manhole,lid_missing,augmented,train
+t0066,"Outside Gate 2 of the college, cracked manhole cover rocks when vehicles go over it",open_manhole,lid_broken,augmented,train
+t0067,Someone stole the iron lid of the gutter chamber near the overbridge,open_manhole,lid_missing,augmented,train
+t0068,"At MG Road junction, manhole is open since yesterday after the workers left",open_manhole,lid_missing,augmented,train
+t0069,The cover on the sewer chamber has collapsed inward. Please fix urgently.,open_manhole,lid_broken,augmented,train
+t0070,gutter ka dhakkan gayab hai near the bus depot,open_manhole,lid_missing,augmented,train
+t0071,"Garbage has not been collected for a week, it stinks",garbage,missed_collection,handwritten,test
+t0072,The public dustbin is overflowing onto the road,garbage,bin_overflow,handwritten,train
+t0073,People are dumping construction waste and household trash on the empty plot,garbage,illegal_dumping,handwritten,train
+t0074,garbage pile,garbage,bin_overflow,handwritten,train
+t0075,Stray dogs tearing open garbage bags all over the footpath,garbage,bin_overflow,handwritten,test
+t0076,Waste collection van skipped our society again,garbage,missed_collection,handwritten,train
+t0077,Huge heap of rubbish next to the vegetable market attracting flies,garbage,illegal_dumping,handwritten,train
+t0078,kachra uthaya nahi gaya teen din se,garbage,missed_collection,handwritten,test
+t0079,"Bins overflowing after the festival, nobody cleared them",garbage,bin_overflow,handwritten,train
+t0080,Someone is burning garbage at the corner every evening,garbage,illegal_dumping,handwritten,train
+t0081,Trash dumped near the lake shore,garbage,illegal_dumping,handwritten,train
+t0082,The community garbage container is full and waste is spread around it,garbage,bin_overflow,handwritten,train
+t0083,Door-to-door garbage collection has stopped in our lane,garbage,missed_collection,handwritten,test
+t0084,Plastic waste piling up in the nala bank,garbage,illegal_dumping,handwritten,train
+t0085,Smelly garbage dump right next to the school wall,garbage,illegal_dumping,handwritten,train
+t0086,Overflowing bin outside the hospital gate,garbage,bin_overflow,handwritten,test
+t0087,Hotel waste thrown on the road behind the restaurant every night,garbage,illegal_dumping,handwritten,train
+t0088,garbage not picked up,garbage,missed_collection,handwritten,train
+t0089,Rotting food waste and plastic all over the street corner,garbage,bin_overflow,handwritten,train
+t0090,Truck dumped a load of debris and trash and drove off,garbage,illegal_dumping,handwritten,train
+t0091,Mosquitoes breeding because of the garbage heap near our building,garbage,bin_overflow,handwritten,train
+t0092,Sweepers collected the waste but left the bags on the roadside,garbage,missed_collection,handwritten,train
+t0093,Dead animal and garbage lying near the bus stand,garbage,illegal_dumping,handwritten,train
+t0094,The litter bin is broken and trash spills out,garbage,bin_overflow,handwritten,train
+t0095,Nobody has cleared the market waste since Sunday,garbage,missed_collection,handwritten,train
+t0096,"Garbage has not been collected for a week, it stinks in front of the post office",garbage,missed_collection,augmented,test
+t0097,The public dustbin is overflowing onto the road. Please fix urgently.,garbage,bin_overflow,augmented,train
+t0098,"At MG Road junction, people are dumping construction waste and household trash on the empty plot",garbage,illegal_dumping,augmented,train
+t0099,Ward 12: stray dogs tearing open garbage bags all over the footpath,garbage,bin_overflow,augmented,test
+t0100,"Opp. City Hospital, waste collection van skipped our society again",garbage,missed_collection,augmented,train
+t0101,Near the railway station: huge heap of rubbish next to the vegetable market attracting flies,garbage,illegal_dumping,augmented,train
+t0102,kachra uthaya nahi gaya teen din se. Please fix urgently.,garbage,missed_collection,augmented,test
+t0103,"Bins overflowing after the festival, nobody cleared them. Complained before but nothing happened.",garbage,bin_overflow,augmented,train
+t0104,Someone is burning garbage at the corner every evening. Kindly take action.,garbage,illegal_dumping,augmented,train
+t0105,Trash dumped near the lake shore in front of the post office,garbage,illegal_dumping,augmented,train
+t0106,"Streetlight not working, the whole lane is dark",streetlight,light_off,handwritten,train
+t0107,The street lamp keeps flickering on and off all night,streetlight,light_flickering,handwritten,train
+t0108,"Streetlights are on during the day, wasting electricity",streetlight,light_off,handwritten,test
+t0109,street light off,streetlight,light_off,handwritten,train
+t0110,Light pole is bent after a truck hit it and the lamp is hanging,streetlight,pole_damaged,handwritten,train
+t0111,Three streetlights in a row are dead near the park entrance,streetlight,light_off,handwritten,train
+t0112,Women feel unsafe walking here because the street lamps are out,streetlight,light_off,handwritten,test
+t0113,"Lamp blinks constantly, very irritating and barely lights the road",streetlight,light_flickering,handwritten,train
+t0114,Streetlight pole has rusted and is leaning towards the houses,streetlight,pole_damaged,handwritten,train
+t0115,No light on the bridge at night since last month,streetlight,light_off,handwritten,train
+t0116,Street ki batti band hai,streetlight,light_off,handwritten,train
+t0117,The bulb in the streetlight is broken,streetlight,light_off,handwritten,train
+t0118,Streetlight glass cover fell down and the lamp is exposed,streetlight,pole_damaged,handwritten,test
+t0119,"Very dim streetlight, flickers whenever it rains",streetlight,light_flickering,handwritten,train
+t0120,"Dark stretch on the highway, the lights were never repaired after the storm",streetlight,light_off,handwritten,train
+t0121,"Pole knocked down by a tree, light not working",streetlight,pole_damaged,handwritten,train
+t0122,street lamps keep switching off around midnight,streetlight,light_flickering,handwritten,train
+t0123,The light outside the bus stop has been off for weeks,streetlight,light_off,handwritten,train
+t0124,Half the lights on the main road are not working,streetlight,light_off,handwritten,train
+t0125,"Streetlight timer is wrong, it stays on till noon",streetlight,light_off,handwritten,train
+t0126,Flickering lamp post outside our gate,streetlight,light_flickering,handwritten,test
+t0127,The decorative lights on the promenade are all dead,streetlight,light_off,handwritten,train
+t0128,Streetlight pole base is cracked and wobbling,streetlight,pole_damaged,handwritten,train
+t0129,dark lane no streetlight working,streetlight,light_off,handwritten,train
+t0130,Light near the underpass goes on and off every few seconds,streetlight,light_flickering,handwritten,test
+t0131,"Streetlight not working, the whole lane is dark. Complained before but nothing happened.",streetlight,light_off,augmented,train
+t0132,Sector 7 - the street lamp keeps flickering on and off all night,streetlight,light_flickering,augmented,train
+t0133,"Streetlights are on during the day, wasting electricity. Please fix urgently.",streetlight,light_off,augmented,test
+t0134,"Behind the vegetable market, street light off",streetlight,light_off,augmented,train
+t0135,Light pole is bent after a truck hit it and the lamp is hanging. Complained before but nothing happened.,streetlight,pole_damaged,augmented,train
+t0136,"Behind the vegetable market, three streetlights in a row are dead near the park entrance",streetlight,light_off,augmented,train
+t0137,Women feel unsafe walking here because the street lamps are out. Complained before but nothing happened.,streetlight,light_off,augmented,test
+t0138,"Opp. City Hospital, lamp blinks constantly, very irritating and barely lights the road",streetlight,light_flickering,augmented,train
+t0139,Streetlight pole has rusted and is leaning towards the houses. Someone will get hurt.,streetlight,pole_damaged,augmented,train
+t0140,Sector 7 - no light on the bridge at night since last month,streetlight,light_off,augmented,train
+t0141,Water pipeline burst and water is gushing onto the road,water_leakage,pipe_burst,handwritten,train
+t0142,Clean drinking water leaking from a pipe joint for days,water_leakage,pipe_leak,handwritten,test
+t0143,"The main supply line has a leak, huge wastage of water",water_leakage,pipe_leak,handwritten,train
+t0144,pipe leak,water_leakage,pipe_leak,handwritten,train
+t0145,Fountain of water coming from under the road after the digging work,water_leakage,pipe_burst,handwritten,train
+t0146,"Municipal tap at the corner keeps running, the valve is broken",water_leakage,pipe_leak,handwritten,train
+t0147,"Pipeline burst near the junction, our area has low pressure since then",water_leakage,pipe_burst,handwritten,train
+t0148,pani ki pipeline phat gayi hai,water_leakage,pipe_burst,handwritten,train
+t0149,Water continuously leaking from the valve chamber on the footpath,water_leakage,pipe_leak,handwritten,train
+t0150,A small leak in the water line has now become a big puddle,water_leakage,pipe_leak,handwritten,train
+t0151,Contractor broke the water pipe while laying cables,water_leakage,pipe_burst,handwritten,train
+t0152,Clear water flowing on the road every morning when supply comes,water_leakage,pipe_leak,handwritten,test
+t0153,"Burst pipe flooding the lane, the road surface is getting damaged",water_leakage,pipe_burst,handwritten,train
+t0154,"Leaking water connection outside house 12, thousands of litres wasted",water_leakage,pipe_leak,handwritten,train
+t0155,The overhead tank pipe in the colony is leaking,water_leakage,pipe_leak,handwritten,train
+t0156,Huge water leak near the metro construction site,water_leakage,pipe_burst,handwritten,train
+t0157,"drinking water wasted, pipe leaking since sunday",water_leakage,pipe_leak,handwritten,test
+t0158,"Supply pipe cracked, water is spraying out",water_leakage,pipe_burst,handwritten,train
+t0159,Water meter chamber full of leaking water,water_leakage,pipe_leak,handwritten,train
+t0160,"Main line rupture, no water in the whole sector",water_leakage,pipe_burst,handwritten,test
+t0161,"Public tap has no tap, water just flows out all day",water_leakage,pipe_leak,handwritten,train
+t0162,Leaking pipe under the footbridge,water_leakage,pipe_leak,handwritten,train
+t0163,"Pipeline busted near the school, children splashing in the water",water_leakage,pipe_burst,handwritten,train
+t0164,"Water seeping up through the road, looks like an underground pipe leak",water_leakage,pipe_leak,handwritten,test
+t0165,Leakage in the water line next to the gas station,water_leakage,pipe_leak,handwritten,train
+t0166,Water pipeline burst and water is gushing onto the road. Complained before but nothing happened.,water_leakage,pipe_burst,augmented,train
+t0167,Clean drinking water leaking from a pipe joint for days. Complained before but nothing happened.,water_leakage,pipe_leak,augmented,test
+t0168,"The main supply line has a leak, huge wastage of water. Please fix urgently.",water_leakage,pipe_leak,augmented,train
+t0169,Fountain of water coming from under the road after the digging work in front of the post office,water_leakage,pipe_burst,augmented,train
+t0170,"Municipal tap at the corner keeps running, the valve is broken. This has been going on for weeks.",water_leakage,pipe_leak,augmented,train
+t0171,"Pipeline burst near the junction, our area has low pressure since then opposite the temple",water_leakage,pipe_burst,augmented,train
+t0172,pani ki pipeline phat gayi hai opposite the temple,water_leakage,pipe_burst,augmented,train
+t0173,Water continuously leaking from the valve chamber on the footpath. Please fix urgently.,water_leakage,pipe_leak,augmented,train
+t0174,A small leak in the water line has now become a big puddle near the overbridge,water_leakage,pipe_leak,augmented,train
+t0175,"Outside Gate 2 of the college, contractor broke the water pipe while laying cables",water_leakage,pipe_burst,augmented,train
+t0176,No power in our area since morning,electricity_outage,power_cut,handwritten,train
+t0177,"Electric wire hanging low over the road, very dangerous",electricity_outage,exposed_wire,handwritten,train
+t0178,Transformer is sparking and making loud noises,electricity_outage,transformer_issue,handwritten,train
+t0179,power cut,electricity_outage,power_cut,handwritten,test
+t0180,Exposed live wires coming out of the junction box on the footpath,electricity_outage,exposed_wire,handwritten,train
+t0181,Frequent power cuts every evening for the last week,electricity_outage,power_cut,handwritten,train
+t0182,"Transformer caught fire last night, whole colony in darkness",electricity_outage,transformer_issue,handwritten,test
+t0183,bijli nahi hai 6 ghante se,electricity_outage,power_cut,handwritten,test
+t0184,Cable snapped during the storm and is lying on the road,electricity_outage,exposed_wire,handwritten,test
+t0185,Electricity keeps tripping in the entire building block,electricity_outage,power_cut,handwritten,train
+t0186,The distribution box door is open and wires are exposed near the playground,electricity_outage,exposed_wire,handwritten,train
+t0187,Transformer leaking oil and humming very loudly,electricity_outage,transformer_issue,handwritten,train
+t0188,Power outage since the rain started,electricity_outage,power_cut,handwritten,train
+t0189,"Wire touching the tree branches, it sparks when the wind blows",electricity_outage,exposed_wire,handwritten,train
+t0190,"Voltage fluctuation damaged our appliances, supply goes off repeatedly",electricity_outage,power_cut,handwritten,test
+t0191,Overhead line has fallen on the wall of the school,electricity_outage,exposed_wire,handwritten,train
+t0192,whole street no electricity,electricity_outage,power_cut,handwritten,train
+t0193,Transformer smoke coming out near the market,electricity_outage,transformer_issue,handwritten,train
+t0194,"Bare electric cable lying in the waterlogged street, someone will get a shock",electricity_outage,exposed_wire,handwritten,train
+t0195,"Power has been off for two days, nobody from the electricity office came",electricity_outage,power_cut,handwritten,train
+t0196,Feeder pillar box is burnt and wires are hanging out,electricity_outage,exposed_wire,handwritten,train
+t0197,Transformer exploded with a loud bang,electricity_outage,transformer_issue,handwritten,train
+t0198,Power goes off every hour for 15 minutes,electricity_outage,power_cut,handwritten,train
+t0199,Sparks from the pole wires during rain,electricity_outage,exposed_wire,handwritten,train
+t0200,Load shedding without notice in our sector,electricity_outage,power_cut,handwritten,train
+t0201,No power in our area since morning in front of the post office,electricity_outage,power_cut,augmented,train
+t0202,"Electric wire hanging low over the road, very dangerous in our society",electricity_outage,exposed_wire,augmented,train
+t0203,Near the railway station: transformer is sparking and making loud noises,electricity_outage,transformer_issue,augmented,train
+t0204,"Outside Gate 2 of the college, exposed live wires coming out of the junction box on the footpath",electricity_outage,exposed_wire,augmented,train
+t0205,Frequent power cuts every evening for the last week. This has been going on for weeks.,electricity_outage,power_cut,augmented,train
+t0206,"Transformer caught fire last night, whole colony in darkness near the overbridge",electricity_outage,transformer_issue,augmented,test
+t0207,bijli nahi hai 6 ghante se. Kindly take action.,electricity_outage,power_cut,augmented,test
+t0208,Cable snapped during the storm and is lying on the road. Please fix urgently.,electricity_outage,exposed_wire,augmented,test
+t0209,Electricity keeps tripping in the entire building block opposite the temple,electricity_outage,power_cut,augmented,train
+t0210,"Outside Gate 2 of the college, the distribution box door is open and wires are exposed near the playground",electricity_outage,exposed_wire,augmented,train
+t0211,Drain is blocked and dirty water is overflowing on the road,drainage_sewage,drain_blocked,handwritten,train
+t0212,"Sewage water flowing into our lane, terrible smell",drainage_sewage,sewage_overflow,handwritten,train
+t0213,Road is waterlogged after every small rain,drainage_sewage,waterlogging,handwritten,train
+t0214,blocked drain,drainage_sewage,drain_blocked,handwritten,train
+t0215,The gutter is choked with plastic and silt,drainage_sewage,drain_blocked,handwritten,test
+t0216,Sewage line overflowing from the chamber near the market,drainage_sewage,sewage_overflow,handwritten,train
+t0217,"Knee-deep water on the road, the storm water drain is not working",drainage_sewage,waterlogging,handwritten,train
+t0218,"nali band hai, ganda pani road pe aa raha hai",drainage_sewage,drain_blocked,handwritten,train
+t0219,Black sewage water entering houses on the ground floor,drainage_sewage,sewage_overflow,handwritten,train
+t0220,"Nala not desilted before monsoon, already overflowing",drainage_sewage,drain_blocked,handwritten,train
+t0221,"Stagnant water near the bus stop for days, mosquitoes everywhere",drainage_sewage,waterlogging,handwritten,train
+t0222,"Sewer backflow in the colony, toilets are bubbling",drainage_sewage,sewage_overflow,handwritten,test
+t0223,Open drain is full of garbage and not flowing,drainage_sewage,drain_blocked,handwritten,train
+t0224,"Underpass flooded again, vehicles stuck",drainage_sewage,waterlogging,handwritten,train
+t0225,Drain cover broken and drain overflowing,drainage_sewage,drain_blocked,handwritten,train
+t0226,Sewage leaking out onto the footpath outside the hospital,drainage_sewage,sewage_overflow,handwritten,train
+t0227,water logging,drainage_sewage,waterlogging,handwritten,test
+t0228,"Rainwater not draining from the street, it stays for days",drainage_sewage,waterlogging,handwritten,test
+t0229,"Sewage smell is unbearable, the line seems to have burst",drainage_sewage,sewage_overflow,handwritten,train
+t0230,Roadside gutter clogged with leaves and mud,drainage_sewage,drain_blocked,handwritten,train
+t0231,Dirty drain water mixing with drinking water supply,drainage_sewage,sewage_overflow,handwritten,train
+t0232,"Whole lane flooded with rainwater, the drain outlet is blocked",drainage_sewage,waterlogging,handwritten,test
+t0233,Overflowing sewer near the school entrance,drainage_sewage,sewage_overflow,handwritten,train
+t0234,Storm drain grating is clogged so the road floods,drainage_sewage,drain_blocked,handwritten,train
+t0235,The drainage channel has collapsed and water is pooling,drainage_sewage,drain_blocked,handwritten,train
+t0236,Drain is blocked and dirty water is overflowing on the road near the main chowk,drainage_sewage,drain_blocked,augmented,train
+t0237,"Sewage water flowing into our lane, terrible smell. This has been going on for weeks.",drainage_sewage,sewage_overflow,augmented,train
+t0238,Near the railway station: road is waterlogged after every small rain,drainage_sewage,waterlogging,augmented,train
+t0239,"Behind the vegetable market, the gutter is choked with plastic and silt",drainage_sewage,drain_blocked,augmented,test
+t0240,"Opp. City Hospital, sewage line overflowing from the chamber near the market",drainage_sewage,sewage_overflow,augmented,train
+t0241,"Knee-deep water on the road, the storm water drain is not working. Kindly take action.",drainage_sewage,waterlogging,augmented,train
+t0242,"Near the railway station: nali band hai, ganda pani road pe aa raha hai",drainage_sewage,drain_blocked,augmented,train
+t0243,"Lane 3, Shivaji Nagar - black sewage water entering houses on the ground floor",drainage_sewage,sewage_overflow,augmented,train
+t0244,"Outside Gate 2 of the college, nala not desilted before monsoon, already overflowing",drainage_sewage,drain_blocked,augmented,train
+t0245,"Stagnant water near the bus stop for days, mosquitoes everywhere near the bus depot",drainage_sewage,waterlogging,augmented,train
+t0246,"Footpath tiles are broken and uplifted, people are tripping",damaged_infrastructure,footpath,handwritten,train
+t0247,"Railing on the bridge is broken, a gap big enough to fall through",damaged_infrastructure,railing_or_divider,handwritten,train
+t0248,The bench in the park is broken and has sharp edges,damaged_infrastructure,public_furniture,handwritten,train
+t0249,broken footpath,damaged_infrastructure,footpath,handwritten,train
+t0250,Bus stop shelter roof collapsed partially,damaged_infrastructure,public_furniture,handwritten,test
+t0251,Road divider is damaged and the concrete blocks are lying on the road,damaged_infrastructure,railing_or_divider,handwritten,train
+t0252,"Signboard fell down, nobody knows which way the exit is",damaged_infrastructure,signage,handwritten,train
+t0253,"Footpath slab missing, you can see the drain below",damaged_infrastructure,footpath,handwritten,train
+t0254,The handrail on the foot overbridge stairs is loose,damaged_infrastructure,railing_or_divider,handwritten,train
+t0255,Public toilet door broken and the wash basin is cracked,damaged_infrastructure,public_furniture,handwritten,test
+t0256,footpath ki tiles tooti hui hai,damaged_infrastructure,footpath,handwritten,train
+t0257,Traffic sign bent and facing the wrong direction,damaged_infrastructure,signage,handwritten,test
+t0258,"Park swing chain broken, children could get hurt",damaged_infrastructure,public_furniture,handwritten,train
+t0259,Crash barrier on the flyover is damaged after an accident,damaged_infrastructure,railing_or_divider,handwritten,train
+t0260,Kerb stones broken along the whole stretch of the sidewalk,damaged_infrastructure,footpath,handwritten,train
+t0261,Street name board rusted and unreadable,damaged_infrastructure,signage,handwritten,test
+t0262,The wall of the public garden has collapsed onto the footpath,damaged_infrastructure,public_furniture,handwritten,train
+t0263,"Broken grill on the median, people are crossing through the gap",damaged_infrastructure,railing_or_divider,handwritten,test
+t0264,bus stop seat broken,damaged_infrastructure,public_furniture,handwritten,train
+t0265,Ramp for wheelchair users at the subway entrance is broken,damaged_infrastructure,footpath,handwritten,train
+t0266,The footbridge steps are cracked and crumbling,damaged_infrastructure,footpath,handwritten,train
+t0267,Hoarding frame hanging dangerously over the road,damaged_infrastructure,signage,handwritten,train
+t0268,Guard rail along the canal is missing in several places,damaged_infrastructure,railing_or_divider,handwritten,train
+t0269,Drinking water fountain in the park is broken,damaged_infrastructure,public_furniture,handwritten,train
+t0270,Paver blocks have come out and the footpath is uneven,damaged_infrastructure,footpath,handwritten,train
+t0271,"Footpath tiles are broken and uplifted, people are tripping on the main road",damaged_infrastructure,footpath,augmented,train
+t0272,"Behind the vegetable market, railing on the bridge is broken, a gap big enough to fall through",damaged_infrastructure,railing_or_divider,augmented,train
+t0273,The bench in the park is broken and has sharp edges. Please fix urgently.,damaged_infrastructure,public_furniture,augmented,train
+t0274,"Outside Gate 2 of the college, bus stop shelter roof collapsed partially",damaged_infrastructure,public_furniture,augmented,test
+t0275,Road divider is damaged and the concrete blocks are lying on the road near the main chowk,damaged_infrastructure,railing_or_divider,augmented,train
+t0276,"Signboard fell down, nobody knows which way the exit is. Complained before but nothing happened.",damaged_infrastructure,signage,augmented,train
+t0277,"Footpath slab missing, you can see the drain below on the main road",damaged_infrastructure,footpath,augmented,train
+t0278,The handrail on the foot overbridge stairs is loose. This has been going on for weeks.,damaged_infrastructure,railing_or_divider,augmented,train
+t0279,Public toilet door broken and the wash basin is cracked. Complained before but nothing happened.,damaged_infrastructure,public_furniture,augmented,test
+t0280,footpath ki tiles tooti hui hai near the overbridge,damaged_infrastructure,footpath,augmented,train
+t0281,A big tree has fallen across the road after the storm,road_obstruction,fallen_tree,handwritten,train
+t0282,Construction debris dumped on the road blocking one lane,road_obstruction,debris,handwritten,test
+t0283,Tree branch broken and hanging over the footpath,road_obstruction,fallen_tree,handwritten,train
+t0284,fallen tree,road_obstruction,fallen_tree,handwritten,test
+t0285,Sand and bricks from a building site are lying on half the road,road_obstruction,debris,handwritten,test
+t0286,Uprooted tree blocking the entrance to our lane,road_obstruction,fallen_tree,handwritten,train
+t0287,Abandoned scrap vehicle parked on the road for months,road_obstruction,debris,handwritten,train
+t0288,ped gir gaya hai road pe,road_obstruction,fallen_tree,handwritten,train
+t0289,Large rocks left on the road after the excavation work,road_obstruction,debris,handwritten,test
+t0290,Tree fell on parked cars and is blocking traffic,road_obstruction,fallen_tree,handwritten,train
+t0291,Pile of rubble from demolition occupying the footpath,road_obstruction,debris,handwritten,train
+t0292,"Heavy branches fell on the road, two-wheelers can't pass",road_obstruction,fallen_tree,handwritten,train
+t0293,Steel rods and pipes left lying across the lane by contractors,road_obstruction,debris,handwritten,train
+t0294,"Big tree leaning dangerously, may fall on the road anytime",road_obstruction,fallen_tree,handwritten,train
+t0295,debris blocking road,road_obstruction,debris,handwritten,train
+t0296,Mud from a landslide has covered the road,road_obstruction,debris,handwritten,train
+t0297,Fallen tree trunk still not removed two days after the storm,road_obstruction,fallen_tree,handwritten,test
+t0298,"Construction material stored on the footpath, pedestrians walk on the road",road_obstruction,debris,handwritten,train
+t0299,Coconut tree collapsed onto the road near the beach,road_obstruction,fallen_tree,handwritten,train
+t0300,Old furniture and mattresses dumped in the middle of the lane,road_obstruction,debris,handwritten,train
+t0301,The road is blocked by a fallen electric pole and tree,road_obstruction,fallen_tree,handwritten,train
+t0302,Broken concrete pieces scattered on the road after the pipeline work,road_obstruction,debris,handwritten,train
+t0303,Tree fell partly and its branches are blocking the view of the traffic signal,road_obstruction,fallen_tree,handwritten,train
+t0304,"Gravel spilled from a truck all over the turn, bikes are slipping",road_obstruction,debris,handwritten,train
+t0305,"Huge tree came down overnight, lane completely blocked",road_obstruction,fallen_tree,handwritten,train
+t0306,"Opp. City Hospital, a big tree has fallen across the road after the storm",road_obstruction,fallen_tree,augmented,train
+t0307,"At MG Road junction, construction debris dumped on the road blocking one lane",road_obstruction,debris,augmented,test
+t0308,"At MG Road junction, tree branch broken and hanging over the footpath",road_obstruction,fallen_tree,augmented,train
+t0309,"Lane 3, Shivaji Nagar - sand and bricks from a building site are lying on half the road",road_obstruction,debris,augmented,test
+t0310,Uprooted tree blocking the entrance to our lane beside the school,road_obstruction,fallen_tree,augmented,train
+t0311,Sector 7 - abandoned scrap vehicle parked on the road for months,road_obstruction,debris,augmented,train
+t0312,ped gir gaya hai road pe. Someone will get hurt.,road_obstruction,fallen_tree,augmented,train
+t0313,Large rocks left on the road after the excavation work. This has been going on for weeks.,road_obstruction,debris,augmented,test
+t0314,Tree fell on parked cars and is blocking traffic. Please fix urgently.,road_obstruction,fallen_tree,augmented,train
+t0315,Pile of rubble from demolition occupying the footpath. Please fix urgently.,road_obstruction,debris,augmented,train
+t0316,Loud music from the hall every night after 11,other,,handwritten,train
+t0317,please help,other,,handwritten,train
+t0318,Stray dogs chasing people in our area,other,,handwritten,train
+t0319,"Problem near my house, please check",other,,handwritten,train
+t0320,Shop owner has encroached the footpath with his stall,other,,handwritten,train
+t0321,Not working,other,,handwritten,train
+t0322,When will the new metro station open?,other,,handwritten,train
+t0323,Neighbours are parking cars in front of my gate,other,,handwritten,train
+t0324,Mosquito fogging has not been done this month,other,,handwritten,train
+t0325,"Very bad condition here, someone should do something",other,,handwritten,test
+t0326,I want to change the name on my property tax bill,other,,handwritten,train
+t0327,asdfgh,other,,handwritten,train
+t0328,Monkeys entering homes and damaging things,other,,handwritten,train
+t0329,Air quality is terrible because of the factory smoke,other,,handwritten,test
+t0330,issue in sector 5,other,,handwritten,train
+t0331,Auto rickshaws overcharging at the station,other,,handwritten,train
+t0332,Thank you for fixing the road last week!,other,,handwritten,test
+t0333,Noise from construction work starts at 5 am,other,,handwritten,test
+t0334,"Same problem as before, still not resolved",other,,handwritten,test
+t0335,Hawkers occupying the whole road in the evening,other,,handwritten,train
+t0336,Illegal parking on both sides makes the road narrow,other,,handwritten,train
+t0337,How do I register a complaint?,other,,handwritten,train
+t0338,The ward office is always closed,other,,handwritten,train
+t0339,Something is wrong at the corner,other,,handwritten,train
+t0340,Pigeons nesting everywhere in the building compound,other,,handwritten,train
+t0341,"Bad smell coming from somewhere near the station, not sure what",other,,handwritten,train
+t0342,Traffic police not present at the junction during peak hours,other,,handwritten,train
+t0343,The problem I reported earlier,other,,handwritten,test
+t0344,Loud music from the hall every night after 11. Complained before but nothing happened.,other,,augmented,train
+t0345,Stray dogs chasing people in our area. Please fix urgently.,other,,augmented,train
+t0346,"Problem near my house, please check. Complained before but nothing happened.",other,,augmented,train
+t0347,Shop owner has encroached the footpath with his stall. This has been going on for weeks.,other,,augmented,train
+t0348,"At MG Road junction, when will the new metro station open?",other,,augmented,train
+t0349,Neighbours are parking cars in front of my gate. Kindly take action.,other,,augmented,train
+t0350,"Opp. City Hospital, mosquito fogging has not been done this month",other,,augmented,train

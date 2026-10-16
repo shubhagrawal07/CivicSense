@@ -1,0 +1,1001 @@
+id,text,category,subcategory,source,split
+g00001,Street light par mud ho gaya,streetlight,pole_damaged,ollama,train
+g00002,The streetlights on Lajpat Nagar Road are not working properly and it's a problem for people walking at night.,streetlight,light_flickering,ollama,train
+g00003,A large truck spilled garbage on the road near the Colaba market.,garbage,illegal_dumping,ollama,train
+g00004,Pata lagta hai ki koi jhootha kaam kar raha hai,garbage,illegal_dumping,ollama,train
+g00005,Residents in the nearby colony are suffering.,garbage,missed_collection,ollama,train
+g00006,Its affecting my daily routine.,streetlight,light_flickering,ollama,train
+g00007,My son slipped while playing outside and now our whole room is flooded due to a burst pipe.,water_leakage,pipe_burst,ollama,train
+g00008,Kids are falling in gutter.,drainage_sewage,sewage_overflow,ollama,train
+g00009,Transformer is full of oil,electricity_outage,transformer_issue,ollama,train
+g00010,water supply cut kar diya hai saraswati nagar ke paas,water_leakage,pipe_burst,ollama,train
+g00011,maine pani ki tarah se nahi raha kalyan nagar ke andar,water_leakage,pipe_burst,ollama,train
+g00012,My nephew almost fell into the open manhole on Lajpat Nagar's 6th Avenue.,open_manhole,lid_missing,ollama,train
+g00013,"Main uthaya thik hai, par koi bhi aata nahi hai.",electricity_outage,power_cut,ollama,train
+g00014,park swings are very dirty,damaged_infrastructure,public_furniture,ollama,train
+g00015,Can't a single pothole be fixed in this city anywhere,pothole,pothole_single,ollama,train
+g00016,Tap is leaking water,water_leakage,pipe_leak,ollama,train
+g00017,Just put a cover on drain already.,open_manhole,lid_missing,ollama,train
+g00018,"The sewer system in the old part of town is antiquated and frequently backs up, causing unpleasant odors and health hazards.",drainage_sewage,drain_blocked,ollama,train
+g00019,"The garbage collection van passed by our street 10 times without stopping, and we're still waiting for the trash to be collected.",garbage,missed_collection,ollama,train
+g00020,"There's a large factory dumping its waste on the streets, and it's making our neighborhood filthy.",garbage,missed_collection,ollama,train
+g00021,My kid was asked to stay back by the fallen signboard on the highway in Chandigarh.,damaged_infrastructure,signage,ollama,train
+g00022,Big pothole on Nariman Point Beach,pothole,pothole_single,ollama,train
+g00023,There is a huge pothole at Kamla Nagar with an open manhole cover.,open_manhole,lid_broken,ollama,train
+g00024,The drains on Link Road are clogged with wet waste.,garbage,illegal_dumping,ollama,train
+g00025,Ab maine samajha ki yah samasya kis cheez ke liye hai.,open_manhole,lid_missing,ollama,train
+g00026,Need to clean now,road_obstruction,debris,ollama,train
+g00027,People throw trash,road_obstruction,debris,ollama,train
+g00028,please fix it fast,electricity_outage,exposed_wire,ollama,train
+g00029,Water is leaking from pipe,water_leakage,pipe_leak,ollama,train
+g00030,i have a leak in my bathroom and its causing water damage,water_leakage,pipe_burst,ollama,train
+g00031,"The overflowing drain is not only a nuisance but also a fire hazard, I'm extremely concerned about the safety of people in the area.",drainage_sewage,drain_blocked,ollama,train
+g00032,"I have been waiting for over a month for the promised renovation work to begin, but nothing has happened yet.",other,,ollama,train
+g00033,Wooden crates and plastic sheets,road_obstruction,debris,ollama,train
+g00034,"Main kuch nahi kiya hai, main aaram karta hoon.",electricity_outage,power_cut,ollama,train
+g00035,Water is dripping here,water_leakage,pipe_leak,ollama,train
+g00036,The stench from the overflowing drain is unbearable and I'm starting to lose my patience.,drainage_sewage,drain_blocked,ollama,train
+g00037,The water in the underpass is so high it's getting into the nearby shops.,drainage_sewage,waterlogging,ollama,train
+g00038,slow leak in water pipe at school on rajaraja chetty street,water_leakage,pipe_leak,ollama,train
+g00039,Can't believe the city doesn't care about this pothole at the bus stop,pothole,pothole_single,ollama,train
+g00040,The pothole outside the hospital entrance is very large.,pothole,road_surface_broken,ollama,train
+g00041,footpath of ramlila maidan is very uneven,damaged_infrastructure,footpath,ollama,train
+g00042,The streetlight is broken,streetlight,pole_damaged,ollama,train
+g00043,Bent street light pole,streetlight,pole_damaged,ollama,train
+g00044,I'm struggling to run a small business as my ATM machine is not working near Mool Chowk.,electricity_outage,power_cut,ollama,train
+g00045,Dussehra preparations are very,other,,ollama,train
+g00046,"The sewer line under the street is not functioning, causing sewage to spill out onto the pavement.",drainage_sewage,drain_blocked,ollama,train
+g00047,Isse maine kuchh nahin kaha.,open_manhole,lid_missing,ollama,train
+g00048,My kid got scared when he saw the open manhole on Saket's 5th Avenue.,open_manhole,lid_missing,ollama,train
+g00049,Dusri baat yeh hai ki main road par uthate hue kisi ki izzat kyun nahi?,streetlight,light_off,ollama,train
+g00050,"Ek streetlight mein jhaadi kiya gaya tha, jisne hamare paas bahut samay lene mein road walk karne ka kaam karna pad raha tha.",streetlight,light_off,ollama,train
+g00051,Rag and bone man on Bhagirath Nagar street,other,,ollama,train
+g00052,"Every day, I drive my bike on the road from SVP Park to BKC, but due to a huge pile of scrap metal, it is becoming difficult to ride",road_obstruction,debris,ollama,train
+g00053,I would appreciate it if you could send a team to fill it up at the earliest.,pothole,pothole_single,ollama,train
+g00054,Main road no street light,streetlight,pole_damaged,ollama,train
+g00055,The public sign outside the University of Delhi is now hanging upside down and is a hazard to students.,damaged_infrastructure,signage,ollama,train
+g00056,There is a broken manhole cover on Pashchimi Marg that's been there for two weeks.,open_manhole,lid_broken,ollama,train
+g00057,Maine inke peeche kuchh gaadiyon ki rasti dekhne ke liye jaane kaha hain.,open_manhole,lid_missing,ollama,train
+g00058,"Our street is always in the dark, it's not just the power cuts, the voltage levels are not stable.",electricity_outage,power_cut,ollama,train
+g00059,water leak at a nearby restaurant on bazaar road,water_leakage,pipe_leak,ollama,train
+g00060,The school bus driver on Poonamallee High Road is driving very fast.,other,,ollama,train
+g00061,water from the drain is contaminating the water of my kitchen,drainage_sewage,drain_blocked,ollama,train
+g00062,I've been walking to work on Colaba Causeway for years and I've noticed that the pedestrian signs have deteriorated to the point where they're almost invisible.,damaged_infrastructure,signage,ollama,train
+g00063,i have a leak in my ceiling and its pouring water,water_leakage,pipe_burst,ollama,train
+g00064,maine jald se aaii jaanib ki baat kiyein,drainage_sewage,sewage_overflow,ollama,train
+g00065,"Near market, drain cover not available.",open_manhole,lid_missing,ollama,train
+g00066,"The stench from the garbage is unbearable, and it's affecting our quality of life.",garbage,missed_collection,ollama,train
+g00067,Kisi ko shak lag rahi hai,electricity_outage,exposed_wire,ollama,train
+g00068,Juhu Beach par khilaun ke khatre ka khatra hai.,damaged_infrastructure,public_furniture,ollama,train
+g00069,the drain outside my house is clogged,drainage_sewage,drain_blocked,ollama,train
+g00070,street light is cracked and broken,streetlight,pole_damaged,ollama,train
+g00071,Ladke ko bhayan ho raha hai,electricity_outage,exposed_wire,ollama,train
+g00072,I have reported the faulty streetlight to the civic body many times.,streetlight,light_flickering,ollama,train
+g00073,Dono cheez band ho gayi.,streetlight,light_off,ollama,train
+g00074,The pothole is quite deep and is affecting the safety of passengers.,pothole,pothole_single,ollama,train
+g00075,"I don't know how many times I have complained about this streetlight, still not fixed.",streetlight,light_flickering,ollama,train
+g00076,Bus stop ke aas-paas kuchh toodhiyan theek nahi hai.,damaged_infrastructure,public_furniture,ollama,train
+g00077,Bike hit by pothole daily,road_obstruction,debris,ollama,train
+g00078,"We've had multiple power cuts in the last three days, I'm starting to lose hope in the system.",electricity_outage,power_cut,ollama,train
+g00079,there is a huge log on the road at marina promenade,road_obstruction,fallen_tree,ollama,train
+g00080,mahi ki nahi aayi hai phir se,electricity_outage,exposed_wire,ollama,train
+g00081,"I've been trying to get the attention of the municipal authorities for months now about the state of the signboard outside the iconic Gateway of India in Mumbai, it's now completely unreadable and worn out.",damaged_infrastructure,signage,ollama,train
+g00082,The road near the ISRO campus is in terrible condition with multiple potholes of varying sizes.,pothole,road_surface_broken,ollama,train
+g00083,Mere bacche ko pata nahi,electricity_outage,exposed_wire,ollama,train
+g00084,poor condition of public toilets,damaged_infrastructure,public_furniture,ollama,train
+g00085,Water is coming from,drainage_sewage,sewage_overflow,ollama,train
+g00086,Water pipe at my building,water_leakage,pipe_leak,ollama,train
+g00087,The potholes on the highway are making it difficult to drive.,pothole,road_surface_broken,ollama,train
+g00088,"I am writing to report a pothole on the road near my workplace, which is causing damage to vehicles.",pothole,pothole_single,ollama,train
+g00089,water leak in my bathroom,water_leakage,pipe_leak,ollama,train
+g00090,Furniture was not provided,other,,ollama,train
+g00091,"I need someone to fix the sewage pipe on Park Street as soon as possible, please.",drainage_sewage,sewage_overflow,ollama,train
+g00092,Maine apne gaon se pahle hi,garbage,bin_overflow,ollama,train
+g00093,Can you please send someone from the local council to fix the voltage issue near Rama Krishna Temple.,electricity_outage,power_cut,ollama,train
+g00094,Power cut at home,electricity_outage,power_cut,ollama,train
+g00095,"The road is full of old machinery and tools, it's like a junkyard.",road_obstruction,debris,ollama,train
+g00096,Street manhole not covered.,open_manhole,lid_missing,ollama,train
+g00097,it was hanging on wall and sparking,electricity_outage,exposed_wire,ollama,train
+g00098,"The power has been out since morning, we can't even boil water, this is unacceptable.",electricity_outage,power_cut,ollama,train
+g00099,My kid slipped on open drain yesterday.,open_manhole,lid_missing,ollama,train
+g00100,Why hawker allowed on Dr. Ambedkar Road?,other,,ollama,train
+g00101,Children are falling on street.,drainage_sewage,sewage_overflow,ollama,train
+g00102,Bahut galat hai yeh kaise hua.,streetlight,light_flickering,ollama,train
+g00103,The people who are selling fruits on the street are playing music too loudly,other,,ollama,train
+g00104,Isse kuchh nahi hota.,open_manhole,lid_missing,ollama,train
+g00105,Dripping tap at school building,water_leakage,pipe_leak,ollama,train
+g00106,i want the drain on t.nagar high road to be cleared,drainage_sewage,drain_blocked,ollama,train
+g00107,"Road infront of my house is very dark, streetlights are not shining properly.",streetlight,light_flickering,ollama,train
+g00108,Dirty old truck,road_obstruction,debris,ollama,train
+g00109,Manhole cover at Connaught Place has broken and is leaking.,open_manhole,lid_broken,ollama,train
+g00110,There's water spraying everywhere on Daulatpur Lane,water_leakage,pipe_burst,ollama,train
+g00111,I am reporting a cracked manhole cover at Laxmi Nagar Metro Station that is causing tripping hazard.,open_manhole,lid_broken,ollama,train
+g00112,meri jhooli jhoom rahi hai,garbage,bin_overflow,ollama,train
+g00113,"Aaj raat ko meri gali mein ek wire lag hua hai, main iska kaise khata hoon aur kyun lag gaya?",electricity_outage,exposed_wire,ollama,train
+g00114,paridipan paridipan ki samasya hai main bina pani nahi raha,water_leakage,pipe_burst,ollama,train
+g00115,My fridge is cold,other,,ollama,train
+g00116,"Mere dost ne kaha ki humein samajhna chahiye ki kaise aapdaan ko alag-alag jagah par dalna chahiye, par hum uski gali mein alag-alag jagah par dalne se naram rahte hain.",garbage,bin_overflow,ollama,train
+g00117,Foggy night no light,streetlight,pole_damaged,ollama,train
+g00118,"Bharatpur main pothole bahut jhik raha hai, sahi hai toh?",pothole,pothole_single,ollama,train
+g00119,Main ghar ka aadha garib ho gaya hai,garbage,illegal_dumping,ollama,train
+g00120,Streetlight working at wrong,streetlight,light_off,ollama,train
+g00121,Pole is leaning to,streetlight,pole_damaged,ollama,train
+g00122,My kid got hurt on a broken table at Juhu Beach.,damaged_infrastructure,public_furniture,ollama,train
+g00123,"The sunken manhole cover on GT Road has been there for a week, it's a safety concern.",open_manhole,lid_broken,ollama,train
+g00124,Kaafi dinon se garbhi bag ki duri hai,garbage,illegal_dumping,ollama,train
+g00125,This park is very small,other,,ollama,train
+g00126,The kerb outside the post office has been damaged for years and it's now almost completely gone.,damaged_infrastructure,footpath,ollama,train
+g00127,There is a huge crater,pothole,pothole_single,ollama,train
+g00128,I just tripped on a broken tile on the footpath outside the market and almost fell it's just so reckless.,damaged_infrastructure,footpath,ollama,train
+g00129,My bike has a flat,pothole,pothole_single,ollama,train
+g00130,Mujhe kisi ne bhi madad nahi ki hai.,streetlight,light_off,ollama,train
+g00131,I saw a dog trying to drink from the open manhole on Punjabi Bagh's 12th Main.,open_manhole,lid_missing,ollama,train
+g00132,We can't walk down the street because the pavement is littered with old cars parts.,road_obstruction,debris,ollama,train
+g00133,it was very dangerous,electricity_outage,exposed_wire,ollama,train
+g00134,I've noticed that the streetlights at Nehru Place are blinking and it's a nuisance to drivers and pedestrians.,streetlight,light_flickering,ollama,train
+g00135,The footpath on Marthandam Street near the bus stand is in such a state it's a safety hazard.,damaged_infrastructure,footpath,ollama,train
+g00136,Clogged manhole at Hauz Khas.,open_manhole,lid_missing,ollama,train
+g00137,maine koi aadhaar pata nahi hai kya,drainage_sewage,sewage_overflow,ollama,train
+g00138,Need help with drainage,drainage_sewage,drain_blocked,ollama,train
+g00139,This streetlight is flickering badly,streetlight,light_flickering,ollama,train
+g00140,i was sitting in my home and see wire,electricity_outage,exposed_wire,ollama,train
+g00141,The water is overflowing from the pipe in the park,water_leakage,pipe_burst,ollama,train
+g00142,Big rock on road,road_obstruction,fallen_tree,ollama,train
+g00143,Dangerous situation,road_obstruction,debris,ollama,train
+g00144,I've been driving on this pothole on the western highway for years and it's getting worse.,pothole,pothole_single,ollama,train
+g00145,"There's a big pothole on MG Road and an open manhole, it's causing traffic jam and putting kids at risk.",open_manhole,lid_missing,ollama,train
+g00146,I'm afraid the road on Guntur Main Road is blocked by a fallen tree.,road_obstruction,fallen_tree,ollama,train
+g00147,"I have complained to the BMC, but they are not paying attention to this issue",road_obstruction,debris,ollama,train
+g00148,mahi ki nahi aayi hai,electricity_outage,exposed_wire,ollama,train
+g00149,Main apni gari par sahi speed se nahi chal sakti.,streetlight,light_flickering,ollama,train
+g00150,Transformer has leaked oil,electricity_outage,transformer_issue,ollama,train
+g00151,I recently spotted a damaged section of the barrier at the bus stand.,damaged_infrastructure,railing_or_divider,ollama,train
+g00152,maine khuda bhi kiya hai sabko pata chal gaya hai,drainage_sewage,sewage_overflow,ollama,train
+g00153,Unloaded materials on road,road_obstruction,debris,ollama,train
+g00154,My bike just broke,pothole,road_surface_broken,ollama,train
+g00155,The pothole on the road in front of my house is causing uneven riding and vibrations.,pothole,pothole_single,ollama,train
+g00156,wire se matra aa raha hai,electricity_outage,exposed_wire,ollama,train
+g00157,The authorities should have removed the debris from the road a long time ago but they have not done anything so far,road_obstruction,debris,ollama,train
+g00158,My house is overheating,electricity_outage,transformer_issue,ollama,train
+g00159,Clogged drain is causing,drainage_sewage,sewage_overflow,ollama,train
+g00160,My kid almost got hit by a truck because of a broken traffic signal in Hyderabad.,damaged_infrastructure,signage,ollama,train
+g00161,The playground at Worli Sea Face is full of broken equipment.,damaged_infrastructure,public_furniture,ollama,train
+g00162,Garbage heap on roadside,road_obstruction,debris,ollama,train
+g00163,"Main road ki gully nahi hain, rainwater toh road par hi pad rahi hai",drainage_sewage,waterlogging,ollama,train
+g00164,Transformers sparking everywhere,electricity_outage,transformer_issue,ollama,train
+g00165,The streetlights on MG Road are blocked by a large pile of trash.,garbage,illegal_dumping,ollama,train
+g00166,Can't clean drain on Nehru Place.,open_manhole,lid_missing,ollama,train
+g00167,The sewer system in my apartment complex is backing up and flooding the hallways.,drainage_sewage,drain_blocked,ollama,train
+g00168,wahin kuchh logon ne maine baat nahi kahi,drainage_sewage,sewage_overflow,ollama,train
+g00169,The public area has broken railings and people are using it as a shortcut.,damaged_infrastructure,railing_or_divider,ollama,train
+g00170,Transformer sparks at cinema,electricity_outage,transformer_issue,ollama,train
+g00171,"I am going to Laxmi Nagar, no electricity since yesterday, I am feeling very bad.",electricity_outage,power_cut,ollama,train
+g00172,I've seen the pothole on Bhulabhai Desai Road and it's causing damage to many vehicles.,pothole,pothole_single,ollama,train
+g00173,i just see very bad wire hang on lamppost and sparking,electricity_outage,exposed_wire,ollama,train
+g00174,"I'm tired of driving on roads with potholes, it's not just the cost of the repairs but the safety risk to drivers and pedestrians.",pothole,road_surface_broken,ollama,train
+g00175,Smoking transformer on main road,electricity_outage,transformer_issue,ollama,train
+g00176,The pothole on the arterial road near the airport is quite big and needs to be fixed.,pothole,pothole_single,ollama,train
+g00177,My little one slipped on the wet floor in front of our building on M.G. Road.,water_leakage,pipe_leak,ollama,train
+g00178,i am very worried now,electricity_outage,exposed_wire,ollama,train
+g00179,The footpath on the street outside my house on 8th Main Road has big cracks in it it's getting worse every day.,damaged_infrastructure,footpath,ollama,train
+g00180,water is overflowing from potholes on marshut street,road_obstruction,fallen_tree,ollama,train
+g00181,i have a slow leak at my house on 12th main road its from the pipe under the kitchen sink,water_leakage,pipe_leak,ollama,train
+g00182,I'm getting water all over my street,water_leakage,pipe_burst,ollama,train
+g00183,Dekho to pata chal jata hai,streetlight,pole_damaged,ollama,train
+g00184,"I got wet and muddy when it rained last week, it was really annoying.",drainage_sewage,waterlogging,ollama,train
+g00185,main street karol bagh mein se koi bhi manahol nahi hai,open_manhole,lid_missing,ollama,train
+g00186,The locker room is dirty,other,,ollama,train
+g00187,Heavy machinery dumped,road_obstruction,debris,ollama,train
+g00188,Transformer at my house on Ashok Vihar road is making a strange smell.,electricity_outage,transformer_issue,ollama,train
+g00189,"I request you to check the streetlights at South Extension, they are very dim and it's hard to see the road.",streetlight,light_flickering,ollama,train
+g00190,People are walking into the road because of unclear traffic signs in Pune.,damaged_infrastructure,signage,ollama,train
+g00191,I am writing to bring to your notice that the streetlights at Connaught Place are flickering and it's a safety concern.,streetlight,light_flickering,ollama,train
+g00192,I lost my phone,other,,ollama,train
+g00193,Transformer sparks near bus stop,electricity_outage,transformer_issue,ollama,train
+g00194,i cant walk on goregaon park road because of flooded drains,drainage_sewage,drain_blocked,ollama,train
+g00195,not enough toilets at stadium,damaged_infrastructure,public_furniture,ollama,train
+g00196,Main aas-paas chal kar nahin sakta kyonki khane-pine ki cheezon ko lekar woh log jhooth bol rahe hain ki humara gaon saaf hai.,garbage,bin_overflow,ollama,train
+g00197,i am very scared and worried now,electricity_outage,exposed_wire,ollama,train
+g00198,"Every day, thousands of people are passing through this road from Marine Lines to Churchgate, but due to a large quantity of construction waste, it is becoming difficult for them to move forward",road_obstruction,debris,ollama,train
+g00199,"I had to deal with a terrible customer service representative at the local shopping mall, they were completely unhelpful.",other,,ollama,train
+g00200,Can I report this?,other,,ollama,train
+g00201,Purane aadmein garbhi bag hain,garbage,illegal_dumping,ollama,train
+g00202,"Mere bachhon ki safety ke liye koi bhi baat kar sakte hain, lekin garma-garam pani ki kheti ka khilaaf kaali duniya aayi hai.",garbage,missed_collection,ollama,train
+g00203,Can you please fix the pothole on the main road leading to the National Stadium?,pothole,pothole_single,ollama,train
+g00204,Dim streetlight is causing accidents at night.,streetlight,light_flickering,ollama,train
+g00205,The public restroom's wall is damaged and has big cracks in it.,damaged_infrastructure,railing_or_divider,ollama,train
+g00206,sirf ek chota leak hai,water_leakage,pipe_leak,ollama,train
+g00207,"Bandra West, Mumbai",other,,ollama,train
+g00208,Jangpura se jangpura road tak,pothole,road_surface_broken,ollama,train
+g00209,"The road in front of my house, 20th Main, is blocked by branches.",road_obstruction,fallen_tree,ollama,train
+g00210,No light in entire,streetlight,pole_damaged,ollama,train
+g00211,Mere ghar ke paas kachra ghumta rehta hai.,garbage,missed_collection,ollama,train
+g00212,I've been reporting the broken tiles on the footpath outside my apartment for years but nothing ever gets done.,damaged_infrastructure,footpath,ollama,train
+g00213,Jab maine manhole kholne ki koshish ki thi to maine dikhne ke liye ek koi cheez nahin thi.,open_manhole,lid_missing,ollama,train
+g00214,Why not on main road,streetlight,light_off,ollama,train
+g00215,Light not working,streetlight,pole_damaged,ollama,train
+g00216,The municipal corporation needs to hire more garbage collectors to ensure that the collection is done on time.,garbage,missed_collection,ollama,train
+g00217,Bachchon ko padhai karne ke liye main apni dukan ke paas aata hoon to yaha garbha jama hua hai.,garbage,missed_collection,ollama,train
+g00218,"Rajendra Nagar, Patna",other,,ollama,train
+g00219,I'm so sick of this pothole on the way to the park from Market Street,pothole,pothole_single,ollama,train
+g00220,Leaking pipe at my neighbour's,water_leakage,pipe_leak,ollama,train
+g00221,Dumpsters are always dirty in this area.,garbage,missed_collection,ollama,train
+g00222,The pothole is very deep,pothole,pothole_single,ollama,train
+g00223,I've called the municipal office but no one came,water_leakage,pipe_burst,ollama,train
+g00224,Pole ke andar rust ho gaya,streetlight,pole_damaged,ollama,train
+g00225,Mere paas kuchh aisi information hai ki maine aaj raat gira streetlight ko aapki team ke paas bheja hai.,streetlight,light_off,ollama,train
+g00226,"Jeevan mein kuchh bhi shuru nahin hote, jaise ki streetlight jisse aapki team ko koi bhi information nahi mil.",streetlight,light_off,ollama,train
+g00227,"Bhai, the public bins in Connaught Place are always full and nobody cleans them regularly.",garbage,bin_overflow,ollama,train
+g00228,Slow leak at my office pipe,water_leakage,pipe_leak,ollama,train
+g00229,Sewage is overflowing everywhere,drainage_sewage,sewage_overflow,ollama,train
+g00230,Light outside my home dying,streetlight,light_flickering,ollama,train
+g00231,The crater on Marine Drive near the statue of Shiva is quite large and needs attention.,pothole,pothole_single,ollama,train
+g00232,Maine sawariyon ko nahi dikha,electricity_outage,exposed_wire,ollama,train
+g00233,"My kid was playing near the open manhole on MG Road and got scared, now he's not playing outside.",open_manhole,lid_missing,ollama,train
+g00234,Kanakia Park mein swing nahi hai aur khiladiyan khel sakte hain.,damaged_infrastructure,public_furniture,ollama,train
+g00235,meri zindagi khatre mein hai,garbage,bin_overflow,ollama,train
+g00236,"The drain in the local park is clogged and water is accumulating in the grass, creating a mosquito breeding ground.",drainage_sewage,drain_blocked,ollama,train
+g00237,The streetlights on Ashok Vihar Road are blinking and it's a nuisance to drivers and pedestrians alike.,streetlight,light_flickering,ollama,train
+g00238,"I am unable to report the manhole cover at Ashok Vihar, East Delhi as it is broken and creating a hazard on the road.",open_manhole,lid_broken,ollama,train
+g00239,"The potholes on MG Road, near the Hotel Leela, are causing a lot of discomfort.",pothole,road_surface_broken,ollama,train
+g00240,water is spraying everywhere in kolkata,water_leakage,pipe_burst,ollama,train
+g00241,Can't even drive safely,pothole,road_surface_broken,ollama,train
+g00242,"The garbage bins on the street were overflowing with trash, and it's attracting rats and flies to the entire neighborhood.",garbage,missed_collection,ollama,train
+g00243,This app is so slow and unhelpful.,other,,ollama,train
+g00244,Children are not safe here,other,,ollama,train
+g00245,I am worried that water will seep into my home if it's not stopped as it's spraying everywhere.,water_leakage,pipe_burst,ollama,train
+g00246,Bilkul ganda ka kshetra hai,garbage,illegal_dumping,ollama,train
+g00247,This app is not allowing me to report the issue properly.,other,,ollama,train
+g00248,"The bank employees are also complaining about the road, they say it is becoming difficult for them to enter and exit the bank",road_obstruction,debris,ollama,train
+g00249,I recently fell into a pothole while walking down the street.,pothole,road_surface_broken,ollama,train
+g00250,water main break kaam hai sahiyaan ki dukaan ke paas,water_leakage,pipe_burst,ollama,train
+g00251,Hum aapko aage badhna kheenche rahen,garbage,bin_overflow,ollama,train
+g00252,"Mere dost ne bhi same ki situation ki hai, uski gali mein bhi public ki dustbin kitni badi ho gayi hai.",garbage,bin_overflow,ollama,train
+g00253,Streetlight never comes on time,streetlight,light_off,ollama,train
+g00254,The underpass near my house is always clogged with rainwater.,drainage_sewage,waterlogging,ollama,train
+g00255,Electricity meter is faulty,electricity_outage,power_cut,ollama,train
+g00256,water is spraying out of my wall,water_leakage,pipe_burst,ollama,train
+g00257,Main apne kirdar ko dekhna chahta hoon.,other,,ollama,train
+g00258,Kabhi kabhi manhole khol nahin hota hai jiski cover nahin hai.,open_manhole,lid_missing,ollama,train
+g00259,The main water line on 5th Street has burst,water_leakage,pipe_burst,ollama,train
+g00260,i see many wire hanging and sparking,electricity_outage,exposed_wire,ollama,train
+g00261,Streetlight pole needs fixing,streetlight,pole_damaged,ollama,train
+g00262,Flickering streetlight is creating a huge problem for me.,streetlight,light_flickering,ollama,train
+g00263,Canteen food at NCPA is very expensive,other,,ollama,train
+g00264,"The open manhole on MG Road is causing a big traffic jam, it's affecting my daily commute.",open_manhole,lid_missing,ollama,train
+g00265,I have been waiting for one hour but the ticket counter is not working,other,,ollama,train
+g00266,"The garbage is being dumped near the drainage pipe, and it's clogging the pipe.",garbage,missed_collection,ollama,train
+g00267,water leak from tap at jk hospital in my neighborhood on vijayanagar street,water_leakage,pipe_leak,ollama,train
+g00268,Maine is baat ko samjha ki kaise humare aas paas ki public ki dustbin ki gali mein aise aapdaan ko nahi dalne se logon ki galti hai aur humein apne aap ko sahi rasta mein lene ke liye samajhna chahiye.,garbage,bin_overflow,ollama,train
+g00269,"The power lines near our house are old and rusty, it's causing a lot of trouble, we need repairs.",electricity_outage,power_cut,ollama,train
+g00270,The public path where I walk my dog every day has broken railings that need to be fixed.,damaged_infrastructure,railing_or_divider,ollama,train
+g00271,The noise from the nearby factory on P.T.S. Nagar Main Road is disturbing my home.,other,,ollama,train
+g00272,Walls need repair urgently.,damaged_infrastructure,railing_or_divider,ollama,train
+g00273,mera khana bhi kachra hai,garbage,bin_overflow,ollama,train
+g00274,"I've been driving on this road for years and every time it rains the potholes get worse, I'm surprised the city council hasn't fixed it yet.",pothole,road_surface_broken,ollama,train
+g00275,Kalyan nagar mein kuch garbha,garbage,illegal_dumping,ollama,train
+g00276,The sewage in the underpass of Sarojini Nagar Street is terrible.,drainage_sewage,waterlogging,ollama,train
+g00277,Railings not properly attached.,damaged_infrastructure,railing_or_divider,ollama,train
+g00278,My neighbor is noisy,other,,ollama,train
+g00279,poor street light is very annoying,streetlight,pole_damaged,ollama,train
+g00280,Mere ghar ke paas ek baar se garbhiyan nahin hui.,garbage,missed_collection,ollama,train
+g00281,A fallen tree is blocking the road near the school.,road_obstruction,fallen_tree,ollama,train
+g00282,Water pipe at M.G. Road,water_leakage,pipe_leak,ollama,train
+g00283,My kid is getting scared while playing near the broken streetlight in Noida.,damaged_infrastructure,signage,ollama,train
+g00284,I need help clearing junk,road_obstruction,debris,ollama,train
+g00285,Kripaya ek jald engineer bhej dena.,electricity_outage,power_cut,ollama,train
+g00286,Aaj se main uske hawa se theek ho gaya.,garbage,missed_collection,ollama,train
+g00287,Car can't pass,road_obstruction,debris,ollama,train
+g00288,Manhole cover is loose on Mahipalpur Road.,open_manhole,lid_broken,ollama,train
+g00289,My tap is leaking,water_leakage,pipe_leak,ollama,train
+g00290,Toh mujhe aapke dwara koi samadhan milna chahiye,garbage,bin_overflow,ollama,train
+g00291,I am concerned for my kids' safety as water is flowing from the street and I am scared that they might get drowned.,water_leakage,pipe_burst,ollama,train
+g00292,"A pipe under the road in Sector 3 is bursting, causing sewage to spill out onto the sidewalk.",drainage_sewage,drain_blocked,ollama,train
+g00293,We need immediate attention to the transformer on Rajender Park road that is leaking oil.,electricity_outage,transformer_issue,ollama,train
+g00294,footpath of moti nagar road is missing tiles,damaged_infrastructure,footpath,ollama,train
+g00295,There is a broken manhole cover on Rohini's Surya Kunj which is obstructing traffic.,open_manhole,lid_broken,ollama,train
+g00296,sahiyaan ne pani ki kathor kiya hai pawan mandir ke paas,water_leakage,pipe_burst,ollama,train
+g00297,I need help with finding a reliable water filter service provider in our area.,other,,ollama,train
+g00298,Mere paas 6 kg ki plastic ki dalti hai,garbage,illegal_dumping,ollama,train
+g00299,Juhu Beach par kuchh toodhiyan nahi hai aur khiladi khel sakte hain.,damaged_infrastructure,public_furniture,ollama,train
+g00300,Maine abhi se dusre baar kshetra se 3 hours aage kahaane voltage problem ho gaya hai.,electricity_outage,power_cut,ollama,train
+g00301,Streetlight pole is damaged,streetlight,pole_damaged,ollama,train
+g00302,Ghar mein jahazon ka khatra hai,garbage,illegal_dumping,ollama,train
+g00303,Aapke team ka koi sahi solution nahi dene ka prayaas kar raha hai near Lajpat Nagar.,electricity_outage,power_cut,ollama,train
+g00304,Rubbish is piling,road_obstruction,debris,ollama,train
+g00305,i request u to fix it as soon as possible,electricity_outage,exposed_wire,ollama,train
+g00306,"Near the gas pump on Panchsheel Park Road, there is an open manhole.",open_manhole,lid_broken,ollama,train
+g00307,Kailash Nagar ka raasta,streetlight,light_off,ollama,train
+g00308,Usse lagataar complaints karta hu.,streetlight,light_flickering,ollama,train
+g00309,The transformer at the park on DLF City road is smoking and causing discomfort.,electricity_outage,transformer_issue,ollama,train
+g00310,water leak in my toilet,water_leakage,pipe_leak,ollama,train
+g00311,Branches ke nuksan kar rahe hain,road_obstruction,fallen_tree,ollama,train
+g00312,my leaky tap is causing me alot of problum at my house on arjun nagar road,water_leakage,pipe_leak,ollama,train
+g00313,Tree is in front of Hotel Leelavati.,road_obstruction,fallen_tree,ollama,train
+g00314,The fallen tree on the 50ft wide road near the school is blocking traffic.,road_obstruction,fallen_tree,ollama,train
+g00315,i broke my shoe on footpath near bharatpur road,damaged_infrastructure,footpath,ollama,train
+g00316,A dumpster in front of the Taj Mahal hotel was emptied incorrectly.,garbage,illegal_dumping,ollama,train
+g00317,My bike was damaged in the rain,other,,ollama,train
+g00318,I need to complain,other,,ollama,train
+g00319,Slow leak in roof,water_leakage,pipe_leak,ollama,train
+g00320,Bahut acchi zaroorat hai ki unhe replace karein.,streetlight,light_flickering,ollama,train
+g00321,water leak from a pipe under my house on karamchand nagar,water_leakage,pipe_leak,ollama,train
+g00322,I request you to send engineer as soon as possible.,electricity_outage,power_cut,ollama,train
+g00323,dhana dhana kheench raha hai,water_leakage,pipe_leak,ollama,train
+g00324,Ghar mein doosron ke kapdon ka khel hai,garbage,illegal_dumping,ollama,train
+g00325,water coming from drain near marshut bus stand,water_leakage,pipe_burst,ollama,train
+g00326,Streetlights are always off here,streetlight,light_flickering,ollama,train
+g00327,electricity box is open and exposed,electricity_outage,exposed_wire,ollama,train
+g00328,I paid for a parking slot but they put me in a different one.,other,,ollama,train
+g00329,my neighbours water pipe is leaking,water_leakage,pipe_burst,ollama,train
+g00330,Gali mein chal kar kuch garib logon ko garbhiyan milti hai.,garbage,missed_collection,ollama,train
+g00331,Kabhi kabhi log aapdaan ko alag-alag jagah par dal daltay hain aur phir uski gali mein ho jata hai aur humare samne bas ek saamanya galti rahti hai.,garbage,bin_overflow,ollama,train
+g00332,The sewage pipe on my neighbor's property is overflowing and sewage is flowing into my yard.,drainage_sewage,sewage_overflow,ollama,train
+g00333,"Ward No. 3, General Hospital",other,,ollama,train
+g00334,Isliye main is baare mein kuchh aajuma karunga.,open_manhole,lid_missing,ollama,train
+g00335,Street hawkers are bad,other,,ollama,train
+g00336,Dilli highway se seelampur tak,pothole,road_surface_broken,ollama,train
+g00337,"The road is filled with huge quantity of construction waste, including broken tiles and bricks",road_obstruction,debris,ollama,train
+g00338,"I am worried about kids in the park, near the open manhole on Gandhi Road, where they can easily slip and fall into it.",open_manhole,lid_broken,ollama,train
+g00339,No lights on Khairi,streetlight,light_off,ollama,train
+g00340,Maine electricity company se baat karne mein gussa hua.,electricity_outage,power_cut,ollama,train
+g00341,Mud and dust everywhere,road_obstruction,debris,ollama,train
+g00342,The binoculars I saw the other day were actually used to throw trash from a high-rise building.,garbage,missed_collection,ollama,train
+g00343,Mujhe lagta hai main ek nai zindagi ka shuruwaat karne ki zaroorat hai.,streetlight,light_flickering,ollama,train
+g00344,Garbage kahan padi hai,garbage,illegal_dumping,ollama,train
+g00345,Could you please send someone to fill it up as soon as possible.,pothole,pothole_single,ollama,train
+g00346,Rocks are worse than,pothole,road_surface_broken,ollama,train
+g00347,broken tiles on footpath near jeevan jyoti park,damaged_infrastructure,footpath,ollama,train
+g00348,Main road near my house is full of potholes and the manhole cover is broken.,open_manhole,lid_broken,ollama,train
+g00349,I've seen the pothole on the road near the Mumbai University and it's causing inconvenience.,pothole,pothole_single,ollama,train
+g00350,Main samajhta hoon ki koi bhi public ki dustbin ko sahi rasta mein lene ke liye sabse pehle uske aapdaan ko sahi rasta mein lene ke liye samajhna chahiye.,garbage,bin_overflow,ollama,train
+g00351,Why are so many vendors at Chhatrapati Shivaji Terminus?,other,,ollama,train
+g00352,Dangerous drop on divider.,damaged_infrastructure,railing_or_divider,ollama,train
+g00353,Road is dirty with open drain.,open_manhole,lid_missing,ollama,train
+g00354,I fell down from,streetlight,pole_damaged,ollama,train
+g00355,i slipped on broken tiles near baba balak nath mandir,damaged_infrastructure,footpath,ollama,train
+g00356,roadside urinal not functioning,damaged_infrastructure,public_furniture,ollama,train
+g00357,Mera gaon ka raajdar pehle bhi kuchh samay se is samasya ke baare mein baat karta tha.,open_manhole,lid_missing,ollama,train
+g00358,"The stormwater drain on the outskirts of the city is not functioning, causing erosion and landslides in the area.",drainage_sewage,drain_blocked,ollama,train
+g00359,Mumbai mein sairaniya ke kamon ko dhoondh raha hoon par sairaniya ka koi solution nahi mila,drainage_sewage,waterlogging,ollama,train
+g00360,"The garbage bins are not being emptied on a regular basis, and it's causing a lot of problems in our area.",garbage,missed_collection,ollama,train
+g00361,The potholes on MG Road are causing inconvenience to drivers.,pothole,road_surface_broken,ollama,train
+g00362,my kitchen sink is leaking water everywhere,water_leakage,pipe_leak,ollama,train
+g00363,Can you fix this streetlight?,streetlight,light_flickering,ollama,train
+g00364,The cracked manhole cover at Janakpuri West is causing a great disturbance to the local residents.,open_manhole,lid_broken,ollama,train
+g00365,Mere paswaan ne kaha ki humein samajhna chahiye ki kaise aapdaan ko sahi rasta mein lene ke liye samajhna chahiye.,garbage,bin_overflow,ollama,train
+g00366,Uske karan mujhe lagta hai main ek dour ke dour par chalti hu.,streetlight,light_flickering,ollama,train
+g00367,The road is obstructed by a fallen tree near the park.,road_obstruction,fallen_tree,ollama,train
+g00368,Pothole is causing damage,pothole,pothole_single,ollama,train
+g00369,Several potholes on Maharshi Dayanand Road,pothole,pothole_single,ollama,train
+g00370,can someone please clean the drain on poonai street,drainage_sewage,drain_blocked,ollama,train
+g00371,Pipe is leaking badly,water_leakage,pipe_leak,ollama,train
+g00372,The railings and dividers of the public park are damaged and need to be repaired immediately.,damaged_infrastructure,railing_or_divider,ollama,train
+g00373,Not one of my streets,streetlight,light_off,ollama,train
+g00374,My bike was stolen,other,,ollama,train
+g00375,Tere bina main bina,electricity_outage,exposed_wire,ollama,train
+g00376,Main jeevan sahi se nahi ja sakta kyunki streetlight band hai.,streetlight,light_off,ollama,train
+g00377,Main uss streetlight ko jaldi fix karna chahti hoon.,streetlight,light_flickering,ollama,train
+g00378,Clear it ASAP.,road_obstruction,fallen_tree,ollama,train
+g00379,I'm unable to cross,pothole,pothole_single,ollama,train
+g00380,The manhole at my house in Pitampura is broken and I don't know who to contact for the repair.,open_manhole,lid_broken,ollama,train
+g00381,Frequent noise disturbance from nearby construction site near Kailash Temple on MG Road.,other,,ollama,train
+g00382,I saw that the guard rail on the side of the road has fallen down and it's a hazard for vehicles.,damaged_infrastructure,railing_or_divider,ollama,train
+g00383,People are eating at tables on Ghatkopar station,other,,ollama,train
+g00384,i request u to fix it,electricity_outage,exposed_wire,ollama,train
+g00385,Fell branch near my house,road_obstruction,fallen_tree,ollama,train
+g00386,Fell tree on road today,road_obstruction,fallen_tree,ollama,train
+g00387,"Mere ghar ke aas paas ki public ki dustbin ki gali mein ek bada aapdaan hai, jiski gali mein aise aapdaan ko dalne se humari samajh mein kaafi saari kami ho gayi hai.",garbage,bin_overflow,ollama,train
+g00388,my water pipe has burst in hyderabad,water_leakage,pipe_burst,ollama,train
+g00389,Slow leak at my office sink,water_leakage,pipe_leak,ollama,train
+g00390,A pothole has opened up on the road near the UB City shopping mall.,pothole,road_surface_broken,ollama,train
+g00391,I live in a three-story apartment building and can see the trash being thrown from the rooftop of our neighbor's house.,garbage,missed_collection,ollama,train
+g00392,"The manhole cover on the street near my office is broken and sunken, please fix it.",open_manhole,lid_broken,ollama,train
+g00393,The light is not working,streetlight,pole_damaged,ollama,train
+g00394,Just drove over that terrible pothole on Sardar Patel Road,pothole,pothole_single,ollama,train
+g00395,There's a loudspeaker playing music in our building's common area after 10 PM.,other,,ollama,train
+g00396,There's a slow leak in the pipe behind the tap at our flat in Panchkarma Building.,water_leakage,pipe_leak,ollama,train
+g00397,Pipe in bathroom leaks,water_leakage,pipe_leak,ollama,train
+g00398,i was walking in dark and find two loose wires,electricity_outage,exposed_wire,ollama,train
+g00399,The pothole on the main road near the Metro station on Western Express Highway is quite rough.,pothole,pothole_single,ollama,train
+g00400,Toh mujhe aapko ek samay diya,garbage,bin_overflow,ollama,train
+g00401,Aapke samanvay se koi uttar nahin mila,garbage,bin_overflow,ollama,train
+g00402,Garden mein tola hua hai aur log khel sakte hain.,damaged_infrastructure,public_furniture,ollama,train
+g00403,"I don't want my kids to get hurt, please fix the open manhole on GT Road.",open_manhole,lid_broken,ollama,train
+g00404,The water main on Main Road burst last night,water_leakage,pipe_burst,ollama,train
+g00405,Road is blocked by,road_obstruction,debris,ollama,train
+g00406,Water is leaking from an open manhole at Rajiv Chowk.,open_manhole,lid_broken,ollama,train
+g00407,The road is blocked by a large amount of fallen leaves and twigs.,road_obstruction,fallen_tree,ollama,train
+g00408,I'm worried about the leak in the pipe near the park in Tilak Nagar.,water_leakage,pipe_leak,ollama,train
+g00409,Main apne gharon ka kachra kamzori ka khilaf lad rahi hoon.,garbage,missed_collection,ollama,train
+g00410,The road outside my house has several deep potholes.,pothole,road_surface_broken,ollama,train
+g00411,Kaha tha ki yahaan garbh ke tukde,garbage,bin_overflow,ollama,train
+g00412,The underpass on Nehru Place is always flooded.,drainage_sewage,waterlogging,ollama,train
+g00413,"The underpass is not well maintained, the water flows into it easily.",drainage_sewage,waterlogging,ollama,train
+g00414,"The road is not designed to handle the rainwater, it's a disaster waiting to happen.",drainage_sewage,waterlogging,ollama,train
+g00415,I'm so frustrated with the sewage flowing into my living room through the broken pipe.,drainage_sewage,sewage_overflow,ollama,train
+g00416,water leak at my house on 9th main road near the gas station from the pipe under the sink,water_leakage,pipe_leak,ollama,train
+g00417,Flooding is happening now,drainage_sewage,sewage_overflow,ollama,train
+g00418,I want to know,other,,ollama,train
+g00419,Off streetlights on Raj Nagar,streetlight,light_off,ollama,train
+g00420,"Apne ghar ke andar ki voltage kharaab ho gayi hai, aur koi solution nahin dene ki koshish kar raha hai.",electricity_outage,power_cut,ollama,train
+g00421,Can't even park my bike,road_obstruction,debris,ollama,train
+g00422,The streets of Fort area are littered with discarded food packaging.,garbage,illegal_dumping,ollama,train
+g00423,My children's school is closed due to power outage near Kirti Nagar.,electricity_outage,power_cut,ollama,train
+g00424,Maine puri sthiti jankari di hai,garbage,bin_overflow,ollama,train
+g00425,"Safedabad, Lucknow",other,,ollama,train
+g00426,Heavy branches,road_obstruction,fallen_tree,ollama,train
+g00427,The kerbs on the footpath outside the school on LTV Road are uneven and need to be repaired.,damaged_infrastructure,footpath,ollama,train
+g00428,kya koi log kisi ko bhi samajh sakte hai,open_manhole,lid_missing,ollama,train
+g00429,Many sticks and,road_obstruction,fallen_tree,ollama,train
+g00430,I'm extremely worried about my 4-year-old daughter as the electricity has been off for the last 3 hours near Indira Gandhi Stadium.,electricity_outage,power_cut,ollama,train
+g00431,Dead streetlight on my street,streetlight,light_off,ollama,train
+g00432,The kerbs on the footpath outside my house have shifted so much that it's hard to walk without tripping I've asked the local authorities multiple times but nothing has been done.,damaged_infrastructure,footpath,ollama,train
+g00433,We are facing power cut at our home on MG Road.,electricity_outage,transformer_issue,ollama,train
+g00434,I'm worried about my kid's safety because there are too many sharp edges on the road.,road_obstruction,debris,ollama,train
+g00435,The road is blocked by heavy branches on the corner of 1st Avenue.,road_obstruction,fallen_tree,ollama,train
+g00436,I'm scared that someone might fall into the open manhole near the cinema hall on Market Street.,open_manhole,lid_broken,ollama,train
+g00437,I'm getting tired of seeing the same old broken sign on the corner of Connaught Place in Delhi every day it's like nobody cares.,damaged_infrastructure,signage,ollama,train
+g00438,Main apne ghar ke aaspaas ek naya saath dhoondh raha hoon.,other,,ollama,train
+g00439,there is a tree branch on road near my house at shiv ganga nagar,road_obstruction,fallen_tree,ollama,train
+g00440,I'm annoyed that the signboard outside the popular street food joint on Khau Gully in Pune is still hanging there after months of complaints.,damaged_infrastructure,signage,ollama,train
+g00441,Kailash nagar se kalkaji tak,pothole,road_surface_broken,ollama,train
+g00442,The stormwater drain outside my office building is overflowing and causing waterlogging in the street.,drainage_sewage,drain_blocked,ollama,train
+g00443,Children are slipping,drainage_sewage,drain_blocked,ollama,train
+g00444,there is no kerb on road near mandir road,damaged_infrastructure,footpath,ollama,train
+g00445,Bade saheb aap logon ko garbhiyan na karte.,garbage,missed_collection,ollama,train
+g00446,box me koi hai sparking,electricity_outage,exposed_wire,ollama,train
+g00447,Stones and gravel scattered,road_obstruction,debris,ollama,train
+g00448,"The drain outside my apartment building is clogged and water is seeping into our lobby, it's causing a lot of inconvenience.",drainage_sewage,drain_blocked,ollama,train
+g00449,"I've lost count of how many times I've hit a pothole and got a flat tire, it's so frustrating.",pothole,road_surface_broken,ollama,train
+g00450,Gautam nagar main bharat nagar,garbage,illegal_dumping,ollama,train
+g00451,The drainage system is clogged with trash and rainwater is flowing onto the road.,road_obstruction,debris,ollama,train
+g00452,sewage kahan se aata hai yeh kya pata hai,drainage_sewage,sewage_overflow,ollama,train
+g00453,Streetlight not working here,streetlight,light_off,ollama,train
+g00454,Aaj se 5th main ke pehle pothale bahut jhik rahi hai,pothole,pothole_single,ollama,train
+g00455,can u do smthing about this,road_obstruction,fallen_tree,ollama,train
+g00456,dhobi ghat mein paani kheench raha hai,water_leakage,pipe_leak,ollama,train
+g00457,I'm afraid that the children will get hit by a car because of the damaged barriers.,damaged_infrastructure,railing_or_divider,ollama,train
+g00458,This pothole is so big it's almost as wide as the road,pothole,pothole_single,ollama,train
+g00459,Deep pothole on Juhu Causeway,pothole,pothole_single,ollama,train
+g00460,no clean water in public drinking station,damaged_infrastructure,public_furniture,ollama,train
+g00461,"There is a deep pothole on the highway near the Petrol Pump, which is causing damage to vehicles.",pothole,pothole_single,ollama,train
+g00462,I am a resident of Kasturba Road and I've noticed that the streetlights on this street are not working properly since last week.,streetlight,light_flickering,ollama,train
+g00463,Maine alag se alag jagah se bhi kaha hai.,streetlight,light_off,ollama,train
+g00464,Colaba Causeway ke pass bus shelter thand hai.,damaged_infrastructure,public_furniture,ollama,train
+g00465,Dheere dheere streetlight band nahin ho raha hai.,streetlight,light_off,ollama,train
+g00466,Not collected for 5 days in my area.,garbage,missed_collection,ollama,train
+g00467,The road at Hauz Khas is impassable due to the loose manhole cover which is not being attended to by the civic authorities.,open_manhole,lid_broken,ollama,train
+g00468,Please clear it ASAP.,road_obstruction,fallen_tree,ollama,train
+g00469,there is water dripping from the toilet at vijaya mart,water_leakage,pipe_leak,ollama,train
+g00470,Drainage system is failed,drainage_sewage,sewage_overflow,ollama,train
+g00471,What about the fallen traffic light pole on main road in Ahmedabad?,damaged_infrastructure,signage,ollama,train
+g00472,Just went over that awful pothole on the way to the airport,pothole,pothole_single,ollama,train
+g00473,water leaking in my kitchen at my house on sri ranganatharaja nagar road has to be fixed,water_leakage,pipe_leak,ollama,train
+g00474,The tourists and the locals are also complaining about this issue,road_obstruction,debris,ollama,train
+g00475,maine koi saboot nahi hai kya,drainage_sewage,sewage_overflow,ollama,train
+g00476,i need to fix my shoe in morning,damaged_infrastructure,footpath,ollama,train
+g00477,"I've been dealing with the smell from the overflowing drain on Church Street for months now, it's driving me mad.",drainage_sewage,drain_blocked,ollama,train
+g00478,Sir I need help,other,,ollama,train
+g00479,Burnt plastic waste is scattered along the pedestrian path of Marine Drive.,garbage,illegal_dumping,ollama,train
+g00480,I'm worried about my child's safety with broken benches at Children's Park.,damaged_infrastructure,public_furniture,ollama,train
+g00481,A fallen tree trunk is currently blocking the road near the bus stand.,road_obstruction,fallen_tree,ollama,train
+g00482,I am worried that if the water doesn't get drained my home's foundation might get damaged.,water_leakage,pipe_burst,ollama,train
+g00483,Large stones stuck,road_obstruction,debris,ollama,train
+g00484,"Bhai, the garbage on the street near the market in Karol Bagh is overflowing and creating a bad smell.",garbage,bin_overflow,ollama,train
+g00485,this footpath near hauz khas is very slippery,damaged_infrastructure,footpath,ollama,train
+g00486,"Near the hospital on Ashok Vihar Road, there is a sunken manhole.",open_manhole,lid_broken,ollama,train
+g00487,"I just received a warning letter from the local council about the drain outside my house, it's been overflowing for years.",drainage_sewage,drain_blocked,ollama,train
+g00488,The once-clear directions on the signboards outside the Metro stations in Delhi are now barely legible.,damaged_infrastructure,signage,ollama,train
+g00489,I need a quiet place to sleep,other,,ollama,train
+g00490,Broken pipes on road,road_obstruction,debris,ollama,train
+g00491,Maine last night road pe 20vi crossing main 2 baje the.,streetlight,light_off,ollama,train
+g00492,A pothole on the road near the Forum Mall in Kormangala is causing a lot of trouble.,pothole,road_surface_broken,ollama,train
+g00493,The open drain on Rohini Sector 22 is a safety hazard for kids.,open_manhole,lid_missing,ollama,train
+g00494,Please send a maintenance team to clear the road.,road_obstruction,fallen_tree,ollama,train
+g00495,Dono cheez jaldi band ho gayi.,streetlight,light_off,ollama,train
+g00496,There is broken traffic sign on the street in front of our school in Mumbai.,damaged_infrastructure,signage,ollama,train
+g00497,yeh rai sahi hai kahan se aisi cheezon ki baat hai,drainage_sewage,sewage_overflow,ollama,train
+g00498,The pothole is quite large and is affecting traffic flow.,pothole,pothole_single,ollama,train
+g00499,The streetlight near the bus stop is not lit properly.,streetlight,light_flickering,ollama,train
+g00500,"I have to take my ailing mother to the hospital, but the meter is still showing a reading near DLF Market.",electricity_outage,power_cut,ollama,train
+g00501,"Maine ek wire ka picture li hai, lekin main usko kahan pahuncha rah hoon?",electricity_outage,exposed_wire,ollama,train
+g00502,There is a loose manhole cover at IIT Kandariya which obstructs the entire road.,open_manhole,lid_broken,ollama,train
+g00503,Power lines are burning,electricity_outage,transformer_issue,ollama,train
+g00504,"Signs are unreadable in rain, we need new ones in all public areas in Delhi.",damaged_infrastructure,signage,ollama,train
+g00505,park main road bahut sunken hai,pothole,road_surface_broken,ollama,train
+g00506,I used this facility,other,,ollama,train
+g00507,water main break ho gaya hai shivaji nagar ke pas,water_leakage,pipe_burst,ollama,train
+g00508,"Mumbai, Mahim area road is a mess.",open_manhole,lid_missing,ollama,train
+g00509,"I'm writing to complain about the potholes on the road to the cricket ground, they're so bad even the kids are getting hurt while playing in the park.",pothole,road_surface_broken,ollama,train
+g00510,maine is manhaol ko khud hi kholne ki koshish ki hai,open_manhole,lid_missing,ollama,train
+g00511,i have a leak at my friend house on st george church road my friend said to call u for service,water_leakage,pipe_leak,ollama,train
+g00512,maine is manhaol ko pehle se hi dekha tha,open_manhole,lid_missing,ollama,train
+g00513,Bajrang Nagar streetlights,streetlight,light_off,ollama,train
+g00514,Can't even see road,streetlight,light_off,ollama,train
+g00515,Maine 15 se 20 feet tak ki doori par gaon ke peechhe ki or tak pani ki jameen dekh li hai,water_leakage,pipe_burst,ollama,train
+g00516,"I'm stuck in traffic, streetlight outside my office is not working properly, keep flickering.",streetlight,light_flickering,ollama,train
+g00517,i see many wire hanging on trees,electricity_outage,exposed_wire,ollama,train
+g00518,Branches in road,road_obstruction,fallen_tree,ollama,train
+g00519,The potholes on the road near the Bengaluru University are very deep and painful.,pothole,road_surface_broken,ollama,train
+g00520,I'm fed up with the constant sewage backup from my neighbor's house.,drainage_sewage,sewage_overflow,ollama,train
+g00521,i see very bad condition of electric meter,electricity_outage,exposed_wire,ollama,train
+g00522,I'm getting sewage flowing into my kitchen sink from the toilet since Monday morning.,drainage_sewage,sewage_overflow,ollama,train
+g00523,The road's barrier has been damaged and I see vehicles driving over it.,damaged_infrastructure,railing_or_divider,ollama,train
+g00524,kathor kachra khel raha hai,garbage,bin_overflow,ollama,train
+g00525,Main yahan se kai dinon se khelta huwa,garbage,bin_overflow,ollama,train
+g00526,"It's been 10 days since the collection was supposed to happen, and the waste is piling up.",garbage,missed_collection,ollama,train
+g00527,my shoe got broken on jyoti nagar road,damaged_infrastructure,footpath,ollama,train
+g00528,Old furniture and appliances,road_obstruction,debris,ollama,train
+g00529,The road needs fixing,pothole,pothole_single,ollama,train
+g00530,Mere saath se kisi ke paas kuch nahi hua.,garbage,missed_collection,ollama,train
+g00531,Ganga nagar se madan chowk tak,pothole,road_surface_broken,ollama,train
+g00532,I'm writing to inquire about the availability of the new bus route in Sector 1.,other,,ollama,train
+g00533,Why no road signs are placed on the railway crossing in Bhopal?,damaged_infrastructure,signage,ollama,train
+g00534,Bend hua hai,streetlight,pole_damaged,ollama,train
+g00535,Nehru place main garbage,garbage,illegal_dumping,ollama,train
+g00536,"Us electricity company ne kaha hai ki woh koi wire lagane ka kaam nahin karte, lekin main unse baat karne ko nahin hoon.",electricity_outage,exposed_wire,ollama,train
+g00537,Sahi samay par kabhi bhi streetlight shuru nahi hote.,streetlight,light_flickering,ollama,train
+g00538,Kuch log apne ghar mein kachra rakhte hain.,garbage,missed_collection,ollama,train
+g00539,The manhole cover on the street near my house is loose and open.,open_manhole,lid_broken,ollama,train
+g00540,There's a huge pile of construction rubble right outside my house.,road_obstruction,debris,ollama,train
+g00541,I'm concerned about my child's safety near the open manhole on MG Road.,open_manhole,lid_missing,ollama,train
+g00542,can u pls move it,road_obstruction,fallen_tree,ollama,train
+g00543,electricity kiye nahi aayi hai meri,electricity_outage,exposed_wire,ollama,train
+g00544,Lights are not working,streetlight,light_off,ollama,train
+g00545,Main is baat ke liye jaanta hoon aur mujhe kuchh karne ki zaroorat hai.,open_manhole,lid_missing,ollama,train
+g00546,Broken signpost,road_obstruction,fallen_tree,ollama,train
+g00547,i have a leaky pipe in my flat and its causing a flood,water_leakage,pipe_burst,ollama,train
+g00548,Main sawariyon ko dekha hua,electricity_outage,exposed_wire,ollama,train
+g00549,Maine iske baare mein apne gaon ke paanchvi varsh mein soochi kiya tha lekin ab bhi koi samadhan nahin mila.,open_manhole,lid_missing,ollama,train
+g00550,Mere ghar ke andar koofee ke sthal pe aaraam karte samay maine dekha ki kuch aisi saavdhaaniyan hain jo maine us samay nahi dekhi thi.,other,,ollama,train
+g00551,"I've been facing voltage fluctuations for the past week and it's affecting my business, I've lost a significant amount of money.",electricity_outage,power_cut,ollama,train
+g00552,My kids are slipping everywhere.,drainage_sewage,sewage_overflow,ollama,train
+g00553,I'm getting water on the floor near the old fountain at Lodi Gardens and it's spreading fast.,water_leakage,pipe_leak,ollama,train
+g00554,The underpass on Nehru Place is a mess.,drainage_sewage,waterlogging,ollama,train
+g00555,I see huge pile of rubble,road_obstruction,debris,ollama,train
+g00556,A group of vendors dumped their trash on the sidewalk in front of Haji Ali Dargah.,garbage,illegal_dumping,ollama,train
+g00557,The water is spraying from the pipe and it's creating a slippery road.,water_leakage,pipe_burst,ollama,train
+g00558,The water pipe near the streetlight in Janak Puri is leaking badly.,water_leakage,pipe_leak,ollama,train
+g00559,Rainwater entering manhole near Ashok Vihar.,open_manhole,lid_missing,ollama,train
+g00560,The road is very uneven,pothole,pothole_single,ollama,train
+g00561,Main apni samjhauta karni nahi chahu aur aapko bataata hoon ki main gaon ke peechhe ki or tak pani ki jameen dekh gayi hai,water_leakage,pipe_burst,ollama,train
+g00562,garbage ki jhooli ban gayi,garbage,bin_overflow,ollama,train
+g00563,Main ek samasya ke liye soochi kiya hai jiska saamna karna mushkil hai.,open_manhole,lid_missing,ollama,train
+g00564,Can't move my car,road_obstruction,debris,ollama,train
+g00565,"The storm drains are not functioning properly, which is causing the problem.",drainage_sewage,waterlogging,ollama,train
+g00566,Manhole cover not placed in Chandni Chowk.,open_manhole,lid_missing,ollama,train
+g00567,Pahle se hi main 8vi crossing main 2 streetlight mil gaye the.,streetlight,light_off,ollama,train
+g00568,Lekin is samasya ke peeche kuchh nahi mil raha hai.,open_manhole,lid_missing,ollama,train
+g00569,Ab kya kar sakta hoon apne ghar ko roshni se bharne ka? near Ashok Vihar.,electricity_outage,power_cut,ollama,train
+g00570,heavy branches on road near indian bank branch,road_obstruction,fallen_tree,ollama,train
+g00571,I want to file,other,,ollama,train
+g00572,Maine kuchh naya paani lagakar lagakar dekha tu paani se bhar ja rahe hain,water_leakage,pipe_burst,ollama,train
+g00573,"Vasant Kunj, New Delhi",other,,ollama,train
+g00574,Driving is a nightmare,pothole,road_surface_broken,ollama,train
+g00575,I have lost my phone and it was last seen near the bus stand on Tilak Road.,other,,ollama,train
+g00576,Lal Bahadur Shastri Road,other,,ollama,train
+g00577,Khairi ka Raasta jhadi,streetlight,light_off,ollama,train
+g00578,I'm waiting for someone to fix the pipe on 3rd Street,water_leakage,pipe_burst,ollama,train
+g00579,conna park ke andar ek chashma par pani aaya hai,water_leakage,pipe_burst,ollama,train
+g00580,Dripping tap in kitchen,water_leakage,pipe_leak,ollama,train
+g00581,Mujhe apni zindagi me koi bhi naya khel seekhna hai jisame mujhe khelne ki aavshyakta ho.,other,,ollama,train
+g00582,This pothole is so deep it's like a hole on the way to the store on Anna Nagar,pothole,pothole_single,ollama,train
+g00583,"The manhole on Janakpuri's 15th Avenue is lying open, it's really scary.",open_manhole,lid_missing,ollama,train
+g00584,Leakage at my flat building,water_leakage,pipe_leak,ollama,train
+g00585,I would appreciate it if you could arrange for its filling soon.,pothole,pothole_single,ollama,train
+g00586,This place is full of people,other,,ollama,train
+g00587,"My child can fall into the open manhole near the bus stop on MG Road, it's a nightmare.",open_manhole,lid_broken,ollama,train
+g00588,my toilet is leaking at my house on madhu nagar road has to be fixed now,water_leakage,pipe_leak,ollama,train
+g00589,drainage in front of my office building is bad,drainage_sewage,drain_blocked,ollama,train
+g00590,I'm concerned about the railing that's broken and loose on the park's playground.,damaged_infrastructure,railing_or_divider,ollama,train
+g00591,Electricity is not working,electricity_outage,transformer_issue,ollama,train
+g00592,Many big trees,road_obstruction,fallen_tree,ollama,train
+g00593,Water leaking from my faucet,water_leakage,pipe_leak,ollama,train
+g00594,toilets outside market area not clean,damaged_infrastructure,public_furniture,ollama,train
+g00595,kuch logon ne pani ki kathor kiya hai batawada ke paas,water_leakage,pipe_burst,ollama,train
+g00596,I'm fed up with standing water on Connaught Place.,drainage_sewage,waterlogging,ollama,train
+g00597,"The potholes on this road are so deep they're like little craters, it's like the city doesn't care about the people using it.",pothole,road_surface_broken,ollama,train
+g00598,The kids are throwing dirty socks,other,,ollama,train
+g00599,I am being scammed by a fake online seller.,other,,ollama,train
+g00600,Road block kar diya hai,road_obstruction,fallen_tree,ollama,train
+g00601,Branches are fallen on road near Marine Drive metro station.,road_obstruction,fallen_tree,ollama,train
+g00602,Tree has fallen on right side near Hotel Sea Face.,road_obstruction,fallen_tree,ollama,train
+g00603,Can someone please assist me in getting a refund for the cancelled ticket?,other,,ollama,train
+g00604,Rainwater is overflowing from drains.,drainage_sewage,sewage_overflow,ollama,train
+g00605,No manhole cover at Sector 27.,open_manhole,lid_missing,ollama,train
+g00606,The clogged drain is causing a mess on my lawn every time it rains.,drainage_sewage,sewage_overflow,ollama,train
+g00607,pata hai kya ab kai din se maine yeh complain kiya hai,drainage_sewage,sewage_overflow,ollama,train
+g00608,"The council should arrange for a professional to inspect and clean the drain immediately, it's an emergency situation.",drainage_sewage,drain_blocked,ollama,train
+g00609,pole is rusty and leaning,streetlight,pole_damaged,ollama,train
+g00610,I see kids playing here.,drainage_sewage,sewage_overflow,ollama,train
+g00611,"My 6-month-old baby was almost dropped from the open manhole on MG Road, someone should do something.",open_manhole,lid_missing,ollama,train
+g00612,"The swings at Rajpath Park are broken, kids can't play here.",damaged_infrastructure,public_furniture,ollama,train
+g00613,Food not hygienic at street stall near Mahalaxmi Temple,other,,ollama,train
+g00614,Can't enter without ticket,other,,ollama,train
+g00615,There is no streetlight on this road at night.,streetlight,light_flickering,ollama,train
+g00616,Dripping water at bus stop,water_leakage,pipe_leak,ollama,train
+g00617,Please help us now,drainage_sewage,drain_blocked,ollama,train
+g00618,"Mera car pothole se khatam ho gaya hai, aapke kya karengi?",pothole,pothole_single,ollama,train
+g00619,I am reporting a broken manhole cover at Janak Puri West Metro Station.,open_manhole,lid_broken,ollama,train
+g00620,I'm not happy with the service,other,,ollama,train
+g00621,I need to know the contact number of the local zoo on Marine Drive.,other,,ollama,train
+g00622,"There is a big crack in the manhole cover on my road, it's very slippery.",open_manhole,lid_broken,ollama,train
+g00623,Main kabhi kabhi is prakaar ki galti ki gali mein aise aapdaan ko dalne se naram rahta hoon.,garbage,bin_overflow,ollama,train
+g00624,This streetlight pole is broken,streetlight,pole_damaged,ollama,train
+g00625,Pothole on Marathwada Marg is huge,pothole,pothole_single,ollama,train
+g00626,Streetlight outside my house is dimly lit.,streetlight,light_flickering,ollama,train
+g00627,"I had a terrible experience at the library, where I was forced to leave my book behind because of a minor issue that could have been easily fixed.",other,,ollama,train
+g00628,Broken truck dumped here,road_obstruction,debris,ollama,train
+g00629,kaal ki kathor hai,garbage,bin_overflow,ollama,train
+g00630,The pothole is quite deep and is affecting the hospital's patients.,pothole,pothole_single,ollama,train
+g00631,water kheech raha hai maine toba,water_leakage,pipe_leak,ollama,train
+g00632,"The website of the new restaurant I'm interested in visiting is giving me a hard time, keeps taking me to a different page every time I try to view the menu.",other,,ollama,train
+g00633,mahi ki nahi aayi hai abhi bhi,electricity_outage,exposed_wire,ollama,train
+g00634,Tere bina koi bhi nahi,electricity_outage,exposed_wire,ollama,train
+g00635,Transformer has started smoking,electricity_outage,transformer_issue,ollama,train
+g00636,"There is a pothole on the road in front of the office building, which is causing uneven riding and vibrations.",pothole,pothole_single,ollama,train
+g00637,i request u to fix it fast,electricity_outage,exposed_wire,ollama,train
+g00638,"I am writing this complaint because, for the last week, the road in front of the shopping mall in Kurla is filled with broken glass",road_obstruction,debris,ollama,train
+g00639,Potholes are causing my car's suspension to wear out fast.,pothole,road_surface_broken,ollama,train
+g00640,I have sewage flowing from my shower drain since yesterday morning and I'm at my wit's end.,drainage_sewage,sewage_overflow,ollama,train
+g00641,Child is sitting alone,other,,ollama,train
+g00642,my toilet is constantly leaking on 5th main road,water_leakage,pipe_leak,ollama,train
+g00643,The bus stand's barrier wall has cracks and I think it's going to collapse soon.,damaged_infrastructure,railing_or_divider,ollama,train
+g00644,public bus shelter broken roof,damaged_infrastructure,public_furniture,ollama,train
+g00645,"The lack of drainage in our neighborhood is causing a lot of problems, including flooding and mosquito breeding.",drainage_sewage,drain_blocked,ollama,train
+g00646,"I am writing to bring to your attention a pothole on the footpath near the school, which is causing tripping hazards for students.",pothole,pothole_single,ollama,train
+g00647,I need toilet paper,other,,ollama,train
+g00648,I have a sewage backup in my toilet on Main Street and I'm waiting for someone to call me back.,drainage_sewage,sewage_overflow,ollama,train
+g00649,Lakhani Road par main rasta uthate hue 2 streetlight mil gaye.,streetlight,light_off,ollama,train
+g00650,I see huge metal scraps,road_obstruction,debris,ollama,train
+g00651,I've noticed a pothole on the road connecting Inorbit Mall to the highway.,pothole,pothole_single,ollama,train
+g00652,The pothole is quite deep and is affecting the school's reputation.,pothole,pothole_single,ollama,train
+g00653,Streetlights are very dim here,streetlight,light_flickering,ollama,train
+g00654,Dripping pipe near city park,water_leakage,pipe_leak,ollama,train
+g00655,"The pothole is quite long and deep, and it's a safety concern for cyclists and pedestrians.",pothole,pothole_single,ollama,train
+g00656,Fence par takneek chal gayi,road_obstruction,fallen_tree,ollama,train
+g00657,Its been 3 days and still not fixed.,streetlight,light_flickering,ollama,train
+g00658,The sewage flow from my kitchen sink has been continuous since last night and it's driving me crazy.,drainage_sewage,sewage_overflow,ollama,train
+g00659,Mehrauli mein sairaniya ka kathora kaam hua hai bas kisi ki zaroorat nahi,drainage_sewage,waterlogging,ollama,train
+g00660,Toilets are broken at school.,drainage_sewage,sewage_overflow,ollama,train
+g00661,"The pothole is quite large and deep, and it's been a nuisance for me and my family for the past week.",pothole,pothole_single,ollama,train
+g00662,bent light post is very ugly,streetlight,pole_damaged,ollama,train
+g00663,Mere paas kaafi samay hai ki maine iske baare mein koi logon se baat ki hai.,open_manhole,lid_missing,ollama,train
+g00664,The sunken manhole cover on Vikas Puri's Raja Ram Mohan Road is causing trouble.,open_manhole,lid_broken,ollama,train
+g00665,Our children are playing in the flooded area near the drain on Hauz Khas Main Road.,water_leakage,pipe_leak,ollama,train
+g00666,I'm extremely frustrated with the lack of garbage collection in our area for the past three days.,garbage,missed_collection,ollama,train
+g00667,"Jaldi repair karo, main jeevan sahi se nahi ja sakta streetlight.",streetlight,light_off,ollama,train
+g00668,garage mein paani ki saanep,water_leakage,pipe_leak,ollama,train
+g00669,I'm annoyed that the drains at Connaught Place are always clogged.,drainage_sewage,waterlogging,ollama,train
+g00670,"In front of my building, drain cover missing.",open_manhole,lid_missing,ollama,train
+g00671,Branches are fallen on road near Juhu beach.,road_obstruction,fallen_tree,ollama,train
+g00672,"Mere ghar ke aas paas ki public ki dustbin kitni badi ho gayi hai, toh kuch dinon se kitni bhi badi ho gayi hai.",garbage,bin_overflow,ollama,train
+g00673,I've noticed that the drain in my neighbor's yard is clogged and water is accumulating in the surrounding area.,drainage_sewage,drain_blocked,ollama,train
+g00674,The park in Bandra is full of broken toys and rusty swings.,damaged_infrastructure,public_furniture,ollama,train
+g00675,"The road is full of broken appliances and electronics, it's a hazard for kids.",road_obstruction,debris,ollama,train
+g00676,yeh road bahut bura hai main kya karo,pothole,road_surface_broken,ollama,train
+g00677,Dilshadpur main pothole bahut jhik raha hai,pothole,pothole_single,ollama,train
+g00678,Muddy water everywhere,road_obstruction,debris,ollama,train
+g00679,Warning signs are missing.,damaged_infrastructure,railing_or_divider,ollama,train
+g00680,Bajrang Nagar lights not,streetlight,light_off,ollama,train
+g00681,"I am writing to report a pothole on the road near the bus stop, which is causing tripping hazards for commuters.",pothole,pothole_single,ollama,train
+g00682,"I want to complain about the open manhole cover on the main road, it's very dangerous.",open_manhole,lid_broken,ollama,train
+g00683,Transformer failed at mall,electricity_outage,transformer_issue,ollama,train
+g00684,Garbage is piling up in the alleyway behind my flat in DLF Colony.,garbage,bin_overflow,ollama,train
+g00685,Mera baccha abhi bhi ghus gaya,electricity_outage,exposed_wire,ollama,train
+g00686,The open manhole on MG Road is making it difficult for me to carry groceries.,open_manhole,lid_missing,ollama,train
+g00687,can u pls fix them on marina road,road_obstruction,fallen_tree,ollama,train
+g00688,Please send someone to clear it.,road_obstruction,fallen_tree,ollama,train
+g00689,electricity supply is not working since morning,electricity_outage,exposed_wire,ollama,train
+g00690,"Maine aaj raat 10 baje streetlight mein gira raha tha, jiski kuchh khaadon ka mishran tha.",streetlight,light_off,ollama,train
+g00691,Mere bachchon ko aamlaat padhne ki zarurat hai to garbha nahi hai.,garbage,missed_collection,ollama,train
+g00692,Koi khadya chakka aaj tak bhara nahin hai,garbage,bin_overflow,ollama,train
+g00693,"The cracked manhole cover in front of my house on MG Road is a safety hazard, especially at night.",open_manhole,lid_broken,ollama,train
+g00694,garbage ki jhooli ban rahi hai,garbage,bin_overflow,ollama,train
+g00695,"Pothole bahut jhik raha hai, main apne car ko bahut khatra mehsoos kar raha hoon",pothole,pothole_single,ollama,train
+g00696,Sewage is spilling out,drainage_sewage,sewage_overflow,ollama,train
+g00697,Can fix now please,electricity_outage,transformer_issue,ollama,train
+g00698,Near my house drain is open on road.,open_manhole,lid_missing,ollama,train
+g00699,i was walking in dark and see very bad wire,electricity_outage,exposed_wire,ollama,train
+g00700,No warning signs around.,damaged_infrastructure,railing_or_divider,ollama,train
+g00701,The pavement outside my house is uneven and has huge potholes it's like they haven't even bothered to maintain it.,damaged_infrastructure,footpath,ollama,train
+g00702,Piles of old tires,road_obstruction,debris,ollama,train
+g00703,Why no pedestrian crossing at Azad Nagar?,other,,ollama,train
+g00704,Junk is blocking road now,road_obstruction,debris,ollama,train
+g00705,Kutte ko maarega,electricity_outage,exposed_wire,ollama,train
+g00706,No voltage at home,electricity_outage,power_cut,ollama,train
+g00707,Kya karenge? na kya?,road_obstruction,fallen_tree,ollama,train
+g00708,Kuchh sawariyon ko nahi dekha,electricity_outage,exposed_wire,ollama,train
+g00709,Gully mein paani ka kila hona hai taaki road par sehn lena hi kathin ho raha hai,drainage_sewage,waterlogging,ollama,train
+g00710,Furious about road condition,pothole,road_surface_broken,ollama,train
+g00711,"Since last week, my vehicle is getting stuck on the potholed road in front of Raipur Hospital, I am afraid to drive my car",road_obstruction,debris,ollama,train
+g00712,My car hit it badly,pothole,pothole_single,ollama,train
+g00713,"Main ghar par khana bana raha hoon, bas ek baar se garbage ek barf ki thali mein aa rahi hai.",garbage,missed_collection,ollama,train
+g00714,Mere pass apni cheezein nahin hain jo mujhe chahiye.,other,,ollama,train
+g00715,Children playing near road,other,,ollama,train
+g00716,Main kisi ghar ke aaspaas ke vyakti se milna hai.,other,,ollama,train
+g00717,Jab maine apne aas paas ki or dekha tu paani se bhar ja rahe hain maine kuchh naya paani ki kundi lagakar lagakar dekha,water_leakage,pipe_burst,ollama,train
+g00718,Maine kabhi kabhi dekha hai ki public ki dustbin ki gali mein aise aapdaan ko dalne se humari samajh mein kaafi saari kami ho gayi hai.,garbage,bin_overflow,ollama,train
+g00719,"I'm extremely disappointed in the way our local government handles such basic issues, it's unacceptable.",drainage_sewage,drain_blocked,ollama,train
+g00720,My neighbors' garbage is not collected yet.,garbage,missed_collection,ollama,train
+g00721,Mere ghar ke kirdar pe ek naya saath hai aur mujhe unse milna hai.,other,,ollama,train
+g00722,"Dheere dheere ka light nahi chala raha, toh kya karna?",electricity_outage,power_cut,ollama,train
+g00723,"Every day, I have to face a problem while driving my car from the Sion Hospital to the Airport",road_obstruction,debris,ollama,train
+g00724,Our area's park has broken benches and no shade.,damaged_infrastructure,public_furniture,ollama,train
+g00725,I would appreciate it if you could send someone to fill it up soon.,pothole,pothole_single,ollama,train
+g00726,No garbage collection at all today.,garbage,missed_collection,ollama,train
+g00727,"I am writing this complaint because, for the last week, the 5 feet stretch of the road in front of the metro station in Parel is filled with broken bricks",road_obstruction,debris,ollama,train
+g00728,There are no clear directions to traffic signals at railway crossings in Kanpur.,damaged_infrastructure,signage,ollama,train
+g00729,"Juhu Beach, Mumbai",other,,ollama,train
+g00730,Makes our road dirty,road_obstruction,debris,ollama,train
+g00731,The sewage pipe on 5th Avenue is clogged and it's causing a huge flood in my garage.,drainage_sewage,sewage_overflow,ollama,train
+g00732,Maine kuchh naya paani lagakar gaon ke peechhe ki or tak pani ki jameen dekh li hai,water_leakage,pipe_burst,ollama,train
+g00733,"The customer service of the new smartwatch brand is absolutely appalling, they claim it's water-resistant but it's not.",other,,ollama,train
+g00734,I am really scared that my little daughter might get hurt by the running water.,water_leakage,pipe_burst,ollama,train
+g00735,street light pole is falling,streetlight,pole_damaged,ollama,train
+g00736,"Siddharthnagar, Varanasi",other,,ollama,train
+g00737,Sairaniya ke kathorataa se darbhanga mein basi rahi hai bas kisi ki zaroorat nahi,drainage_sewage,waterlogging,ollama,train
+g00738,Blocked my path completely,road_obstruction,debris,ollama,train
+g00739,"I was walking on the street and saw a big crack in the manhole cover near my son's school, it's been like that for days.",open_manhole,lid_broken,ollama,train
+g00740,My house has oil leak,electricity_outage,transformer_issue,ollama,train
+g00741,conna park me ek bada chashma par pani aaya hai,water_leakage,pipe_burst,ollama,train
+g00742,Can't even park my car,road_obstruction,debris,ollama,train
+g00743,Aapko zaroor bataata hoon maine apne aas paas ki or dekha tu paani se bhar ja rahe hain maine kuchh naya paani lagakar lagakar dekha,water_leakage,pipe_burst,ollama,train
+g00744,I've been complaining to the authorities for years about the poor condition of the signboard outside the Rajiv Gandhi Stadium in Hyderabad.,damaged_infrastructure,signage,ollama,train
+g00745,The bins on the street near the post office in Panchsheel Park are overflowing.,garbage,bin_overflow,ollama,train
+g00746,The manhole cover at Janakpuri is broken and needs repair.,open_manhole,lid_broken,ollama,train
+g00747,"The manhole cover at Sector 10, Rohini is broken and making a noise every time it rains.",open_manhole,lid_broken,ollama,train
+g00748,"The loose manhole cover at Sardar Patel Road, Tilak Nagar is creating a problem for the drivers and pedestrians.",open_manhole,lid_broken,ollama,train
+g00749,"I request you to repair the cracked manhole cover at Punjabi Bagh, West Delhi as soon as possible.",open_manhole,lid_broken,ollama,train
+g00750,there is a huge pile of garbage in the drain on anna salai,drainage_sewage,drain_blocked,ollama,train
+g00751,"The overflowing drain on Rajaji Road is a health hazard, I'm worried about the diseases that could spread.",drainage_sewage,drain_blocked,ollama,train
+g00752,poor maintenance of streetlight,streetlight,pole_damaged,ollama,train
+g00753,There's huge heap of wood,road_obstruction,debris,ollama,train
+g00754,I've been driving on this pothole on Western Express Highway for a while now and it's getting worse.,pothole,pothole_single,ollama,train
+g00755,"Jaldi uthane ki zarurat hai, main 3 baje hue ghum raha hoon.",streetlight,light_off,ollama,train
+g00756,"Main apne bachchon ke liye bhojan kaise banaunga, yah sawal toh aapke electricity bandh ke liye hai near Green Park.",electricity_outage,power_cut,ollama,train
+g00757,Flickering streetlight on Airport Road is annoying.,streetlight,light_flickering,ollama,train
+g00758,Toilet seat is overflowing,drainage_sewage,sewage_overflow,ollama,train
+g00759,Garbage man did not collect yesterday's trash.,garbage,missed_collection,ollama,train
+g00760,Road is full of broken,road_obstruction,debris,ollama,train
+g00761,Transformer is making smoke,electricity_outage,transformer_issue,ollama,train
+g00762,I just walked down the main road and saw that a section of the kerb has completely broken off it's so uneven now.,damaged_infrastructure,footpath,ollama,train
+g00763,I recently tripped on the broken tiles on the footpath outside the hospital on MG Road it was a close call.,damaged_infrastructure,footpath,ollama,train
+g00764,The road surface is bad,pothole,pothole_single,ollama,train
+g00765,Garbage ki samasya bahut badi hai.,garbage,missed_collection,ollama,train
+g00766,Gutter is clogged again,drainage_sewage,drain_blocked,ollama,train
+g00767,"The vendor I bought my TV from is still not delivering the promised accessories, it's been two weeks since I placed the order.",other,,ollama,train
+g00768,Why do streets never work,streetlight,light_flickering,ollama,train
+g00769,I need a locker room,other,,ollama,train
+g00770,Broken down and no one.,damaged_infrastructure,railing_or_divider,ollama,train
+g00771,I'm worried about my kids.,drainage_sewage,sewage_overflow,ollama,train
+g00772,Lalbaug Main Road ke near park mein tola hua hai.,damaged_infrastructure,public_furniture,ollama,train
+g00773,The pothole in front of the school is very deep and dangerous.,pothole,road_surface_broken,ollama,train
+g00774,Duniya ke har cheez,streetlight,pole_damaged,ollama,train
+g00775,It's pouring rain and water's knee-deep in Connaught Place.,drainage_sewage,waterlogging,ollama,train
+g00776,Main khud sairaniya ke khilaaf sujeet banaunga agar humari shikayat suni nahi jati,drainage_sewage,waterlogging,ollama,train
+g00777,manhaol ke andar se paani aa rahe hai,open_manhole,lid_missing,ollama,train
+g00778,"Maine ek wire ko dekha hai jismein paani ho raha hai, yeh kaise hota hai?",electricity_outage,exposed_wire,ollama,train
+g00779,Mahalakshmi Temple ke chauraha par bhed bheda hua hai.,damaged_infrastructure,public_furniture,ollama,train
+g00780,I'm sick of the stinky sewage overflowing onto Sarojini Nagar Street.,drainage_sewage,waterlogging,ollama,train
+g00781,ki duniya mein paani aa raha hai,water_leakage,pipe_leak,ollama,train
+g00782,I am writing to report a cracked manhole cover at Ashok Vihar East Metro Station.,open_manhole,lid_broken,ollama,train
+g00783,phir bhi paani bhi jama rehta hai,pothole,road_surface_broken,ollama,train
+g00784,maine apne school wale dost ko pucha hai koi manhaol nahi karta,open_manhole,lid_missing,ollama,train
+g00785,Overflowing is a big problem,drainage_sewage,drain_blocked,ollama,train
+g00786,manhaol ko chunaav mein samajhne ki zarurat hogi,open_manhole,lid_missing,ollama,train
+g00787,johar puri ke manhaol se koi bhi nahi hai,open_manhole,lid_missing,ollama,train
+g00788,Bahut zaroorat hai ki woh jaldi fix ho.,streetlight,light_flickering,ollama,train
+g00789,"Open manhole cover on Ring Road, near the traffic circle.",open_manhole,lid_broken,ollama,train
+g00790,I need a doctor,other,,ollama,train
+g00791,My home is getting flooded and I don't know what to do with this situation.,water_leakage,pipe_burst,ollama,train
+g00792,No light at night,streetlight,pole_damaged,ollama,train
+g00793,I reported the missing tiles on the footpath near the temple on MG Road six months ago and still nothing has been done.,damaged_infrastructure,footpath,ollama,train
+g00794,Junk and waste on road,road_obstruction,debris,ollama,train
+g00795,This pothole at the traffic light on Lokmanya Tilak Road is really bad,pothole,pothole_single,ollama,train
+g00796,"I am writing to bring to your attention a pothole on the road near the hospital, which is causing uneven riding and speeding by motorists.",pothole,pothole_single,ollama,train
+g00797,A big crater has formed,pothole,pothole_single,ollama,train
+g00798,This is a serious issue,other,,ollama,train
+g00799,"Foul smell, attracts flies daily",road_obstruction,debris,ollama,train
+g00800,Water flowing where it shouldn't.,drainage_sewage,sewage_overflow,ollama,train
+g00801,Garbage ka chakka jheel mein khela,garbage,bin_overflow,ollama,train
+g00802,my water pipe is leaking at my house on kalyani nagar road has to be fixed soon,water_leakage,pipe_leak,ollama,train
+g00803,Crater in front of Khadiya Hospital,pothole,pothole_single,ollama,train
+g00804,"Garbage is overflowing in the street near my house on Malcha Road, and it's creating a big problem for me.",garbage,bin_overflow,ollama,train
+g00805,My bike is stolen,other,,ollama,train
+g00806,water is spraying out of my toilet tank,water_leakage,pipe_burst,ollama,train
+g00807,Water's pooling up on the road near my flat.,drainage_sewage,waterlogging,ollama,train
+g00808,I've been walking on the footpath outside the metro station on MG Road for years but every time it rains the tiles are uneven and slippery.,damaged_infrastructure,footpath,ollama,train
+g00809,my brother die because of electric shock,electricity_outage,exposed_wire,ollama,train
+g00810,Lighting stopped working suddenly,electricity_outage,power_cut,ollama,train
+g00811,Katiar main sairaniya kee kathorataa se door rehna chaahta hoon,drainage_sewage,waterlogging,ollama,train
+g00812,Just hit a huge pothole on the way to my friend's house on 14th Street,pothole,pothole_single,ollama,train
+g00813,I just saw a kid playing near the open manhole on MG Road and got a call from school saying they need to pick him up early.,open_manhole,lid_missing,ollama,train
+g00814,no benches at train station,damaged_infrastructure,public_furniture,ollama,train
+g00815,Leaking oil from transformer,electricity_outage,transformer_issue,ollama,train
+g00816,Cracked surface on Juhu Beach Road,pothole,pothole_single,ollama,train
+g00817,"Our area has been hit by repeated power cuts for the past month, it's like the system is not designed for the residents.",electricity_outage,power_cut,ollama,train
+g00818,It was dark outside,streetlight,pole_damaged,ollama,train
+g00819,"I'm really frustrated with the state of the drainage system on 1st Main Road, it's been overflowing for weeks now and the mess is getting out of hand.",drainage_sewage,drain_blocked,ollama,train
+g00820,I recently visited the famous Marine Drive and was shocked to see that many of the street signs are either bent or have faded letters making it difficult for pedestrians to navigate.,damaged_infrastructure,signage,ollama,train
+g00821,water leakage at my office building,water_leakage,pipe_leak,ollama,train
+g00822,"Lightbandh nahin ho raha hai, toh kab se aapke workers ka kaam ho raha hai?",electricity_outage,power_cut,ollama,train
+g00823,Aapko bhi is par baat karni chahiye,garbage,bin_overflow,ollama,train
+g00824,A pothole on the corner of Mahatma Gandhi Road is really annoying,pothole,pothole_single,ollama,train
+g00825,Dumpsters are always full in my area.,garbage,missed_collection,ollama,train
+g00826,"Please close the open manhole on GTB Road, it's not safe for kids to play here.",open_manhole,lid_missing,ollama,train
+g00827,there is a huge pile of rubble on the road at chennai beach,road_obstruction,fallen_tree,ollama,train
+g00828,it is hanging on tree,electricity_outage,exposed_wire,ollama,train
+g00829,I need a table,other,,ollama,train
+g00830,The manhole at my house in Greater Noida is broken and I am not sure who to contact for the repair.,open_manhole,lid_broken,ollama,train
+g00831,The flooding on Rajiv Chowk is getting worse by the day.,drainage_sewage,waterlogging,ollama,train
+g00832,Mere padosi ne kaha ki usne 2 baar kshetra se 3 hours aage kahaane voltage problem ho gaya hai.,electricity_outage,power_cut,ollama,train
+g00833,"IT Park, Hyderabad",other,,ollama,train
+g00834,"There's an open manhole on MG Road and no one is taking care of it, it's a big concern for parents.",open_manhole,lid_missing,ollama,train
+g00835,water leakage in conna park,water_leakage,pipe_burst,ollama,train
+g00836,Sewage is flooding me,drainage_sewage,sewage_overflow,ollama,train
+g00837,I've seen several people falling over the crumbling guard rail.,damaged_infrastructure,railing_or_divider,ollama,train
+g00838,Maine 20 se 30 feet tak ki doori par gaon ke peechhe ki or tak pani ki jameen dekh li hai,water_leakage,pipe_burst,ollama,train
+g00839,maine kuch bhi samajh nahi aya hai,open_manhole,lid_missing,ollama,train
+g00840,The manhole cover at Jaisinghpur has come loose.,open_manhole,lid_broken,ollama,train
+g00841,"Mere house ke 2 room ke paas se voltage ka issue hai, koi bhi kuch nahi karta.",electricity_outage,power_cut,ollama,train
+g00842,Tree blocking way,road_obstruction,fallen_tree,ollama,train
+g00843,Sikandarpuri mein rain water ki gully nahi hai bas jangal mein sehn lena hua hai,drainage_sewage,waterlogging,ollama,train
+g00844,water leak in my kitchen,water_leakage,pipe_leak,ollama,train
+g00845,Cement pipes and electrical wires,road_obstruction,debris,ollama,train
+g00846,it was sparking and making noise,electricity_outage,exposed_wire,ollama,train
+g00847,The burst pipe is spraying water all over the street and it's affecting our daily life.,water_leakage,pipe_burst,ollama,train
+g00848,The restaurant is taking too long,other,,ollama,train
+g00849,kya aapke paas koi number hai,drainage_sewage,sewage_overflow,ollama,train
+g00850,Not just potholes alone,pothole,road_surface_broken,ollama,train
+g00851,"Floods are getting worse every year, it's so frustrating when it rains and water is standing on the road.",drainage_sewage,waterlogging,ollama,train
+g00852,Pehle se kyon nahin jaldi,garbage,illegal_dumping,ollama,train
+g00853,Manhole cover gone from Kalkaji.,open_manhole,lid_missing,ollama,train
+g00854,I'm worried about the kids who slipped near the broken railing last night.,damaged_infrastructure,railing_or_divider,ollama,train
+g00855,Mujhe kisi se pahle se aisa bhi nahin hua.,garbage,missed_collection,ollama,train
+g00856,"Kai baar maine aapki team ko kaha hai ki streetlight mein kuchh galat hota hai, par abhi tak kuchh kaha nahi hai.",streetlight,light_off,ollama,train
+g00857,Koi nahi aage kharidta,garbage,illegal_dumping,ollama,train
+g00858,Big heap of broken bricks,road_obstruction,debris,ollama,train
+g00859,My fridge is not working due to power outage near Rajendra Place.,electricity_outage,power_cut,ollama,train
+g00860,A streetlight pole is broken and the open manhole is a hazard on Hauz Khas Road.,open_manhole,lid_missing,ollama,train
+g00861,"The streetlights on MG Road are very dim and it's hard to see the road, especially at night, and I request you to change the bulbs.",streetlight,light_flickering,ollama,train
+g00862,"I just got back from a trip to Delhi and was surprised by the state of the roads, the potholes were everywhere.",pothole,road_surface_broken,ollama,train
+g00863,I want to file complaint,other,,ollama,train
+g00864,The pothole on the service road of Bandra Kurla Complex is quite deep and needs repair.,pothole,pothole_single,ollama,train
+g00865,garbage bins toot gaye,garbage,bin_overflow,ollama,train
+g00866,Tree is fallen on my way to work.,road_obstruction,fallen_tree,ollama,train
+g00867,Can't ride with this,road_obstruction,debris,ollama,train
+g00868,footpath of jyotisar chowk is uneven,damaged_infrastructure,footpath,ollama,train
+g00869,Please inform about fallen signal board near my home in DLF Gurgaon so children are getting scared while crossing.,damaged_infrastructure,signage,ollama,train
+g00870,"I'm a resident of Mumbai and the potholes on Marine Drive are getting out of hand, it's like they're getting worse every day.",pothole,road_surface_broken,ollama,train
+g00871,There are many fallen trees and branches near the road on both sides.,road_obstruction,fallen_tree,ollama,train
+g00872,Manhole on street is missing cover.,open_manhole,lid_missing,ollama,train
+g00873,Electricity not working properly,electricity_outage,power_cut,ollama,train
+g00874,I've been using this footpath for years and the tiles have completely fallen apart it's like they've been intentionally broken by someone.,damaged_infrastructure,footpath,ollama,train
+g00875,Can't read traffic signs,streetlight,light_off,ollama,train
+g00876,I saw a pothole on the road outside the cinema hall on Park Street last night it was huge.,damaged_infrastructure,footpath,ollama,train
+g00877,Aaj mujhe ek manhole mila jahan aasan se aage nikalne ke liye koi chinta nahin hoti.,open_manhole,lid_missing,ollama,train
+g00878,Main apni gari ke sath sath apni zindagi ko bhi nahi ja sakti.,streetlight,light_flickering,ollama,train
+g00879,Litter on footpath outside Indian Museum,other,,ollama,train
+g00880,i have a leaky pipe on the street outside my house on 2nd avenue,water_leakage,pipe_leak,ollama,train
+g00881,main kisi bhi cheez ke liye koi kharida nahi kar sakta,pothole,road_surface_broken,ollama,train
+g00882,Sarkari durbashan se kab koi koi aattha nahi ho raha,garbage,illegal_dumping,ollama,train
+g00883,"I have to drive my car on this road, it is becoming difficult due to the potholes and broken tiles",road_obstruction,debris,ollama,train
+g00884,The garbage on the street near the bus stand is overflowing and creating a bad smell.,garbage,bin_overflow,ollama,train
+g00885,I need help fixing the leaky faucet in our bathroom on Laxmi Nagar Main Road.,water_leakage,pipe_leak,ollama,train
+g00886,Flickering streetlight on Main Road is creating a huge problem for commuters.,streetlight,light_flickering,ollama,train
+g00887,Mere bhai ki eye mein kuchh ghante purane hai kyunki woh aaj raat 10 baje streetlight mein aage jaana tha.,streetlight,light_off,ollama,train
+g00888,I want to know when will the public toilet be repaired,other,,ollama,train
+g00889,I want to report a complaint about the bike shop but I don't know how,other,,ollama,train
+g00890,I see huge pile waste,road_obstruction,debris,ollama,train
+g00891,Our bus shelter on MG Road is damaged and not providing shelter to commuters.,damaged_infrastructure,public_furniture,ollama,train
+g00892,"The road outside my house is a disaster, I've reported it to the local council multiple times but they never seem to care.",pothole,road_surface_broken,ollama,train
+g00893,can someone please fix broken bench,damaged_infrastructure,public_furniture,ollama,train
+g00894,I'm concerned about the safety of children playing on the open drain on Karol Bagh's 3rd Avenue.,open_manhole,lid_missing,ollama,train
+g00895,Mujhe lagta hai ki koi kadam nahin uthaya gaya hai ki mujhe bahut jaroori vyayam karna hai.,other,,ollama,train
+g00896,sewage ka paani maine apne ghar se nikal liya hai,drainage_sewage,sewage_overflow,ollama,train
+g00897,Mujhe lagta hai ki uske sahyog ke saath hamein samasya hal karne mein madad milti hai.,garbage,missed_collection,ollama,train
+g00898,I am shocked to see that my daily commute to office is getting ruined because of the huge pile of broken bricks on the road near Lokhandwala Flyover,road_obstruction,debris,ollama,train
+g00899,Gully mein paani nahi hai taaki road par pani ki sehn lena hi kafi kathin ho raha hai,drainage_sewage,waterlogging,ollama,train
+g00900,Our little one fell on the wet floor in front of our building on Punjabi Bagh Main Road.,water_leakage,pipe_leak,ollama,train
+g00901,I would like to request a meeting with the management to discuss the school's performance.,other,,ollama,train
+g00902,sahiyaan ki bhi samasya hai main bina pani nahi raha,water_leakage,pipe_burst,ollama,train
+g00903,I think the city should take immediate action to fix the pipe and stop the water flow.,water_leakage,pipe_burst,ollama,train
+g00904,"The pothole is causing water to collect and flood the area, and I'm worried about the risk of flooding in our building.",pothole,pothole_single,ollama,train
+g00905,"Maine apne house ko bahut acche se dhoaya hai, lekin abhi bhi voltage problem hai.",electricity_outage,power_cut,ollama,train
+g00906,I have been trying to get the broken manhole cover fixed at Model Town since Monday.,open_manhole,lid_broken,ollama,train
+g00907,"I request the BMC to clear the road near the Church gate on Marine Drive, it is becoming a nightmare to walk on",road_obstruction,debris,ollama,train
+g00908,The public bins on the street near the park are full of garbage and stinking badly.,garbage,bin_overflow,ollama,train
+g00909,"Stop working, stop now",streetlight,light_off,ollama,train
+g00910,Someone has stolen my bike and I want it back.,other,,ollama,train
+g00911,The library's new book policy is quite confusing and I need some clarification.,other,,ollama,train
+g00912,"I've complained to the municipal corporation multiple times, but no action has been taken yet.",garbage,missed_collection,ollama,train
+g00913,I am very worried about my daughter's safety with so many people around,other,,ollama,train
+g00914,old and broken urinals everywhere,damaged_infrastructure,public_furniture,ollama,train
+g00915,Transformer smokes at temple,electricity_outage,transformer_issue,ollama,train
+g00916,"I'm concerned about the fallen tree on MG Road, which is blocking the entire road width.",road_obstruction,fallen_tree,ollama,train
+g00917,Please clear it soon.,road_obstruction,fallen_tree,ollama,train
+g00918,Gutter is so dirty,drainage_sewage,drain_blocked,ollama,train
+g00919,I am writing to bring to your notice that the streetlights at Ram Mandir Chowk are constantly flickering and it's a safety concern for the people walking at night.,streetlight,light_flickering,ollama,train
+g00920,box mein wire kiya bahut garm hai,electricity_outage,exposed_wire,ollama,train
+g00921,Toh mujhe aapko ek aur samay diya,garbage,bin_overflow,ollama,train
+g00922,jag mahaul aakarshit ho raha,garbage,bin_overflow,ollama,train
+g00923,lakin nahi kisi aisa nahi karta aur usse khata hai,open_manhole,lid_missing,ollama,train
+g00924,Water's dripping from the faucet in our bathroom in Rajouri Garden.,water_leakage,pipe_leak,ollama,train
+g00925,"There's a loose manhole cover on the highway near the police station, it's a matter of time before someone falls.",open_manhole,lid_broken,ollama,train
+g00926,Bharat nagar main jhuggi,garbage,illegal_dumping,ollama,train
+g00927,Unclaimed truck on roadside,road_obstruction,debris,ollama,train
+g00928,The manhole cover at GTB Road is cracked and broken.,open_manhole,lid_broken,ollama,train
+g00929,"I am very frustrated with the lack of clarity from the company's marketing team, they keep sending me mixed messages about the product's features.",other,,ollama,train
+g00930,Large pothole in front of Mahatma Gandhi Road,pothole,pothole_single,ollama,train
+g00931,This app is completely useless and not helping at all.,other,,ollama,train
+g00932,i call u many time but u not answer,electricity_outage,exposed_wire,ollama,train
+g00933,The pothole on Kalpataru Apartments road is quite rough and is causing inconvenience.,pothole,pothole_single,ollama,train
+g00934,The sign outside the famous Hauz Khas Village in New Delhi is completely gone and is obstructing the view of the beautiful park.,damaged_infrastructure,signage,ollama,train
+g00935,The person who is running the canteen in the community hall is cheating,other,,ollama,train
+g00936,Vasai Road par kuchh toodhiyan nahi hai.,damaged_infrastructure,public_furniture,ollama,train
+g00937,I am stuck on SCLR near Haji Ali mosque.,road_obstruction,fallen_tree,ollama,train
+g00938,Main apni cheezein nahin le ja sakta.,other,,ollama,train
+g00939,Andheri Station ke near park mein tola hua hai.,damaged_infrastructure,public_furniture,ollama,train
+g00940,"Garbage is piling up in the street near my house on Sardar Patel Road, and it's creating a big problem for me.",garbage,bin_overflow,ollama,train
+g00941,I'm fed up with the sewage flowing into my backyard through the broken drain pipe on 12th Main Street.,drainage_sewage,sewage_overflow,ollama,train
+g00942,I've noticed a pothole on MG Road near the cinema hall that is causing damage to my vehicle.,pothole,pothole_single,ollama,train
+g00943,Our two-year-old was playing on the wet floor in our flat on Sardar Patel Marg.,water_leakage,pipe_leak,ollama,train
+g00944,The vendor is selling expired products,other,,ollama,train
+g00945,I've reported this issue multiple times to the waste management department but nothing seems to be done.,drainage_sewage,drain_blocked,ollama,train
+g00946,drain on gomanthagiri road is very clogged and stinky,drainage_sewage,drain_blocked,ollama,train
+g00947,"I'm writing to complain about the potholes on the Mysore Road, they're so bad even the autorickshaws can't navigate through them.",pothole,road_surface_broken,ollama,train
+g00948,Furious about this streetlight,streetlight,light_off,ollama,train
+g00949,Petrol pump is not,other,,ollama,train
+g00950,nahi saaf karna hoga,garbage,bin_overflow,ollama,train
+g00951,"I was very disappointed with the quality of the new sneakers I bought, the material is cheap and flimsy.",other,,ollama,train
+g00952,Sewage is coming from drain.,drainage_sewage,sewage_overflow,ollama,train
+g00953,Water vendor near City Museum has stopped service,other,,ollama,train
+g00954,Water is overflowing everywhere,drainage_sewage,drain_blocked,ollama,train
+g00955,Empty manhole on Noida road,open_manhole,lid_missing,ollama,train
+g00956,Electricity outage near hospital,electricity_outage,transformer_issue,ollama,train
+g00957,the drain near kannappa chettiar park is overflowing,drainage_sewage,drain_blocked,ollama,train
+g00958,"Main road par utha raha tha, dono cheez jaldi band ho gayi.",streetlight,light_off,ollama,train
+g00959,I was given a fake order number by this company's website.,other,,ollama,train
+g00960,Fence is on ground.,damaged_infrastructure,railing_or_divider,ollama,train
+g00961,Tere liye maina shukriyar,electricity_outage,exposed_wire,ollama,train
+g00962,park benches are extremely old,damaged_infrastructure,public_furniture,ollama,train
+g00963,maine is baat ko bahut samay se socha hai aur koi bhi madad nahi karti hai,open_manhole,lid_missing,ollama,train
+g00964,The person who took my complaint about the loud music is not helping.,other,,ollama,train
+g00965,He won't listen to my problems,other,,ollama,train
+g00966,I don't like the way the new wall is not properly fenced.,damaged_infrastructure,railing_or_divider,ollama,train
+g00967,i live in delhi and my water main burst,water_leakage,pipe_burst,ollama,train
+g00968,bahut bura sa dikh raha hai,pothole,road_surface_broken,ollama,train
+g00969,I got a flat tire due to a pothole on a local road.,pothole,road_surface_broken,ollama,train
+g00970,We are experiencing frequent power outages due to the faulty transformer on Vikas Puri road.,electricity_outage,transformer_issue,ollama,train
+g00971,Water is coming from the burst pipe on Kankarabastri Road,water_leakage,pipe_burst,ollama,train
+g00972,Main apne ghar par sairaniya ki shikayat karunga taaki mujhe suna jaye,drainage_sewage,waterlogging,ollama,train
+g00973,I'm writing to report a issue with the faulty elevator in our building.,other,,ollama,train
+g00974,Mujhe lagta hai koi bhi problem nahin hai.,streetlight,light_off,ollama,train
+g00975,The city's drainage system is supposed to be functional but last week's rain caused massive flooding and ruined most of the footpath tiles.,damaged_infrastructure,footpath,ollama,train
+g00976,"I just saw my 4-year-old child playing near the open manhole on Main Road, it's really scary for kids to play there.",open_manhole,lid_missing,ollama,train
+g00977,Ghar wale ko khud khatra,other,,ollama,train
+g00978,There's a big gap in the fence surrounding the school.,damaged_infrastructure,railing_or_divider,ollama,train
+g00979,"Meh apne house ki details diya gayi hai, jis prakaar mehne aavashyak hoon.",electricity_outage,power_cut,ollama,train
+g00980,A portion of the barrier wall on the highway has cracked and I am worried about the safety of commuters.,damaged_infrastructure,railing_or_divider,ollama,train
+g00981,"The open manhole on MG Road is causing a big noise, it's disturbing our peace.",open_manhole,lid_missing,ollama,train
+g00982,"Borivali, Kandivali road is in bad condition.",open_manhole,lid_missing,ollama,train
+g00983,The footpath on the street outside the hospital on MG Road has broken tiles and potholes everywhere.,damaged_infrastructure,footpath,ollama,train
+g00984,Main Road ke park mein bench theek nahi hai.,damaged_infrastructure,public_furniture,ollama,train
+g00985,they are very long and make noise,electricity_outage,exposed_wire,ollama,train
+g00986,The gym equipment at the community center is in a poor condition.,other,,ollama,train
+g00987,my water pipe is leaking everywhere in mumbai,water_leakage,pipe_burst,ollama,train
+g00988,I saw a kid hit his head on the broken railing yesterday.,damaged_infrastructure,railing_or_divider,ollama,train
+g00989,There's a strong smell of chemicals coming from the nearby chemical plant.,other,,ollama,train
+g00990,Main is tarah se is baat par aage nahi ja pa raha,garbage,illegal_dumping,ollama,train
+g00991,my footpath near india gate is broken,damaged_infrastructure,footpath,ollama,train
+g00992,Dussehra stalls are not,other,,ollama,train
+g00993,Street light on main road,streetlight,pole_damaged,ollama,train
+g00994,A public footpath railing has fallen down and I don't see any sign of repair work.,damaged_infrastructure,railing_or_divider,ollama,train
+g00995,The sign at the famous Chandni Chowk in Old Delhi is almost gone and is blocking traffic.,damaged_infrastructure,signage,ollama,train
+g00996,Potholes on the side,pothole,road_surface_broken,ollama,train
+g00997,"I'm worried about my kids playing near the manhole on Mahatma Gandhi Road, it's just lying open.",open_manhole,lid_missing,ollama,train
+g00998,Maine bahut saal ke liye sairaniya ke kathorataa ki shikayat ki hai bas suna bhi nahi hai,drainage_sewage,waterlogging,ollama,train
+g00999,water is leaking from a pipe in my office building on main street,water_leakage,pipe_leak,ollama,train
+g01000,Garbage ke karan bahut saari baat kuchh nahin hui.,garbage,missed_collection,ollama,train
