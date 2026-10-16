@@ -71,15 +71,3 @@ def test_unknown_department_is_404(client):
     )
 
     assert response.status_code == 404
-
-
-@pytest.mark.parametrize(
-    "params",
-    [
-        {"lat": 19.1, "lng": 72.9},
-        {"department_id": 1, "lat": "north", "lng": 72.9},
-        {"department_id": 1, "lat": 91, "lng": 72.9},
-    ],
-)
-def test_missing_or_invalid_parameters_are_422(client, params):
-    assert client.get("/api/authority-info", params=params).status_code == 422

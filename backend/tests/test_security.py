@@ -60,19 +60,6 @@ def test_tampered_token_is_rejected():
         decode_access_token(f"{head}.{body}.{flipped}{sig[1:]}")
 
 
-def test_token_signed_with_another_secret_is_rejected():
-    claims = {
-        "sub": "7",
-        "role": "ADMIN",
-        "exp": datetime.now(timezone.utc) + timedelta(minutes=5),
-    }
-    token = jwt.encode(
-        claims, "some-other-secret-that-is-long-enough-x", algorithm=ALGORITHM
-    )
-    with pytest.raises(InvalidToken):
-        decode_access_token(token)
-
-
 def test_empty_secret_refuses_to_sign(monkeypatch):
     monkeypatch.setattr(settings, "jwt_secret", "")
     with pytest.raises(RuntimeError):

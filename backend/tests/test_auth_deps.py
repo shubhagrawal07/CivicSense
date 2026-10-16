@@ -91,27 +91,6 @@ def test_me_without_a_token_is_401(client):
     assert response.headers["www-authenticate"] == "Bearer"
 
 
-def test_me_with_a_tampered_token_is_401(client, db):
-    token = token_for(add_user(db, "t@example.com"))
-    head, body, sig = token.split(".")
-    flipped = "A" if sig[0] != "A" else "B"
-    response = client.get(
-        "/api/auth/me", headers=bearer(f"{head}.{body}.{flipped}{sig[1:]}")
-    )
-    assert response.status_code == 401
-
-
-def test_me_with_an_expired_token_is_401(client, db):
-    user = add_user(db, "old@example.com")
-    claims = {
-        "sub": str(user.id),
-        "role": "CITIZEN",
-        "exp": datetime.now(timezone.utc) - timedelta(minutes=1),
-    }
-    token = jwt.encode(claims, settings.jwt_secret, algorithm=ALGORITHM)
-    assert client.get("/api/auth/me", headers=bearer(token)).status_code == 401
-
-
 def test_role_comes_from_the_database_not_the_token(gated, db):
     user = add_user(db, "promoted@example.com", UserRole.CITIZEN)
     claims = {

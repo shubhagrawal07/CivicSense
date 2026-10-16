@@ -5,6 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from app.api.admin import router as admin_router
 from app.api.auth import router as auth_router
 from app.api.authority import router as authority_router
 from app.api.reports import router as reports_router
@@ -29,6 +30,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["Authorization", "Content-Type"],
 )
+app.include_router(admin_router)
 app.include_router(auth_router)
 app.include_router(authority_router)
 app.include_router(reports_router)
