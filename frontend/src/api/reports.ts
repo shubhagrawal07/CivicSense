@@ -1,7 +1,16 @@
 import { client } from "./client";
-import { mockGetReport, mockSubmitReport } from "./mock/mockReports";
+import {
+  mockGetMyReports,
+  mockGetReport,
+  mockSubmitReport,
+} from "./mock/mockReports";
 import { env } from "../config/env";
-import type { Report, SubmitReportPayload, SubmitReportResponse } from "./types";
+import type {
+  MyReportsResponse,
+  Report,
+  SubmitReportPayload,
+  SubmitReportResponse,
+} from "./types";
 
 async function realSubmitReport(
   payload: SubmitReportPayload,
@@ -34,3 +43,20 @@ export const submitReport: (
 export const getReport: (id: string) => Promise<Report> = env.useMockApi
   ? mockGetReport
   : realGetReport;
+
+async function realGetMyReports(params: {
+  limit: number;
+  offset: number;
+}): Promise<MyReportsResponse> {
+  const { data } = await client.get<MyReportsResponse>("/reports/mine", {
+    params,
+  });
+  return data;
+}
+
+export const getMyReports: (params: {
+  limit: number;
+  offset: number;
+}) => Promise<MyReportsResponse> = env.useMockApi
+  ? mockGetMyReports
+  : realGetMyReports;
