@@ -1,0 +1,73 @@
+/* Spacing-only baseline — no color/typography design pass. Polished styling
+   is explicitly out of scope for SL-15 (deferred to Sprint 2); this just
+   keeps the unstyled MVP from looking cramped. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.app-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.field textarea,
+.field input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+.field textarea {
+  min-height: 80px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+form > p {
+  margin-bottom: 20px;
+}
+
+[role="alert"] {
+  margin-top: 6px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+}
