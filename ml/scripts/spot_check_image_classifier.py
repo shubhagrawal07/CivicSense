@@ -12,7 +12,7 @@ SAMPLES_DIR = ROOT / "ml" / "datasets" / "images" / "test_samples"
 # the backend app isn't an installed package, so point at it directly
 sys.path.insert(0, str(ROOT / "backend"))
 
-from app.intelligence.image_classifier import classify_image  # noqa: E402
+from app.intelligence.image_classifier import classify_image
 
 
 def main():
