@@ -19,7 +19,6 @@ async def save_image(file: UploadFile) -> str:
         mb = settings.max_image_bytes // (1024 * 1024)
         raise InvalidInput("image", f"Image must be {mb} MB or smaller")
 
-    # the client's content-type and filename are not trusted, Pillow decides
     try:
         with Image.open(io.BytesIO(data)) as img:
             fmt = img.format

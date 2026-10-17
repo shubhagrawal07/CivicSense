@@ -54,3 +54,28 @@ export interface ApiErrorResponse {
   detail?: string;
   errors?: ApiFieldError[];
 }
+
+export type UserRole = "CITIZEN" | "OFFICER" | "ADMIN";
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  role: UserRole;
+}
+
+export interface RegisterPayload {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginPayload {
+  email: string;
+  password: string;
+}
+
+export interface LoginResult {
+  token: string;
+  user: User;
+}

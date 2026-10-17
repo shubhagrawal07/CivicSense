@@ -8,13 +8,29 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   line-height: 1.5;
 }
 
 .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px 24px;
   border-bottom: 1px solid #ddd;
+}
+
+.app-header nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-header button {
+  margin: 0;
 }
 
 .app-main {
@@ -34,7 +50,10 @@ body {
 }
 
 .field textarea,
-.field input[type="file"] {
+.field input[type="file"],
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
   display: block;
   width: 100%;
   padding: 8px;

@@ -15,7 +15,6 @@ class BadCredentials(Exception):
     pass
 
 
-# checked when the email is unknown, so a miss takes about as long as a wrong password
 _DUMMY_HASH = hash_password("not-a-real-account")
 
 
@@ -38,7 +37,6 @@ def register_user(db: Session, name: str, email: str, password: str) -> User:
     try:
         db.commit()
     except IntegrityError:
-        # two requests with the same email can both pass the check above
         db.rollback()
         raise EmailTaken() from None
     db.refresh(user)

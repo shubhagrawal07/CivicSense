@@ -3,13 +3,17 @@ import { AppLayout } from "./components/layout/AppLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
+import { LoginPage } from "./pages/LoginPage";
+import { MyReportsPage } from "./pages/MyReportsPage";
+import { RegisterPage } from "./pages/RegisterPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        {/* TODO(SL-24): add /login route */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/report/new"
           element={
@@ -26,7 +30,14 @@ export function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        {/* TODO(SL-27): add /my-reports route */}
+        <Route
+          path="/my-reports"
+          element={
+            <ProtectedRoute>
+              <MyReportsPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
