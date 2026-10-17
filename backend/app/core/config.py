@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     region_max_lng: float | None = None
     text_model_path: str = "ml/models/text_classifier.joblib"
     text_confidence_threshold: float = 0.5
+    anthropic_api_key: str = ""
+    image_classifier_model: str = "claude-haiku-4-5"
     frontend_origin: str = "http://localhost:5173"
     admin_name: str = "Admin"
     admin_email: str = ""
