@@ -32,7 +32,6 @@ def get_current_user(
     except (InvalidToken, ValueError):
         raise _unauthorized() from None
 
-    # role comes from the row, not the token, so a role change applies at once
     user = db.get(User, user_id)
     if user is None:
         raise _unauthorized()
