@@ -1,8 +1,6 @@
-CLAUDE.md
 docs
 uploads
 *.pdf
-.claude
 .env
 .venv/
 venv/
@@ -14,9 +12,12 @@ node_modules/
 dist/
 .vite/
 *.tsbuildinfo
+CLAUDE.md
+.claude
 .DS_Store
 # ml/datasets/*
 !ml/datasets/.gitkeep
 ml/models/*.pt
 ml/models/*.pkl
 ml/datasets/raw_v2
+Intermediate_submission.txt

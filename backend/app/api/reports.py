@@ -67,7 +67,6 @@ def get_report(
     report = db.get(Report, report_id)
     if report is None:
         raise HTTPException(status_code=404, detail="Report not found")
-    # the ticket asks for 403 here, even though it lets callers probe which ids exist
     if user.role != UserRole.ADMIN and report.user_id != user.id:
         raise HTTPException(status_code=403, detail="Not allowed")
     return build_report_out(db, report)

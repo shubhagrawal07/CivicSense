@@ -9,7 +9,6 @@ from app.models.user import User
 
 ALGORITHM = "HS256"
 
-# default argon2-cffi parameters, same constructor the argon2-cffi readme shows
 _hasher = PasswordHasher()
 
 

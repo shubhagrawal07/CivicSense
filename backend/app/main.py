@@ -23,7 +23,6 @@ async def lifespan(app):
 
 
 app = FastAPI(title="CivicSense", lifespan=lifespan)
-# the token travels in a header, not a cookie, so credentials stay off
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.frontend_origin],
