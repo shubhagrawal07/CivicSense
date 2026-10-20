@@ -18,6 +18,11 @@ class Settings(BaseSettings):
     jwt_expire_minutes: int = 60
     upload_dir: str = "uploads"
     max_image_bytes: int = 5 * 1024 * 1024
+    link_radius_m: float = 50
+    link_window_days: int = 30
+    link_weight_geo: float = 0.5
+    link_weight_category: float = 0.3
+    link_weight_recency: float = 0.2
     # report locations outside this box are refused; all four unset means no check
     region_min_lat: float | None = None
     region_max_lat: float | None = None
