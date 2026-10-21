@@ -46,8 +46,16 @@ def lookup_authority(db: Session, department_id: int, lat: float, lng: float):
 
     if inside:
         top = max(inside.values())
-        winners = sorted((a for a, p in inside.items() if p == top), key=_by_id)
-        best, tied = winners[0], winners[1:]
+
+        winners = []
+        for key, score in inside.items():
+            if score == top:
+                winners.append(key)
+
+        winners.sort(key=_by_id)
+
+        best = winners[0]
+        tied = winners[1:]
     else:
         best, tied = default, []
 
@@ -125,20 +133,30 @@ def fallback_contacts(db):
 
 
 def contact_info(authority, trusted=True):
-    contacts = sorted(
-        authority.contacts,
-        key=lambda c: (c.verification_status != VerificationStatus.VERIFIED, c.id),
-    )
-    return [
-        ContactInfo(
+
+    def my_sort_key(c):
+        is_not_verified = c.verification_status != VerificationStatus.VERIFIED
+        return (is_not_verified, c.id)
+
+    contacts = sorted(authority.contacts, key=my_sort_key)
+
+    result_list = []
+
+    for c in contacts:
+        is_verified = False
+        if trusted:
+            if c.verification_status == VerificationStatus.VERIFIED:
+                is_verified = True
+
+        info = ContactInfo(
             type=c.type.value,
             value=c.value,
             source_url=c.source_url,
             last_verified=c.last_verified,
-            verified=trusted and c.verification_status == VerificationStatus.VERIFIED,
+            verified=is_verified,
         )
-        for c in contacts
-    ]
+        result_list.append(info)
+    return result_list
 
 
 def _by_id(authority):

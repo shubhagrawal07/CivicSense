@@ -9,8 +9,8 @@ from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import create_access_token, hash_password
 from app.main import app
-from app.models import Department, Report, User
-from app.models.enums import ProcessingStatus, Severity, UserRole
+from app.models import Department, Issue, IssueReport, Report, User
+from app.models.enums import IssueStatus, ProcessingStatus, Severity, UserRole
 from app.seed import seed_authorities, seed_departments
 
 POINT = {"latitude": "19.1334", "longitude": "72.9133"}
@@ -311,3 +311,65 @@ def test_unknown_report_is_404(client, citizen):
 
 def test_get_without_token_is_401(client):
     assert client.get("/api/reports/1").status_code == 401
+
+
+def test_mine_lists_only_own_reports(client, db, citizen):
+    other = make_user(db, "other@example.com")
+    mine = submit(client, citizen, {"description": TEXT}).json()
+    submit(client, other, {"description": TEXT})
+
+    body = client.get("/api/reports/mine", headers=auth(citizen)).json()
+
+    assert body["total"] == 1
+    assert [item["id"] for item in body["items"]] == [mine["id"]]
+
+
+def test_mine_is_paginated_newest_first(client, db, citizen):
+    ids = [
+        submit(client, citizen, {"description": TEXT}).json()["id"] for _ in range(3)
+    ]
+
+    first = client.get("/api/reports/mine?limit=2", headers=auth(citizen)).json()
+    second = client.get(
+        "/api/reports/mine?limit=2&offset=2", headers=auth(citizen)
+    ).json()
+
+    assert first["total"] == 3
+    assert [item["id"] for item in first["items"]] == [ids[2], ids[1]]
+    assert [item["id"] for item in second["items"]] == [ids[0]]
+
+
+def test_mine_hides_results_until_done(client, db, citizen):
+    created = submit(client, citizen, {"description": TEXT}).json()
+
+    pending = client.get("/api/reports/mine", headers=auth(citizen)).json()["items"][0]
+
+    assert pending["processing_status"] == "PENDING"
+    assert pending["description_preview"] == TEXT
+    assert pending["thumbnail_url"] is None
+    for key in (
+        "category",
+        "severity_level",
+        "issue_id",
+        "issue_status",
+        "report_count",
+    ):
+        assert pending[key] is None
+
+    report = db.get(Report, created["id"])
+    report.processing_status = ProcessingStatus.DONE
+    report.classification = "pothole"
+    report.predicted_severity = Severity.HIGH
+    issue = Issue(category="pothole", status=IssueStatus.NEW, report_count=2)
+    db.add(issue)
+    db.flush()
+    db.add(IssueReport(issue_id=issue.id, report_id=report.id))
+    db.flush()
+
+    done = client.get("/api/reports/mine", headers=auth(citizen)).json()["items"][0]
+
+    assert done["category"] == "pothole"
+    assert done["severity_level"] == "HIGH"
+    assert done["issue_id"] == issue.id
+    assert done["issue_status"] == "NEW"
+    assert done["report_count"] == 2
