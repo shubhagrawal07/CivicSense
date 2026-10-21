@@ -144,7 +144,7 @@ def contact_info(authority, trusted=True):
 
     for c in contacts:
         is_verified = False
-        if trusted == True:
+        if trusted:
             if c.verification_status == VerificationStatus.VERIFIED:
                 is_verified = True
 
