@@ -32,6 +32,8 @@ class Settings(BaseSettings):
     text_confidence_threshold: float = 0.5
     anthropic_api_key: str = ""
     image_classifier_model: str = "claude-haiku-4-5"
+    image_confidence_threshold: float = 0.4
+    image_wins_conflicts: bool = True
     frontend_origin: str = "http://localhost:5173"
     admin_name: str = "Admin"
     admin_email: str = ""
