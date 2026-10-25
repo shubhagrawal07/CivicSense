@@ -10,24 +10,26 @@ export function Pagination({ total, limit, offset, onOffsetChange }: PaginationP
   const firstShown = total === 0 ? 0 : offset + 1;
 
   return (
-    <div>
-      <span>
-        Showing {firstShown} to {lastShown} of {total}
+    <div className="pagination">
+      <span className="pagination__summary">
+        Show {firstShown} - {lastShown} of {total}
       </span>
-      <button
-        type="button"
-        disabled={offset === 0}
-        onClick={() => onOffsetChange(Math.max(offset - limit, 0))}
-      >
-        Previous
-      </button>
-      <button
-        type="button"
-        disabled={offset + limit >= total}
-        onClick={() => onOffsetChange(offset + limit)}
-      >
-        Next
-      </button>
+      <div className="pagination__buttons">
+        <button
+          type="button"
+          disabled={offset === 0}
+          onClick={() => onOffsetChange(Math.max(offset - limit, 0))}
+        >
+          Previous
+        </button>
+        <button
+          type="button"
+          disabled={offset + limit >= total}
+          onClick={() => onOffsetChange(offset + limit)}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }

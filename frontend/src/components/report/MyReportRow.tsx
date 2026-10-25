@@ -10,17 +10,21 @@ export function MyReportRow({ item }: MyReportRowProps) {
   const navigate = useNavigate();
 
   return (
-    <li onClick={() => navigate(`/reports/${item.id}`)} style={{ cursor: "pointer" }}>
-      {item.thumbnail_url && <img src={item.thumbnail_url} alt="" width={48} height={48} />}
-      <span>{item.description_preview ?? "Photo only"}</span>
-      <span>{new Date(item.created_at).toLocaleDateString()}</span>
-      <StatusBadge
-        processingStatus={item.processing_status}
-        issueStatus={item.issue_status}
-      />
-      <span>{item.category ?? "Not yet available"}</span>
-      <span>{item.severity_level ?? "Not yet available"}</span>
-      {item.issue_id && <span>{item.report_count} supporting report(s)</span>}
-    </li>
+    <tr className="report-row" onClick={() => navigate(`/reports/${item.id}`)}>
+      <td>
+        {item.thumbnail_url && <img src={item.thumbnail_url} alt="" width={48} height={48} />}
+        {item.description_preview ?? "Photo only"}
+      </td>
+      <td>{new Date(item.created_at).toLocaleDateString()}</td>
+      <td>
+        <StatusBadge
+          processingStatus={item.processing_status}
+          issueStatus={item.issue_status}
+        />
+      </td>
+      <td>{item.category ?? "Not yet available"}</td>
+      <td>{item.severity_level ?? "Not yet available"}</td>
+      <td>{item.issue_id ? `${item.report_count} supporting report(s)` : "—"}</td>
+    </tr>
   );
 }

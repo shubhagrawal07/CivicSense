@@ -86,3 +86,40 @@ dt {
 dd {
   margin: 0;
 }
+
+.report-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-list th {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+.report-list td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-row {
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.pagination__summary {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.pagination__buttons {
+  display: flex;
+  gap: 12px;
+}

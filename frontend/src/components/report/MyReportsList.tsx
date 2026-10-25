@@ -7,10 +7,22 @@ interface MyReportsListProps {
 
 export function MyReportsList({ items }: MyReportsListProps) {
   return (
-    <ul>
-      {items.map((item) => (
-        <MyReportRow key={item.id} item={item} />
-      ))}
-    </ul>
+    <table className="report-list">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Reported</th>
+          <th>Status</th>
+          <th>Category</th>
+          <th>Severity</th>
+          <th>Supporting reports</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <MyReportRow key={item.id} item={item} />
+        ))}
+      </tbody>
+    </table>
   );
 }
