@@ -4,21 +4,12 @@ import type {
   SubmitReportResponse,
 } from "../types";
 
-// In-memory mock of the report submission + background-processing flow,
-// used while SL-11 (backend report API) and SL-16 (processing pipeline) are
-// not yet available. A report transitions PENDING -> PROCESSING -> DONE on
-// its own after a short delay, so the polling UI has something real to react
-// to. Delete this module (and the VITE_USE_MOCK_API switch in reports.ts)
-// once the real backend is wired up.
-
 const MOCK_DELAY_PROCESSING_MS = 1500;
 const MOCK_DELAY_DONE_MS = 6000;
 
 const reports = new Map<string, Report>();
 let nextId = 1;
 
-// Submitting a description containing the word "fail" (case-insensitive)
-// produces a FAILED report, for exercising the error UI without waiting.
 function willFail(payload: SubmitReportPayload): boolean {
   return (payload.description ?? "").toLowerCase().includes("fail");
 }

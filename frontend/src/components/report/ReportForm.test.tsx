@@ -4,8 +4,6 @@ import { describe, expect, it, vi } from "vitest";
 import { ReportForm } from "./ReportForm";
 import { submitReport } from "../../api/reports";
 
-// Leaflet doesn't render meaningfully in jsdom; swap LocationPicker for a
-// minimal stub that lets tests set a location without exercising the map.
 vi.mock("./LocationPicker", () => ({
   LocationPicker: ({
     onChange,

@@ -1,7 +1,3 @@
-// Mirrors the backend `Report` model (backend/app/models/report.py) and its
-// enums (backend/app/models/enums.py) as closely as possible. SL-11 has not
-// published a finalized API contract yet — keep this minimal and extend it
-// as SL-11/SL-16 land real fields, rather than guessing ahead of them.
 
 export type ProcessingStatus = "PENDING" | "PROCESSING" | "DONE" | "FAILED";
 

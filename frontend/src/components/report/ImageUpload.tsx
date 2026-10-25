@@ -43,13 +43,16 @@ export function ImageUpload({ onChange }: ImageUploadProps) {
   return (
     <div>
       <label htmlFor="report-image">Photo (optional)</label>
+
       <input
         id="report-image"
         type="file"
         accept="image/jpeg,image/png"
         onChange={handleFileChange}
       />
+
       {error && <p role="alert">{error}</p>}
+
       {preview && (
         <img
           src={preview}
