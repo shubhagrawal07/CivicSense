@@ -47,9 +47,6 @@ export interface Report {
 
 export type IssueStatus = "NEW" | "IN_PROGRESS" | "RESOLVED";
 
-// Mirrors the backend list projection from GET /api/reports/mine (SL-25).
-// This is deliberately a separate shape from Report since the field names
-// and nullability rules differ.
 export interface MyReportListItem {
   id: string;
   description_preview?: string | null;
