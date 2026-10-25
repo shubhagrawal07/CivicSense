@@ -56,6 +56,24 @@ class AuthorityRef(BaseModel):
     contacts: list[ContactOut]
 
 
+class MyReportItem(BaseModel):
+    id: int
+    description_preview: str | None
+    thumbnail_url: str | None
+    created_at: datetime
+    processing_status: ProcessingStatus
+    category: str | None = None
+    severity_level: Severity | None = None
+    issue_id: int | None = None
+    issue_status: str | None = None
+    report_count: int | None = None
+
+
+class MyReportsPage(BaseModel):
+    items: list[MyReportItem]
+    total: int
+
+
 class ReportOut(BaseModel):
     id: int
     description: str | None
