@@ -18,22 +18,22 @@ Submitting a report returns straight away. The analysis runs in the background, 
 
 ## Tech stack
 
-| Area | Choice |
-|---|---|
-| Backend | Python, FastAPI, Pydantic |
-| Database | PostgreSQL + PostGIS (in Docker), SQLAlchemy with GeoAlchemy2, Alembic |
-| Auth | Argon2 password hashing, JWT, roles: citizen, officer, admin |
-| Background work | FastAPI `BackgroundTasks`. The pipeline is a plain function, so it can move to a queue later |
-| Text ML | scikit-learn: TF-IDF + Logistic Regression |
-| Image ML | PyTorch / torchvision with a small pretrained model (MobileNetV3 or ResNet18), fine-tuned, CPU only. Pillow for image handling |
-| Duplicate matching | Category, text similarity and PostGIS distance (`ST_DWithin`) |
-| Scraper (Sprint 2) | Scrapy, BeautifulSoup, Playwright. Respects robots.txt and rate limits, and stores the source URL and last-verified date for every contact |
-| Frontend | React + TypeScript (Vite), React Router, Recharts |
-| Maps | Leaflet + OpenStreetMap |
-| File storage | Local `uploads/` folder, served as static files |
-| Testing and quality | pytest, ruff, black |
-| Dev setup | Docker for the database only. Backend and frontend run locally |
-| Tracking and docs | Git + GitHub, Jira, Confluence |
+| Area                | Choice                                                                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Backend             | Python, FastAPI, Pydantic                                                                                                                  |
+| Database            | PostgreSQL + PostGIS (in Docker), SQLAlchemy with GeoAlchemy2, Alembic                                                                     |
+| Auth                | Argon2 password hashing, JWT, roles: citizen, officer, admin                                                                               |
+| Background work     | FastAPI `BackgroundTasks`. The pipeline is a plain function, so it can move to a queue later                                               |
+| Text ML             | scikit-learn: TF-IDF + Logistic Regression                                                                                                 |
+| Image ML            | PyTorch / torchvision with a small pretrained model (MobileNetV3 or ResNet18), fine-tuned, CPU only. Pillow for image handling             |
+| Duplicate matching  | Category, text similarity and PostGIS distance (`ST_DWithin`)                                                                              |
+| Scraper (Sprint 2)  | Scrapy, BeautifulSoup, Playwright. Respects robots.txt and rate limits, and stores the source URL and last-verified date for every contact |
+| Frontend            | React + TypeScript (Vite), React Router, Recharts                                                                                          |
+| Maps                | Leaflet + OpenStreetMap                                                                                                                    |
+| File storage        | Local `uploads/` folder, served as static files                                                                                            |
+| Testing and quality | pytest, ruff, black                                                                                                                        |
+| Dev setup           | Docker for the database only. Backend and frontend run locally                                                                             |
+| Tracking and docs   | Git + GitHub, Jira, Confluence                                                                                                             |
 
 ## Getting started
 
@@ -114,4 +114,13 @@ civicsense/
 ```
 
 `ml/` is where models are trained and evaluated. `backend/app/intelligence/` only loads the finished models and uses them when a report is processed.
+
+
+DISCLAIMER:
+
+Few things where we have taken help of AI to generate data or copy paste pre-implemented work:
+
+-> All documentation files like this readme
+-> All test cases across frontend and backend so that we can know what might break before going into the production
+-> The JIRA portal updates to keep track of our work and divide and communicate in real time.
 

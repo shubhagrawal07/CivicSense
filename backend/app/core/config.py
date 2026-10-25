@@ -18,6 +18,11 @@ class Settings(BaseSettings):
     jwt_expire_minutes: int = 60
     upload_dir: str = "uploads"
     max_image_bytes: int = 5 * 1024 * 1024
+    link_radius_m: float = 50
+    link_window_days: int = 30
+    link_weight_geo: float = 0.5
+    link_weight_category: float = 0.3
+    link_weight_recency: float = 0.2
     # report locations outside this box are refused; all four unset means no check
     region_min_lat: float | None = None
     region_max_lat: float | None = None
@@ -25,6 +30,10 @@ class Settings(BaseSettings):
     region_max_lng: float | None = None
     text_model_path: str = "ml/models/text_classifier.joblib"
     text_confidence_threshold: float = 0.5
+    anthropic_api_key: str = ""
+    image_classifier_model: str = "claude-haiku-4-5"
+    image_confidence_threshold: float = 0.4
+    image_wins_conflicts: bool = True
     frontend_origin: str = "http://localhost:5173"
     admin_name: str = "Admin"
     admin_email: str = ""

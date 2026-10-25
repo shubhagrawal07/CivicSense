@@ -7,6 +7,7 @@ from fastapi import (
     File,
     Form,
     HTTPException,
+    Query,
     UploadFile,
 )
 from sqlalchemy.orm import Session
@@ -16,12 +17,13 @@ from app.core.db import get_db
 from app.core.errors import InvalidInput
 from app.models import Report, User
 from app.models.enums import UserRole
-from app.schemas.report import ReportAccepted, ReportOut
+from app.schemas.report import MyReportsPage, ReportAccepted, ReportOut
 from app.services.reports import (
     build_report_out,
     check_region,
     clean_description,
     create_report,
+    list_my_reports,
 )
 from app.services.uploads import delete_image, save_image
 from app.workers.pipeline import process_report
@@ -58,6 +60,16 @@ async def submit_report(
     return report
 
 
+@router.get("/mine", response_model=MyReportsPage)
+def my_reports(
+    user: Annotated[User, Depends(get_current_user)],
+    db: Annotated[Session, Depends(get_db)],
+    limit: Annotated[int, Query(ge=1, le=100)] = 20,
+    offset: Annotated[int, Query(ge=0)] = 0,
+):
+    return list_my_reports(db, user.id, limit, offset)
+
+
 @router.get("/{report_id}", response_model=ReportOut)
 def get_report(
     report_id: int,
@@ -67,7 +79,6 @@ def get_report(
     report = db.get(Report, report_id)
     if report is None:
         raise HTTPException(status_code=404, detail="Report not found")
-    # the ticket asks for 403 here, even though it lets callers probe which ids exist
     if user.role != UserRole.ADMIN and report.user_id != user.id:
         raise HTTPException(status_code=403, detail="Not allowed")
     return build_report_out(db, report)

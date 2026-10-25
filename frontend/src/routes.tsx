@@ -3,13 +3,17 @@ import { AppLayout } from "./components/layout/AppLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
+import { LoginPage } from "./pages/LoginPage";
 import { MyReportsPage } from "./pages/MyReportsPage";
+import { RegisterPage } from "./pages/RegisterPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/report/new"
           element={

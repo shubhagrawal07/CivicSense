@@ -9,7 +9,6 @@ from app.core.security import InvalidToken, decode_access_token
 from app.models import Report, User
 from app.models.enums import UserRole
 
-# auto_error is off so a missing header gets the same 401 as a bad token
 bearer = HTTPBearer(auto_error=False)
 
 
@@ -33,7 +32,6 @@ def get_current_user(
     except (InvalidToken, ValueError):
         raise _unauthorized() from None
 
-    # role comes from the row, not the token, so a role change applies at once
     user = db.get(User, user_id)
     if user is None:
         raise _unauthorized()
@@ -49,7 +47,6 @@ def require_role(*roles: UserRole):
     return check
 
 
-# 404 and not 403, so guessing report ids does not reveal which ones exist
 def assert_owner_or_admin(user: User, report: Report) -> None:
     if user.role == UserRole.ADMIN or report.user_id == user.id:
         return

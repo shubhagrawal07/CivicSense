@@ -11,7 +11,6 @@ class Base(DeclarativeBase):
     pass
 
 
-# usual session-per-request dependency, same shape as the one in the fastapi sql docs
 def get_db():
     db = SessionLocal()
     try:

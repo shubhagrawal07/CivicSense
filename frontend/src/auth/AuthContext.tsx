@@ -1,41 +1,57 @@
-import { createContext, useCallback, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import type { ReactNode } from "react";
-import { env } from "../config/env";
-
-// Minimal auth stub for SL-15. SL-24 (login pages) will replace the
-// internals of this provider (real login call, token refresh, etc.)
-// without changing how ProtectedRoute or consumers use this context.
+import { getMe, login as loginRequest } from "../api/auth";
+import { setUnauthorizedHandler } from "../api/client";
+import type { LoginPayload, User } from "../api/types";
+import { clearStoredToken, getStoredToken, storeToken } from "./tokenStorage";
 
 interface AuthContextValue {
+  user: User | null;
   token: string | null;
   isAuthenticated: boolean;
-  login: (token: string) => void;
+  isLoading: boolean;
+  login: (credentials: LoginPayload) => Promise<void>;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-function readInitialToken(): string | null {
-  const stored = localStorage.getItem("authToken");
-  if (stored) return stored;
-  return env.useMockApi && env.devAuthToken ? env.devAuthToken : null;
-}
-
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [token, setToken] = useState<string | null>(readInitialToken);
-
-  const login = useCallback((newToken: string) => {
-    localStorage.setItem("authToken", newToken);
-    setToken(newToken);
-  }, []);
+  const [token, setToken] = useState<string | null>(getStoredToken);
+  const [user, setUser] = useState<User | null>(null);
+  // a stored token has to be checked with the server before we trust it
+  const [isLoading, setIsLoading] = useState(() => getStoredToken() !== null);
 
   const logout = useCallback(() => {
-    localStorage.removeItem("authToken");
+    clearStoredToken();
     setToken(null);
+    setUser(null);
   }, []);
 
+  const login = useCallback(async (credentials: LoginPayload) => {
+    const result = await loginRequest(credentials);
+    storeToken(result.token);
+    setToken(result.token);
+    setUser(result.user);
+  }, []);
+
+  useEffect(() => {
+    setUnauthorizedHandler(logout);
+    return () => setUnauthorizedHandler(null);
+  }, [logout]);
+
+  useEffect(() => {
+    if (!getStoredToken()) return;
+    getMe()
+      .then(setUser)
+      .catch(logout)
+      .finally(() => setIsLoading(false));
+  }, [logout]);
+
   return (
-    <AuthContext.Provider value={{ token, isAuthenticated: !!token, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, token, isAuthenticated: user !== null, isLoading, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
