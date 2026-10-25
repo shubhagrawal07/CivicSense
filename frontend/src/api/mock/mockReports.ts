@@ -1,15 +1,11 @@
 import type {
+  MyReportListItem,
+  MyReportsResponse,
+  ProcessingStatus,
   Report,
   SubmitReportPayload,
   SubmitReportResponse,
 } from "../types";
-
-// In-memory mock of the report submission + background-processing flow,
-// used while SL-11 (backend report API) and SL-16 (processing pipeline) are
-// not yet available. A report transitions PENDING -> PROCESSING -> DONE on
-// its own after a short delay, so the polling UI has something real to react
-// to. Delete this module (and the VITE_USE_MOCK_API switch in reports.ts)
-// once the real backend is wired up.
 
 const MOCK_DELAY_PROCESSING_MS = 1500;
 const MOCK_DELAY_DONE_MS = 6000;
@@ -17,8 +13,68 @@ const MOCK_DELAY_DONE_MS = 6000;
 const reports = new Map<string, Report>();
 let nextId = 1;
 
-// Submitting a description containing the word "fail" (case-insensitive)
-// produces a FAILED report, for exercising the error UI without waiting.
+function demoReport(
+  description: string,
+  status: ProcessingStatus,
+  hoursAgo: number,
+): Report {
+  return {
+    id: String(nextId++),
+    description: description,
+    image_path: null,
+    latitude: 0,
+    longitude: 0,
+    processing_status: status,
+    created_at: new Date(Date.now() - hoursAgo * 60 * 60 * 1000).toISOString(),
+  };
+}
+
+const demoReports: Report[] = [
+  {
+    ...demoReport("Large pothole on Main St", "DONE", 5),
+    classification: "pothole",
+    predicted_severity: "HIGH",
+  },
+  {
+    ...demoReport("Streetlight out near the park", "DONE", 4),
+    classification: "lighting",
+    predicted_severity: "LOW",
+  },
+  demoReport("Overflowing bin on 5th Ave", "PENDING", 3),
+  demoReport("Graffiti on the underpass wall", "PROCESSING", 2),
+  {
+    ...demoReport("Broken fence near the school", "FAILED", 1),
+    error: "Mock processing failed.",
+  },
+];
+
+for (const report of demoReports) {
+  reports.set(report.id, report);
+}
+
+function toListItem(report: Report): MyReportListItem {
+  const item: MyReportListItem = {
+    id: report.id,
+    description_preview: report.description?.slice(0, 80),
+    thumbnail_url: report.image_path,
+    created_at: report.created_at,
+    processing_status: report.processing_status,
+  };
+
+  if (report.processing_status !== "DONE") {
+    return item;
+  }
+
+  return {
+    ...item,
+    category: report.classification,
+    severity_level: report.predicted_severity,
+    issue_id: report.id,
+    issue_status: "NEW",
+    report_count: 1,
+  };
+}
+
 function willFail(payload: SubmitReportPayload): boolean {
   return (payload.description ?? "").toLowerCase().includes("fail");
 }
@@ -84,6 +140,17 @@ export async function mockSubmitReport(
   }, MOCK_DELAY_DONE_MS);
 
   return { id, processing_status: "PENDING", created_at: createdAt };
+}
+
+export async function mockGetMyReports(params: {
+  limit: number;
+  offset: number;
+}): Promise<MyReportsResponse> {
+  const newestFirst = Array.from(reports.values()).reverse();
+  const items = newestFirst
+    .slice(params.offset, params.offset + params.limit)
+    .map(toListItem);
+  return { items: items, total: newestFirst.length };
 }
 
 export async function mockGetReport(id: string): Promise<Report> {
