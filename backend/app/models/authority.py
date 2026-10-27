@@ -1,11 +1,25 @@
 from datetime import date, datetime
 
 from geoalchemy2 import Geometry
-from sqlalchemy import Date, DateTime, Enum, ForeignKey, Integer, String, Text
+from sqlalchemy import (
+    Date,
+    DateTime,
+    Enum,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.db import Base
-from app.models.enums import ContactType, SourceStatus, VerificationStatus
+from app.models.enums import (
+    ContactType,
+    JurisdictionStatus,
+    SourceStatus,
+    VerificationStatus,
+)
 
 
 class Department(Base):
@@ -83,3 +97,30 @@ class GovernmentSource(Base):
     status: Mapped[SourceStatus] = mapped_column(
         Enum(SourceStatus, name="source_status"), default=SourceStatus.ACTIVE
     )
+
+
+class Jurisdiction(Base):
+    __tablename__ = "jurisdictions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    authority_id: Mapped[int | None] = mapped_column(
+        ForeignKey("authorities.id"), index=True
+    )
+    name: Mapped[str] = mapped_column(String(200))
+    type: Mapped[str] = mapped_column(String(50))
+    boundary = mapped_column(Geometry("MULTIPOLYGON", srid=4326), nullable=False)
+    priority: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    source: Mapped[str | None] = mapped_column(String(500))
+    status: Mapped[JurisdictionStatus] = mapped_column(
+        Enum(JurisdictionStatus, name="jurisdiction_status"),
+        default=JurisdictionStatus.CANDIDATE,
+    )
+
+
+class AuthorityService(Base):
+    __tablename__ = "authority_services"
+    __table_args__ = (UniqueConstraint("authority_id", "department_id"),)
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    authority_id: Mapped[int] = mapped_column(ForeignKey("authorities.id"))
+    department_id: Mapped[int] = mapped_column(ForeignKey("departments.id"))

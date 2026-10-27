@@ -61,3 +61,14 @@ class SourceStatus(str, enum.Enum):
     ACTIVE = "ACTIVE"
     FAILING = "FAILING"
     DISABLED = "DISABLED"
+
+
+class JurisdictionStatus(str, enum.Enum):
+    CANDIDATE = "CANDIDATE"
+    APPROVED = "APPROVED"
+
+
+class ScrapeStatus(str, enum.Enum):
+    RUNNING = "RUNNING"
+    SUCCEEDED = "SUCCEEDED"
+    FAILED = "FAILED"
