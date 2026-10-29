@@ -1,3 +1,5 @@
+import logging
+import threading
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -8,18 +10,22 @@ from fastapi.staticfiles import StaticFiles
 from app.api.admin import router as admin_router
 from app.api.auth import router as auth_router
 from app.api.authority import router as authority_router
+from app.api.issues import router as issues_router
 from app.api.reports import router as reports_router
 from app.api.stats import router as stats_router
 from app.core.config import settings
 from app.core.errors import InvalidInput, invalid_input_handler, validation_handler
 from app.intelligence.text_classifier import load_text_model
+from app.workers.pipeline import requeue_stuck_reports
 
+logging.basicConfig(level=logging.INFO)
 settings.upload_path.mkdir(parents=True, exist_ok=True)
 
 
 @asynccontextmanager
 async def lifespan(app):
     load_text_model()
+    threading.Thread(target=requeue_stuck_reports, daemon=True).start()
     yield
 
 
@@ -33,6 +39,7 @@ app.add_middleware(
 app.include_router(admin_router)
 app.include_router(auth_router)
 app.include_router(authority_router)
+app.include_router(issues_router)
 app.include_router(reports_router)
 app.include_router(stats_router)
 app.add_exception_handler(InvalidInput, invalid_input_handler)

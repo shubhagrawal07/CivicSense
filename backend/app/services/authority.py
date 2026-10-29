@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.models import Authority, Department, JurisdictionArea
 from app.models.enums import VerificationStatus
+from app.schemas.authority import ContactOut
 
 EDGE_METRES = 30
 # supplies the contacts when a department has nothing of its own
@@ -157,6 +158,21 @@ def contact_info(authority, trusted=True):
         )
         result_list.append(info)
     return result_list
+
+
+def contacts_out(contacts):
+    result = []
+    for c in contacts:
+        result.append(
+            ContactOut(
+                type=c.type,
+                value=c.value,
+                source_url=c.source_url,
+                last_verified_at=c.last_verified,
+                verified=c.verified,
+            )
+        )
+    return result
 
 
 def _by_id(authority):
