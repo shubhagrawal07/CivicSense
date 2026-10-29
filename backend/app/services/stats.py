@@ -13,6 +13,11 @@ OPEN = (
     IssueStatus.REOPENED,
 )
 RESOLVED = (IssueStatus.RESOLVED, IssueStatus.VERIFIED, IssueStatus.CLOSED)
+BUCKETS = {
+    "open": OPEN,
+    "in_progress": (IssueStatus.IN_PROGRESS,),
+    "resolved": RESOLVED,
+}
 
 
 def summary_stats(db: Session) -> dict:
@@ -41,4 +46,27 @@ def summary_stats(db: Session) -> dict:
         "in_progress": row.in_progress,
         "resolved": row.resolved,
         "avg_resolution_days": avg_days,
+    }
+
+
+def breakdown_stats(db: Session, status: str | None = None) -> dict:
+    def count_by(column):
+        n = func.count().label("count")
+        query = (
+            select(column, n)
+            .where(column.is_not(None))
+            .group_by(column)
+            .order_by(n.desc(), column)
+        )
+        if status:
+            query = query.where(Issue.status.in_(BUCKETS[status]))
+        return db.execute(query).all()
+
+    return {
+        "by_category": [
+            {"category": r.category, "count": r.count} for r in count_by(Issue.category)
+        ],
+        "by_severity": [
+            {"severity": r.severity, "count": r.count} for r in count_by(Issue.severity)
+        ],
     }

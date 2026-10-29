@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 from app.core.db import get_db
 from app.main import app
 from app.models import Issue
-from app.models.enums import IssueStatus
+from app.models.enums import IssueStatus, Severity
 
 
 @pytest.fixture
@@ -83,3 +83,51 @@ def test_average_is_null_without_resolved_issues(client, db):
         "resolved",
         "avg_resolution_days",
     }
+
+
+def add_classified(db, category, severity, status=IssueStatus.NEW):
+    db.add(Issue(category=category, severity=severity, status=status))
+    db.flush()
+
+
+def test_breakdown_groups_and_sorts_by_count(client, db):
+    if summary(client)["total"]:
+        pytest.skip("database already holds issues")
+
+    add_classified(db, "pothole", Severity.HIGH)
+    add_classified(db, "pothole", Severity.HIGH)
+    add_classified(db, "pothole", Severity.LOW, IssueStatus.RESOLVED)
+    add_classified(db, "garbage", Severity.CRITICAL, IssueStatus.IN_PROGRESS)
+    add_classified(db, "streetlight", None)
+
+    body = client.get("/api/stats/breakdown").json()
+    assert body["by_category"] == [
+        {"category": "pothole", "count": 3},
+        {"category": "garbage", "count": 1},
+        {"category": "streetlight", "count": 1},
+    ]
+    assert body["by_severity"] == [
+        {"severity": "HIGH", "count": 2},
+        {"severity": "LOW", "count": 1},
+        {"severity": "CRITICAL", "count": 1},
+    ]
+    total = sum(row["count"] for row in body["by_category"])
+    assert total == summary(client)["total"]
+
+
+def test_breakdown_status_filter(client, db):
+    if summary(client)["total"]:
+        pytest.skip("database already holds issues")
+
+    add_classified(db, "pothole", Severity.HIGH)
+    add_classified(db, "pothole", Severity.LOW, IssueStatus.CLOSED)
+    add_classified(db, "garbage", Severity.LOW, IssueStatus.IN_PROGRESS)
+
+    resolved = client.get("/api/stats/breakdown", params={"status": "resolved"})
+    assert resolved.json()["by_category"] == [{"category": "pothole", "count": 1}]
+
+    active = client.get("/api/stats/breakdown", params={"status": "in_progress"})
+    assert active.json()["by_category"] == [{"category": "garbage", "count": 1}]
+
+    bad = client.get("/api/stats/breakdown", params={"status": "bogus"})
+    assert bad.status_code == 422
