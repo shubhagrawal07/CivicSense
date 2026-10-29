@@ -69,7 +69,7 @@ def test_description_only_is_accepted(client, db, citizen):
     assert body["processing_status"] == "PENDING"
     report = db.get(Report, body["id"])
     assert report.user_id == citizen.id
-    assert report.image_path is None
+    assert report.image_name is None
     assert report.description == TEXT
 
 
@@ -79,9 +79,11 @@ def test_image_only_is_accepted_and_stored(client, db, citizen):
     assert response.status_code == 202
     report = db.get(Report, response.json()["id"])
     assert report.description is None
-    assert report.image_path.endswith(".png")
-    assert "photo" not in report.image_path
-    assert (settings.upload_path / report.image_path).exists()
+    assert len(report.images) == 1
+    assert report.images[0].position == 0
+    assert report.image_name.endswith(".png")
+    assert "photo" not in report.image_name
+    assert (settings.upload_path / report.image_name).exists()
 
 
 def test_jpeg_with_description_is_accepted(client, db, citizen):
@@ -95,14 +97,14 @@ def test_jpeg_with_description_is_accepted(client, db, citizen):
     )
 
     assert response.status_code == 202
-    assert db.get(Report, response.json()["id"]).image_path.endswith(".jpg")
+    assert db.get(Report, response.json()["id"]).image_name.endswith(".jpg")
 
 
 def test_stored_filenames_are_random(client, db, citizen):
     first = submit(client, citizen, image=picture())
     second = submit(client, citizen, image=picture())
 
-    names = {db.get(Report, r.json()["id"]).image_path for r in (first, second)}
+    names = {db.get(Report, r.json()["id"]).image_name for r in (first, second)}
     assert len(names) == 2
 
 

@@ -11,6 +11,7 @@ export function MyReportsList({ items }: MyReportsListProps) {
       <thead>
         <tr>
           <th>Description</th>
+          <th>Photo</th>
           <th>Reported</th>
           <th>Status</th>
           <th>Category</th>

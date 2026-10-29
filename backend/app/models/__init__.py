@@ -8,7 +8,7 @@ from app.models.authority import (
     JurisdictionArea,
 )
 from app.models.issue import Issue, IssueReport
-from app.models.report import Report
+from app.models.report import Report, ReportImage
 from app.models.scraping import RawDocument, ScrapeRun
 from app.models.status_history import StatusHistory
 from app.models.user import User
@@ -25,6 +25,7 @@ __all__ = [
     "JurisdictionArea",
     "RawDocument",
     "Report",
+    "ReportImage",
     "ScrapeRun",
     "StatusHistory",
     "User",
