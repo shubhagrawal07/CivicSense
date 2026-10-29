@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import type { MyReportListItem } from "../../api/types";
+import { PhotoLightbox } from "../common/PhotoLightbox";
 import { StatusBadge } from "./StatusBadge";
 
 interface MyReportRowProps {
@@ -14,14 +15,7 @@ export function MyReportRow({ item }: MyReportRowProps) {
       <td>{item.description_preview ?? "No description"}</td>
       <td>
         {item.thumbnail_url ? (
-          <a
-            href={item.thumbnail_url}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <img src={item.thumbnail_url} alt="Uploaded photo" width={48} height={48} />
-          </a>
+          <PhotoLightbox src={item.thumbnail_url} alt="Uploaded photo" />
         ) : (
           "—"
         )}
