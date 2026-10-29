@@ -1,21 +1,22 @@
+# AI-generated test code
 from PIL import Image
 
 from app.intelligence import image_classifier
 from app.intelligence.image_classifier import classify_image
 
 
-def _make_image(path):
+def make_image(path):
     Image.new("RGB", (10, 10)).save(path)
 
 
 def test_valid_image_returns_the_mocked_category(tmp_path, monkeypatch):
     monkeypatch.setattr(
         image_classifier,
-        "_call_claude",
+        "call_claude",
         lambda *a, **k: {"category": "pothole", "confidence": 0.9},
     )
     path = tmp_path / "photo.png"
-    _make_image(path)
+    make_image(path)
 
     result = classify_image(path)
 
@@ -25,10 +26,10 @@ def test_valid_image_returns_the_mocked_category(tmp_path, monkeypatch):
 
 
 def test_corrupt_image_falls_back_without_calling_claude(tmp_path, monkeypatch):
-    def _should_not_be_called(*a, **k):
+    def fail_if_called(*a, **k):
         raise AssertionError("an unreadable image should never reach the API call")
 
-    monkeypatch.setattr(image_classifier, "_call_claude", _should_not_be_called)
+    monkeypatch.setattr(image_classifier, "call_claude", fail_if_called)
     path = tmp_path / "broken.jpg"
     path.write_bytes(b"not actually an image")
 
@@ -39,12 +40,12 @@ def test_corrupt_image_falls_back_without_calling_claude(tmp_path, monkeypatch):
 
 
 def test_api_failure_falls_back_instead_of_raising(tmp_path, monkeypatch):
-    def _raise(*a, **k):
+    def network_down(*a, **k):
         raise RuntimeError("network down")
 
-    monkeypatch.setattr(image_classifier, "_call_claude", _raise)
+    monkeypatch.setattr(image_classifier, "call_claude", network_down)
     path = tmp_path / "photo.png"
-    _make_image(path)
+    make_image(path)
 
     result = classify_image(path)
 
@@ -55,11 +56,11 @@ def test_api_failure_falls_back_instead_of_raising(tmp_path, monkeypatch):
 def test_unknown_category_from_model_falls_back(tmp_path, monkeypatch):
     monkeypatch.setattr(
         image_classifier,
-        "_call_claude",
+        "call_claude",
         lambda *a, **k: {"category": "not_a_real_category", "confidence": 0.9},
     )
     path = tmp_path / "photo.png"
-    _make_image(path)
+    make_image(path)
 
     result = classify_image(path)
 
