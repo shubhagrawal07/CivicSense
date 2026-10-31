@@ -36,11 +36,25 @@ export interface Report {
   department_confidence?: number | null;
   predicted_severity?: Severity | null;
 
+  issue?: { id: number | string } | null;
+
   created_at: string;
   processed_at?: string | null;
 }
 
-export type IssueStatus = "NEW" | "IN_PROGRESS" | "RESOLVED";
+export type IssueStatus =
+  | "NEW"
+  | "UNDER_REVIEW"
+  | "CLASSIFIED"
+  | "ASSIGNED"
+  | "IN_PROGRESS"
+  | "RESOLVED"
+  | "VERIFIED"
+  | "CLOSED"
+  | "DUPLICATE"
+  | "REJECTED"
+  | "ESCALATED"
+  | "REOPENED";
 
 export interface MyReportListItem {
   id: string;
@@ -93,4 +107,33 @@ export interface LoginPayload {
 export interface LoginResult {
   token: string;
   user: User;
+}
+
+export interface IssueContact {
+  type: string;
+  value: string;
+  source_url: string | null;
+  last_verified_at: string | null;
+  verified: boolean;
+}
+
+export interface IssueStatusChange {
+  status: IssueStatus;
+  changed_at: string;
+  note: string | null;
+}
+
+export interface Issue {
+  id: number;
+  category: string;
+  severity: Severity | null;
+  status: IssueStatus;
+  location: { lat: number; lng: number };
+  report_count: number;
+  first_reported_at: string;
+  last_reported_at: string;
+  department: { id: number; name: string } | null;
+  authority: { id: number; name: string; jurisdiction: string } | null;
+  contacts: IssueContact[];
+  status_history: IssueStatusChange[];
 }
