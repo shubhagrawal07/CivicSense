@@ -104,11 +104,12 @@ def test_matching_updates_last_reported_at(db, user):
 
 
 def test_different_category_does_not_link(db, user):
+    existing = db.scalar(select(func.count()).select_from(Issue))
     link_or_create_issue(db, make_report(db, user, "pothole"))
     other = link_or_create_issue(db, make_report(db, user, "garbage", dlat=NEAR))
 
     assert other.is_new
-    assert db.scalar(select(func.count()).select_from(Issue)) == 2
+    assert db.scalar(select(func.count()).select_from(Issue)) == existing + 2
 
 
 def test_far_away_report_does_not_link(db, user):
