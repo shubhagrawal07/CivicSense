@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
+import { IssueDetailPage } from "./pages/IssueDetailPage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
 import { LoginPage } from "./pages/LoginPage";
@@ -30,6 +31,7 @@ export function AppRoutes() {
             </ProtectedRoute>
           }
         />
+        <Route path="/issues/:id" element={<IssueDetailPage />} />
         <Route
           path="/my-reports"
           element={

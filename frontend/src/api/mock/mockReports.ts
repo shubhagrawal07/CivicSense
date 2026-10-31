@@ -34,11 +34,13 @@ const demoReports: Report[] = [
     ...demoReport("Large pothole on Main St", "DONE", 5),
     classification: "pothole",
     predicted_severity: "HIGH",
+    issue: { id: "1" },
   },
   {
     ...demoReport("Streetlight out near the park", "DONE", 4),
     classification: "lighting",
     predicted_severity: "LOW",
+    issue: { id: "2" },
   },
   demoReport("Overflowing bin on 5th Ave", "PENDING", 3),
   demoReport("Graffiti on the underpass wall", "PROCESSING", 2),
@@ -135,6 +137,7 @@ export async function mockSubmitReport(
       predicted_department_id: 1,
       department_confidence: 0.91,
       predicted_severity: "MEDIUM",
+      issue: { id },
       processed_at: new Date().toISOString(),
     });
   }, MOCK_DELAY_DONE_MS);

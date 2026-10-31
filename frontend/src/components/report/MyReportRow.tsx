@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import type { MyReportListItem } from "../../api/types";
 import { PhotoLightbox } from "../common/PhotoLightbox";
 import { StatusBadge } from "./StatusBadge";
@@ -29,7 +29,18 @@ export function MyReportRow({ item }: MyReportRowProps) {
       </td>
       <td>{item.category ?? "Not yet available"}</td>
       <td>{item.severity_level ?? "Not yet available"}</td>
-      <td>{item.issue_id ? `${item.report_count} supporting report(s)` : "—"}</td>
+      <td>
+        {item.issue_id ? (
+          <Link
+            to={`/issues/${item.issue_id}`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            {item.report_count} supporting report(s)
+          </Link>
+        ) : (
+          "—"
+        )}
+      </td>
     </tr>
   );
 }
