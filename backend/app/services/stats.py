@@ -1,4 +1,6 @@
-from sqlalchemy import extract, func, select
+from datetime import date
+
+from sqlalchemy import Date, cast, extract, func, select
 from sqlalchemy.orm import Session
 
 from app.models import Issue
@@ -70,3 +72,26 @@ def breakdown_stats(db: Session, status: str | None = None) -> dict:
             {"severity": r.severity, "count": r.count} for r in count_by(Issue.severity)
         ],
     }
+
+
+def trend_stats(
+    db: Session,
+    interval: str = "week",
+    category: str | None = None,
+    start: date | None = None,
+    end: date | None = None,
+) -> list[dict]:
+    reported_utc = func.timezone("UTC", Issue.first_reported_at)
+    period = cast(func.date_trunc(interval, reported_utc), Date).label("period")
+    query = (
+        select(period, func.count().label("count")).group_by(period).order_by(period)
+    )
+
+    if category:
+        query = query.where(Issue.category == category)
+    if start:
+        query = query.where(cast(reported_utc, Date) >= start)
+    if end:
+        query = query.where(cast(reported_utc, Date) <= end)
+
+    return [{"period": r.period, "count": r.count} for r in db.execute(query)]

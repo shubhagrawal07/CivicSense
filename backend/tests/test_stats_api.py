@@ -131,3 +131,58 @@ def test_breakdown_status_filter(client, db):
 
     bad = client.get("/api/stats/breakdown", params={"status": "bogus"})
     assert bad.status_code == 422
+
+
+def add_reported(db, category, when):
+    db.add(Issue(category=category, status=IssueStatus.NEW, first_reported_at=when))
+    db.flush()
+
+
+def trend(client, **params):
+    response = client.get("/api/stats/trend", params=params)
+    assert response.status_code == 200
+    return response.json()
+
+
+def test_trend_by_day(client, db):
+    utc = timezone.utc
+    add_reported(db, "trend_day", datetime(2026, 9, 7, 3, tzinfo=utc))
+    add_reported(db, "trend_day", datetime(2026, 9, 7, 22, tzinfo=utc))
+    add_reported(db, "trend_day", datetime(2026, 9, 9, 1, tzinfo=utc))
+    add_reported(db, "trend_other", datetime(2026, 9, 7, 5, tzinfo=utc))
+
+    body = trend(client, interval="day", category="trend_day")
+    assert body == [
+        {"period": "2026-09-07", "count": 2},
+        {"period": "2026-09-09", "count": 1},
+    ]
+
+    window = trend(
+        client,
+        interval="day",
+        category="trend_day",
+        **{"from": "2026-09-08", "to": "2026-09-09"},
+    )
+    assert window == [{"period": "2026-09-09", "count": 1}]
+
+
+def test_trend_by_week_is_default_and_labelled_by_monday(client, db):
+    utc = timezone.utc
+    # 2026-09-07 is a Monday, 2026-09-13 the Sunday that closes that week
+    add_reported(db, "trend_week", datetime(2026, 9, 7, 0, 30, tzinfo=utc))
+    add_reported(db, "trend_week", datetime(2026, 9, 13, 23, 30, tzinfo=utc))
+    add_reported(db, "trend_week", datetime(2026, 9, 14, 0, 30, tzinfo=utc))
+
+    expected = [
+        {"period": "2026-09-07", "count": 2},
+        {"period": "2026-09-14", "count": 1},
+    ]
+    assert trend(client, category="trend_week") == expected
+    assert trend(client, interval="week", category="trend_week") == expected
+
+
+def test_trend_rejects_bad_parameters(client):
+    bad_interval = client.get("/api/stats/trend", params={"interval": "month"})
+    assert bad_interval.status_code == 422
+    backwards = {"from": "2026-10-01", "to": "2026-09-01"}
+    assert client.get("/api/stats/trend", params=backwards).status_code == 422
