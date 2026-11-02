@@ -3,7 +3,7 @@ from datetime import date, timedelta
 from sqlalchemy import exists, func, select
 from sqlalchemy.orm import Session
 
-from app.models import AuthorityContact, Issue, Jurisdiction, Report
+from app.models import AuthorityContact, Issue, Jurisdiction, Report, ReportImage
 from app.models.enums import ProcessingStatus, VerificationStatus
 
 WARD_TYPE = "ward"
@@ -36,7 +36,8 @@ def data_quality_summary(db: Session) -> dict:
     cutoff = date.today() - timedelta(days=OLD_CONTACT_DAYS)
 
     reports_without_description = count_where(db, Report, Report.description.is_(None))
-    reports_without_image = count_where(db, Report, Report.image_path.is_(None))
+    has_image = exists().where(ReportImage.report_id == Report.id)
+    reports_without_image = count_where(db, Report, ~has_image)
     reports_failed_processing = count_where(
         db, Report, Report.processing_status == ProcessingStatus.FAILED
     )

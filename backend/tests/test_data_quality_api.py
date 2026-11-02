@@ -7,7 +7,7 @@ from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import create_access_token, hash_password
 from app.main import app
-from app.models import Authority, AuthorityContact, Report, User
+from app.models import Authority, AuthorityContact, Report, ReportImage, User
 from app.models.enums import (
     ContactType,
     ProcessingStatus,
@@ -47,12 +47,12 @@ def test_counts_rows_with_missing_or_stale_data(client, db):
     admin = make_user(db, "quality-admin@example.com", UserRole.ADMIN)
     before = summary(client, admin)
 
-    db.add(Report(user_id=admin.id, description=None, image_path=None))
+    db.add(Report(user_id=admin.id, description=None))
     db.add(
         Report(
             user_id=admin.id,
             description="broken light",
-            image_path="a.jpg",
+            images=[ReportImage(file_name="a.jpg")],
             processing_status=ProcessingStatus.FAILED,
         )
     )
