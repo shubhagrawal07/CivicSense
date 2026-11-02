@@ -21,6 +21,7 @@ class ScrapeRun(Base):
     )
     rows_added: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     error_message: Mapped[str | None] = mapped_column(Text)
+    summary: Mapped[str | None] = mapped_column(Text)
 
 
 class RawDocument(Base):
