@@ -1,3 +1,5 @@
+from datetime import date
+
 from pydantic import BaseModel
 
 from app.models.enums import Severity
@@ -24,3 +26,8 @@ class SeverityCount(BaseModel):
 class BreakdownOut(BaseModel):
     by_category: list[CategoryCount]
     by_severity: list[SeverityCount]
+
+
+class TrendPoint(BaseModel):
+    period: date
+    count: int
