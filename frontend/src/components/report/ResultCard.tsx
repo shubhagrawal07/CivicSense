@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Report } from "../../api/types";
 
 const SOURCE_LABEL: Record<string, string> = {
@@ -30,9 +31,13 @@ export function ResultCard({ report }: { report: Report }) {
             : "Not yet available"}
         </dd>
       </dl>
-      {/* TODO(SL-10/SL-14/SL-16): once issue-linking and authority-contact
-          fields exist on the Report/Issue API, surface "joined an existing
-          issue" and responsible-authority contact details here. */}
+      {report.issue && (
+        <p>
+          <Link to={`/issues/${report.issue.id}`}>
+            View the issue this report belongs to
+          </Link>
+        </p>
+      )}
     </div>
   );
 }

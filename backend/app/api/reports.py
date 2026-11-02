@@ -44,8 +44,8 @@ async def submit_report(
     text = clean_description(description)
     # browsers send an empty part when no file was picked
     has_image = image is not None and bool(image.filename)
-    if text is None and not has_image:
-        raise InvalidInput("description", "Provide a description, an image, or both")
+    if text is None:
+        raise InvalidInput("description", "A description is required")
     check_region(latitude, longitude)
 
     image_name = await save_image(image) if has_image else None

@@ -1,15 +1,9 @@
-"""Manual dev tool for SL-22. Runs classify_image() over SL-21's sample images
-and prints an accuracy number. Makes real paid API calls, never run in CI.
-Needs a real ANTHROPIC_API_KEY and the backend dependencies installed.
-"""
-
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SAMPLES_DIR = ROOT / "ml" / "datasets" / "images" / "test_samples"
 
-# the backend app isn't an installed package, so point at it directly
 sys.path.insert(0, str(ROOT / "backend"))
 
 from app.intelligence.image_classifier import classify_image

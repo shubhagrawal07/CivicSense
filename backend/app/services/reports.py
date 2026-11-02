@@ -1,11 +1,11 @@
 from sqlalchemy import func, select
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
 from app.core.config import settings
 from app.core.errors import InvalidInput
-from app.models import Department, Issue, IssueReport, Report
+from app.intelligence.severity import compute_severity
+from app.models import Department, Issue, IssueReport, Report, ReportImage
 from app.models.enums import ProcessingStatus
-from app.schemas.authority import ContactOut
 from app.schemas.report import (
     AuthorityRef,
     ClassificationOut,
@@ -17,7 +17,8 @@ from app.schemas.report import (
     ReportOut,
     SeverityOut,
 )
-from app.services.authority import lookup_authority
+from app.services.authority import contacts_out, lookup_authority
+from app.services.issue_linking import METHOD_NEW
 
 MIN_DESCRIPTION = 10
 MAX_DESCRIPTION = 1000
@@ -59,10 +60,11 @@ def create_report(
     report = Report(
         user_id=user_id,
         description=description,
-        image_path=image_name,
         location=func.ST_SetSRID(func.ST_MakePoint(lng, lat), 4326),
         processing_status=ProcessingStatus.PENDING,
     )
+    if image_name:
+        report.images.append(ReportImage(file_name=image_name, position=0))
     db.add(report)
     db.commit()
     db.refresh(report)
@@ -78,7 +80,7 @@ def build_report_out(db: Session, report: Report) -> ReportOut:
     out = ReportOut(
         id=report.id,
         description=report.description,
-        image_url=f"/uploads/{report.image_path}" if report.image_path else None,
+        image_url=f"/uploads/{report.image_name}" if report.image_name else None,
         location=LatLng(lat=lat, lng=lng),
         created_at=report.created_at,
         processing_status=report.processing_status,
@@ -111,40 +113,36 @@ def build_report_out(db: Session, report: Report) -> ReportOut:
             confidence=report.department_confidence,
         )
 
-    issue = db.scalar(
-        select(Issue).join(IssueReport).where(IssueReport.report_id == report.id)
-    )
-    if issue:
+    row = db.execute(
+        select(Issue, IssueReport.matching_method)
+        .join(IssueReport)
+        .where(IssueReport.report_id == report.id)
+    ).first()
+    if row:
+        issue, method = row
         out.issue = IssueRef(
             id=issue.id,
             status=issue.status.value,
             report_count=issue.report_count,
-            is_new=issue.report_count == 1,
+            is_new=method == METHOD_NEW,
         )
 
     if report.predicted_severity:
+        severity = compute_severity(
+            report.classification, report.description, report.image_name is not None
+        )
         out.severity = SeverityOut(
             level=report.predicted_severity,
-            score=issue.severity_score if issue else None,
-            reasons=[],
+            score=severity["score"],
+            reasons=severity["reasons"],
         )
 
     if department:
         match = lookup_authority(db, department.id, lat, lng)
         if match.authority:
-            contacts_list = []
-            for c in match.contacts:
-                new_contact = ContactOut(
-                    type=c.type,
-                    value=c.value,
-                    source_url=c.source_url,
-                    last_verified_at=c.last_verified,
-                    verified=c.verified,
-                )
-                contacts_list.append(new_contact)
             out.authority = AuthorityRef(
                 name=match.authority.name,
-                contacts=contacts_list,
+                contacts=contacts_out(match.contacts),
             )
     return out
 
@@ -162,6 +160,7 @@ def list_my_reports(
         .outerjoin(IssueReport, IssueReport.report_id == Report.id)
         .outerjoin(Issue, Issue.id == IssueReport.issue_id)
         .where(Report.user_id == user_id)
+        .options(selectinload(Report.images))
         .order_by(Report.created_at.desc(), Report.id.desc())
         .limit(limit)
         .offset(offset)
@@ -173,8 +172,8 @@ def list_my_reports(
         if report.description:
             preview = report.description[:PREVIEW_LENGTH]
         thumbnail = None
-        if report.image_path:
-            thumbnail = f"/uploads/{report.image_path}"
+        if report.image_name:
+            thumbnail = f"/uploads/{report.image_name}"
 
         item = MyReportItem(
             id=report.id,

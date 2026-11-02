@@ -69,19 +69,21 @@ def test_description_only_is_accepted(client, db, citizen):
     assert body["processing_status"] == "PENDING"
     report = db.get(Report, body["id"])
     assert report.user_id == citizen.id
-    assert report.image_path is None
+    assert report.image_name is None
     assert report.description == TEXT
 
 
-def test_image_only_is_accepted_and_stored(client, db, citizen):
-    response = submit(client, citizen, image=picture())
+def test_photo_is_stored_next_to_the_description(client, db, citizen):
+    response = submit(client, citizen, {"description": TEXT}, picture())
 
     assert response.status_code == 202
     report = db.get(Report, response.json()["id"])
-    assert report.description is None
-    assert report.image_path.endswith(".png")
-    assert "photo" not in report.image_path
-    assert (settings.upload_path / report.image_path).exists()
+    assert report.description == TEXT
+    assert len(report.images) == 1
+    assert report.images[0].position == 0
+    assert report.image_name.endswith(".png")
+    assert "photo" not in report.image_name
+    assert (settings.upload_path / report.image_name).exists()
 
 
 def test_jpeg_with_description_is_accepted(client, db, citizen):
@@ -95,14 +97,14 @@ def test_jpeg_with_description_is_accepted(client, db, citizen):
     )
 
     assert response.status_code == 202
-    assert db.get(Report, response.json()["id"]).image_path.endswith(".jpg")
+    assert db.get(Report, response.json()["id"]).image_name.endswith(".jpg")
 
 
 def test_stored_filenames_are_random(client, db, citizen):
-    first = submit(client, citizen, image=picture())
-    second = submit(client, citizen, image=picture())
+    first = submit(client, citizen, {"description": TEXT}, picture())
+    second = submit(client, citizen, {"description": TEXT}, picture())
 
-    names = {db.get(Report, r.json()["id"]).image_path for r in (first, second)}
+    names = {db.get(Report, r.json()["id"]).image_name for r in (first, second)}
     assert len(names) == 2
 
 
@@ -116,6 +118,13 @@ def test_no_token_is_401(client):
     response = submit(client, None, {"description": TEXT})
 
     assert response.status_code == 401
+
+
+def test_photo_without_description_is_422(client, citizen):
+    response = submit(client, citizen, image=picture())
+
+    assert response.status_code == 422
+    assert response.json()["errors"][0]["field"] == "description"
 
 
 def test_neither_description_nor_image_is_422(client, citizen):
@@ -140,7 +149,13 @@ def test_description_length_is_enforced(client, citizen, text):
 
 
 def test_non_image_file_is_422(client, citizen):
-    response = submit(client, citizen, image=b"%PDF-1.4 not a picture", name="a.png")
+    response = submit(
+        client,
+        citizen,
+        {"description": TEXT},
+        b"%PDF-1.4 not a picture",
+        name="a.png",
+    )
 
     assert response.status_code == 422
     assert response.json()["errors"][0]["field"] == "image"
@@ -148,7 +163,12 @@ def test_non_image_file_is_422(client, citizen):
 
 def test_other_image_format_is_422(client, citizen):
     response = submit(
-        client, citizen, image=picture("GIF"), name="a.gif", ctype="image/gif"
+        client,
+        citizen,
+        {"description": TEXT},
+        picture("GIF"),
+        name="a.gif",
+        ctype="image/gif",
     )
 
     assert response.status_code == 422
@@ -157,7 +177,7 @@ def test_other_image_format_is_422(client, citizen):
 
 def test_oversized_image_is_422(client, citizen, monkeypatch):
     monkeypatch.setattr(settings, "max_image_bytes", 1000)
-    response = submit(client, citizen, image=picture(size=(600, 600)))
+    response = submit(client, citizen, {"description": TEXT}, picture(size=(600, 600)))
 
     assert response.status_code == 422
     assert response.json()["errors"][0]["field"] == "image"
@@ -165,7 +185,7 @@ def test_oversized_image_is_422(client, citizen, monkeypatch):
 
 @pytest.mark.parametrize("size", [(50, 50), (9000, 120)])
 def test_image_dimensions_are_enforced(client, citizen, size):
-    response = submit(client, citizen, image=picture(size=size))
+    response = submit(client, citizen, {"description": TEXT}, picture(size=size))
 
     assert response.status_code == 422
     assert response.json()["errors"][0]["field"] == "image"
@@ -237,7 +257,7 @@ def test_get_pending_report_has_nulls(client, citizen):
 
 
 def test_get_report_returns_image_url(client, citizen):
-    created = submit(client, citizen, image=picture()).json()
+    created = submit(client, citizen, {"description": TEXT}, picture()).json()
 
     body = client.get(f"/api/reports/{created['id']}", headers=auth(citizen)).json()
 
