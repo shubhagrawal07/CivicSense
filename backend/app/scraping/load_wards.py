@@ -33,16 +33,15 @@ def find_raw_text(db):
 
     if latest_run is None:
         return None
-    
+
     document = db.scalars(
         select(RawDocument).where(RawDocument.scrape_run_id == latest_run.id)
     ).first()
-    
+
     if document is None:
         return None
-    
-    return document.content
 
+    return document.content
 
 
 def in_mumbai(geometry):
