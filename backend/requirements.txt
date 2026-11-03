@@ -14,3 +14,5 @@ PyJWT==2.15.1
 email-validator==2.3.0
 pillow==12.3.0
 anthropic==1.15.0
+osm2geojson==0.3.2
+shapely==2.2.0
