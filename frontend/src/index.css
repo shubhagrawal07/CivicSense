@@ -168,3 +168,25 @@ dd {
   line-height: 1;
   cursor: pointer;
 }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-card__label {
+  font-size: 0.85rem;
+  color: #555;
+}
