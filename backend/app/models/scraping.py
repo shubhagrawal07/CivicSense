@@ -20,6 +20,7 @@ class ScrapeRun(Base):
         Enum(ScrapeStatus, name="scrape_status"), default=ScrapeStatus.RUNNING
     )
     rows_added: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    pages_failed: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     error_message: Mapped[str | None] = mapped_column(Text)
 
 
