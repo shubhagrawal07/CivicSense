@@ -9,6 +9,7 @@ export function Header() {
       <strong>CivicSense</strong>
       {!isLoading && (
         <nav>
+          <Link to="/dashboard">Dashboard</Link>
           {user ? (
             <>
               <span>{user.name}</span>

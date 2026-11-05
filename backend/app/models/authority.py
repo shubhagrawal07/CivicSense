@@ -2,6 +2,7 @@ from datetime import date, datetime
 
 from geoalchemy2 import Geometry
 from sqlalchemy import (
+    BigInteger,
     Date,
     DateTime,
     Enum,
@@ -106,7 +107,9 @@ class Jurisdiction(Base):
     authority_id: Mapped[int | None] = mapped_column(
         ForeignKey("authorities.id"), index=True
     )
+    osm_id: Mapped[int | None] = mapped_column(BigInteger, unique=True)
     name: Mapped[str] = mapped_column(String(200))
+    ward_code: Mapped[str | None] = mapped_column(String(50))
     type: Mapped[str] = mapped_column(String(50))
     boundary = mapped_column(Geometry("MULTIPOLYGON", srid=4326), nullable=False)
     priority: Mapped[int] = mapped_column(Integer, default=0, server_default="0")

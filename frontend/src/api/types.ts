@@ -137,3 +137,11 @@ export interface Issue {
   contacts: IssueContact[];
   status_history: IssueStatusChange[];
 }
+
+export interface StatsSummary {
+  total: number;
+  open: number;
+  in_progress: number;
+  resolved: number;
+  avg_resolution_days: number | null;
+}
