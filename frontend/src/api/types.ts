@@ -138,6 +138,15 @@ export interface Issue {
   status_history: IssueStatusChange[];
 }
 
+export interface DataQuality {
+  reports_without_description: number;
+  reports_without_image: number;
+  reports_failed_processing: number;
+  issues_outside_any_ward: number | null;
+  contacts_unverified: number;
+  contacts_older_than_90_days: number;
+}
+
 export interface StatsSummary {
   total: number;
   open: number;

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { DashboardPage } from "./pages/DashboardPage";
+import { DataQualityPage } from "./pages/DataQualityPage";
 import { IssueDetailPage } from "./pages/IssueDetailPage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
@@ -42,7 +43,15 @@ export function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route
+          path="/admin/data-quality"
+          element={
+            <ProtectedRoute role="ADMIN">
+              <DataQualityPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="*"element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
