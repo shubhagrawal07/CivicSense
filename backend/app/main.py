@@ -12,6 +12,7 @@ from app.api.auth import router as auth_router
 from app.api.authority import router as authority_router
 from app.api.issues import router as issues_router
 from app.api.jurisdiction import router as jurisdiction_router
+from app.api.map import router as map_router
 from app.api.reports import router as reports_router
 from app.api.stats import router as stats_router
 from app.core.config import settings
@@ -42,6 +43,7 @@ app.include_router(auth_router)
 app.include_router(authority_router)
 app.include_router(issues_router)
 app.include_router(jurisdiction_router)
+app.include_router(map_router)
 app.include_router(reports_router)
 app.include_router(stats_router)
 app.add_exception_handler(InvalidInput, invalid_input_handler)

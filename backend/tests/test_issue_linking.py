@@ -13,7 +13,7 @@ from app.services.issue_linking import (
     link_or_create_issue,
 )
 
-LAT, LNG = 19.1334, 72.9133
+LAT, LNG = 18.95, 72.75
 # one degree of latitude is about 111 km, so this is roughly 22 m
 NEAR = 0.0002
 FAR = 0.002
