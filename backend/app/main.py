@@ -10,6 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from app.api.admin import router as admin_router
 from app.api.auth import router as auth_router
 from app.api.authority import router as authority_router
+from app.api.hotspots import router as hotspots_router
 from app.api.issues import router as issues_router
 from app.api.jurisdiction import router as jurisdiction_router
 from app.api.map import router as map_router
@@ -41,6 +42,7 @@ app.add_middleware(
 app.include_router(admin_router)
 app.include_router(auth_router)
 app.include_router(authority_router)
+app.include_router(hotspots_router)
 app.include_router(issues_router)
 app.include_router(jurisdiction_router)
 app.include_router(map_router)
