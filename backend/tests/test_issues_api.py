@@ -11,7 +11,7 @@ from app.seed import seed_authorities, seed_departments
 from app.services.reports import create_report
 from app.workers import pipeline
 
-LAT, LNG = 19.1334, 72.9133
+LAT, LNG = 18.95, 72.75
 TEXT = "Large pothole near the main gate, two scooters already slipped"
 
 
