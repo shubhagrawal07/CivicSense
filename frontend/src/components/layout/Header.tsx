@@ -12,6 +12,7 @@ export function Header() {
           <Link to="/dashboard">Dashboard</Link>
           {user ? (
             <>
+              {user.role === "ADMIN" && <Link to="/admin/data-quality">Data quality</Link>}
               <span>{user.name}</span>
               <button type="button" onClick={logout}>
                 Log out

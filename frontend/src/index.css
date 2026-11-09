@@ -190,3 +190,38 @@ dd {
   font-size: 0.85rem;
   color: #555;
 }
+
+.quality-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+.quality-table th,
+.quality-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 36px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.badge--green {
+  background: #2e7d32;
+}
+
+.badge--orange {
+  background: #e65100;
+}
+
+.badge--grey {
+  background: #757575;
+}
