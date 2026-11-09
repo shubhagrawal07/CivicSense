@@ -80,6 +80,10 @@ jobs:
         if: matrix.dir == 'backend'
         working-directory: backend
         run: alembic upgrade head
+      - name: Seed base data
+        if: matrix.dir == 'backend'
+        working-directory: backend
+        run: python -m app.seed
       - name: Run pytest
         run: |
           if [ -d "${{ matrix.dir }}" ]; then

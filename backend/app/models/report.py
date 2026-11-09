@@ -53,6 +53,8 @@ class Report(Base):
     )
     processed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
+    is_synthetic: Mapped[bool] = mapped_column(Boolean, default=False)
+
     images: Mapped[list["ReportImage"]] = relationship(
         back_populates="report",
         cascade="all, delete-orphan",

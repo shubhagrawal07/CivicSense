@@ -2,6 +2,7 @@ from datetime import datetime
 
 from geoalchemy2 import Geometry
 from sqlalchemy import (
+    Boolean,
     DateTime,
     Enum,
     Float,
@@ -42,6 +43,7 @@ class Issue(Base):
         DateTime(timezone=True), server_default=func.now()
     )
     resolved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    is_synthetic: Mapped[bool] = mapped_column(Boolean, default=False)
 
     reports: Mapped[list["IssueReport"]] = relationship(back_populates="issue")
 
