@@ -3,8 +3,8 @@ from datetime import date
 from sqlalchemy import Date, cast, extract, func, select
 from sqlalchemy.orm import Session
 
-from app.models import Issue
-from app.models.enums import IssueStatus
+from app.models import Issue, Jurisdiction
+from app.models.enums import IssueStatus, Severity
 
 OPEN = (
     IssueStatus.NEW,
@@ -15,6 +15,7 @@ OPEN = (
     IssueStatus.REOPENED,
 )
 RESOLVED = (IssueStatus.RESOLVED, IssueStatus.VERIFIED, IssueStatus.CLOSED)
+HIGH_SEVERITIES = (Severity.HIGH, Severity.CRITICAL)
 BUCKETS = {
     "open": OPEN,
     "in_progress": (IssueStatus.IN_PROGRESS,),
@@ -95,3 +96,34 @@ def trend_stats(
         query = query.where(cast(reported_utc, Date) <= end)
 
     return [{"period": r.period, "count": r.count} for r in db.execute(query)]
+
+
+def by_ward_stats(db: Session) -> list[dict]:
+    issue_in_ward = func.ST_Contains(Jurisdiction.boundary, Issue.location)
+    query = (
+        select(
+            Jurisdiction.id,
+            Jurisdiction.name,
+            func.count(Issue.id).label("issue_count"),
+            func.count(Issue.id).filter(Issue.status.in_(OPEN)).label("open_count"),
+            func.count(Issue.id)
+            .filter(Issue.severity.in_(HIGH_SEVERITIES))
+            .label("high_severity_count"),
+        )
+        .select_from(Jurisdiction)
+        .outerjoin(Issue, issue_in_ward)
+        .where(Jurisdiction.type == "ward")
+        .group_by(Jurisdiction.id, Jurisdiction.name)
+        .order_by(Jurisdiction.name)
+    )
+
+    return [
+        {
+            "ward_id": r.id,
+            "ward_name": r.name,
+            "issue_count": r.issue_count,
+            "open_count": r.open_count,
+            "high_severity_count": r.high_severity_count,
+        }
+        for r in db.execute(query)
+    ]

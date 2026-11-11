@@ -5,8 +5,13 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.schemas.stats import BreakdownOut, SummaryOut, TrendPoint
-from app.services.stats import breakdown_stats, summary_stats, trend_stats
+from app.schemas.stats import BreakdownOut, SummaryOut, TrendPoint, WardCount
+from app.services.stats import (
+    breakdown_stats,
+    by_ward_stats,
+    summary_stats,
+    trend_stats,
+)
 
 router = APIRouter(prefix="/api/stats", tags=["stats"])
 
@@ -37,3 +42,8 @@ def trend(
     if start and end and start > end:
         raise HTTPException(status_code=422, detail="'from' is after 'to'")
     return trend_stats(db, interval, category, start, end)
+
+
+@router.get("/by-ward", response_model=list[WardCount])
+def by_ward(db: Annotated[Session, Depends(get_db)]):
+    return by_ward_stats(db)
