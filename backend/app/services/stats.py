@@ -1,6 +1,6 @@
 from datetime import date
 
-from sqlalchemy import Date, cast, extract, func, select
+from sqlalchemy import Date, and_, cast, extract, func, select
 from sqlalchemy.orm import Session
 
 from app.models import Issue, Jurisdiction
@@ -98,8 +98,24 @@ def trend_stats(
     return [{"period": r.period, "count": r.count} for r in db.execute(query)]
 
 
-def by_ward_stats(db: Session) -> list[dict]:
-    issue_in_ward = func.ST_Contains(Jurisdiction.boundary, Issue.location)
+def by_ward_stats(
+    db: Session,
+    category: str | None = None,
+    severity: Severity | None = None,
+    start: date | None = None,
+    end: date | None = None,
+) -> list[dict]:
+    join_conditions = [func.ST_Contains(Jurisdiction.boundary, Issue.location)]
+    reported_utc = func.timezone("UTC", Issue.first_reported_at)
+    if category:
+        join_conditions.append(Issue.category == category)
+    if severity:
+        join_conditions.append(Issue.severity == severity)
+    if start:
+        join_conditions.append(cast(reported_utc, Date) >= start)
+    if end:
+        join_conditions.append(cast(reported_utc, Date) <= end)
+
     query = (
         select(
             Jurisdiction.id,
@@ -111,7 +127,7 @@ def by_ward_stats(db: Session) -> list[dict]:
             .label("high_severity_count"),
         )
         .select_from(Jurisdiction)
-        .outerjoin(Issue, issue_in_ward)
+        .outerjoin(Issue, and_(*join_conditions))
         .where(Jurisdiction.type == "ward")
         .group_by(Jurisdiction.id, Jurisdiction.name)
         .order_by(Jurisdiction.name)
