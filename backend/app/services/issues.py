@@ -1,9 +1,11 @@
+import csv
+import io
 from datetime import date, datetime, timezone
 
 from sqlalchemy import Date, cast, func, select
 from sqlalchemy.orm import Session
 
-from app.models import Department, Issue, StatusHistory
+from app.models import Authority, Department, Issue, StatusHistory
 from app.models.enums import IssueStatus, Severity
 from app.schemas.issue import IssueOut, StatusHistoryOut
 from app.schemas.report import LatLng
@@ -11,6 +13,7 @@ from app.services.authority import contacts_out, lookup_authority
 from app.services.stats import BUCKETS
 
 MAP_LIMIT = 2000
+EXPORT_LIMIT = 5000
 
 
 class IssueNotFound(Exception):
@@ -162,3 +165,75 @@ def map_issues(
             }
         )
     return {"type": "FeatureCollection", "features": features}
+
+
+def export_issues_csv(
+    db: Session,
+    category: str | None = None,
+    severities: list[Severity] | None = None,
+    statuses: list[str] | None = None,
+    start: date | None = None,
+    end: date | None = None,
+) -> str:
+    query = (
+        select(
+            Issue.id,
+            Issue.category,
+            Issue.severity,
+            Issue.status,
+            Issue.report_count,
+            Department.name.label("department"),
+            Authority.name.label("authority"),
+            func.ST_Y(Issue.location).label("lat"),
+            func.ST_X(Issue.location).label("lng"),
+            Issue.first_reported_at,
+            Issue.last_reported_at,
+            Issue.resolved_at,
+            Issue.is_synthetic,
+        )
+        .outerjoin(Department, Issue.department_id == Department.id)
+        .outerjoin(Authority, Issue.authority_id == Authority.id)
+        .where(Issue.location.is_not(None))
+    )
+    query = filter_issues(query, category, severities, statuses, start, end)
+    query = query.order_by(Issue.last_reported_at.desc(), Issue.id.desc())
+    query = query.limit(EXPORT_LIMIT)
+
+    buffer = io.StringIO()
+    writer = csv.writer(buffer)
+    writer.writerow(
+        [
+            "id",
+            "category",
+            "severity",
+            "status",
+            "report_count",
+            "department",
+            "authority",
+            "latitude",
+            "longitude",
+            "first_reported_at",
+            "last_reported_at",
+            "resolved_at",
+            "is_synthetic",
+        ]
+    )
+    for row in db.execute(query):
+        writer.writerow(
+            [
+                row.id,
+                row.category,
+                row.severity.value if row.severity else "",
+                row.status.value,
+                row.report_count,
+                row.department or "",
+                row.authority or "",
+                row.lat,
+                row.lng,
+                row.first_reported_at,
+                row.last_reported_at,
+                row.resolved_at or "",
+                row.is_synthetic,
+            ]
+        )
+    return buffer.getvalue()
