@@ -29,9 +29,7 @@ export function ResultCard({ report }: { report: Report }) {
       </dl>
       {report.issue && (
         <p>
-          <Link to={`/issues/${report.issue.id}`}>
-            View the issue this report belongs to
-          </Link>
+          <Link to={`/issues/${report.issue.id}`}>View the issue this report belongs to</Link>
         </p>
       )}
     </div>

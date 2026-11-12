@@ -41,8 +41,7 @@ describe("DashboardPage", () => {
   });
 
   it("shows N/A when nothing has been resolved", async () => {
-    stub.load = () =>
-      Promise.resolve({ ...summary, resolved: 0, avg_resolution_days: null });
+    stub.load = () => Promise.resolve({ ...summary, resolved: 0, avg_resolution_days: null });
     render(<DashboardPage />);
     expect(await screen.findByText("N/A")).toBeInTheDocument();
   });

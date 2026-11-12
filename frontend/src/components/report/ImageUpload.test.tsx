@@ -31,10 +31,7 @@ describe("ImageUpload", () => {
     render(<ImageUpload onChange={onChange} />);
     const input = screen.getByLabelText(/photo/i);
 
-    await userEvent.upload(
-      input,
-      makeFile("big.png", "image/png", 6 * 1024 * 1024),
-    );
+    await userEvent.upload(input, makeFile("big.png", "image/png", 6 * 1024 * 1024));
 
     expect(screen.getByRole("alert")).toHaveTextContent(/5MB/i);
     expect(onChange).toHaveBeenCalledWith(null);

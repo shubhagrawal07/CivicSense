@@ -44,10 +44,7 @@ export function DashboardPage() {
   }
 
   const { summary } = state;
-  const avg =
-    summary.avg_resolution_days === null
-      ? "N/A"
-      : String(summary.avg_resolution_days);
+  const avg = summary.avg_resolution_days === null ? "N/A" : String(summary.avg_resolution_days);
 
   return (
     <div>

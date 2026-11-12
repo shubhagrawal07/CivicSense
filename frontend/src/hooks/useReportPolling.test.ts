@@ -49,9 +49,7 @@ describe("useReportPolling", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(10_000);
     });
-    expect((getReport as ReturnType<typeof vi.fn>).mock.calls.length).toBe(
-      callsAfterDone,
-    );
+    expect((getReport as ReturnType<typeof vi.fn>).mock.calls.length).toBe(callsAfterDone);
   });
 
   it("stops polling once the report is FAILED", async () => {

@@ -44,9 +44,7 @@ describe("useMyReportsPolling", () => {
     await act(async () => {
       await vi.advanceTimersByTimeAsync(10_000);
     });
-    expect((getMyReports as ReturnType<typeof vi.fn>).mock.calls.length).toBe(
-      callsAfterDone,
-    );
+    expect((getMyReports as ReturnType<typeof vi.fn>).mock.calls.length).toBe(callsAfterDone);
   });
 
   it("flips timedOut after ~2 minutes with something still pending", async () => {
@@ -69,10 +67,9 @@ describe("useMyReportsPolling", () => {
       total: 1,
     });
 
-    const { rerender } = renderHook(
-      ({ offset }) => useMyReportsPolling(20, offset),
-      { initialProps: { offset: 0 } },
-    );
+    const { rerender } = renderHook(({ offset }) => useMyReportsPolling(20, offset), {
+      initialProps: { offset: 0 },
+    });
     await act(async () => {
       await vi.advanceTimersByTimeAsync(0);
     });
@@ -86,8 +83,9 @@ describe("useMyReportsPolling", () => {
     expect((getMyReports as ReturnType<typeof vi.fn>).mock.calls.length).toBeGreaterThan(
       callsBeforeChange,
     );
-    expect(
-      (getMyReports as ReturnType<typeof vi.fn>).mock.calls.at(-1)?.[0],
-    ).toEqual({ limit: 20, offset: 20 });
+    expect((getMyReports as ReturnType<typeof vi.fn>).mock.calls.at(-1)?.[0]).toEqual({
+      limit: 20,
+      offset: 20,
+    });
   });
 });

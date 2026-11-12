@@ -5,10 +5,7 @@ interface ConfirmationScreenProps {
   onSubmitAnother: () => void;
 }
 
-export function ConfirmationScreen({
-  reportId,
-  onSubmitAnother,
-}: ConfirmationScreenProps) {
+export function ConfirmationScreen({ reportId, onSubmitAnother }: ConfirmationScreenProps) {
   return (
     <div>
       <h2>Your report has been received and is being analysed</h2>
