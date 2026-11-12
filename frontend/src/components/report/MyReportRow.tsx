@@ -14,27 +14,17 @@ export function MyReportRow({ item }: MyReportRowProps) {
     <tr className="report-row" onClick={() => navigate(`/reports/${item.id}`)}>
       <td>{item.description_preview ?? "No description"}</td>
       <td>
-        {item.thumbnail_url ? (
-          <PhotoLightbox src={item.thumbnail_url} alt="Uploaded photo" />
-        ) : (
-          "—"
-        )}
+        {item.thumbnail_url ? <PhotoLightbox src={item.thumbnail_url} alt="Uploaded photo" /> : "—"}
       </td>
       <td>{new Date(item.created_at).toLocaleDateString()}</td>
       <td>
-        <StatusBadge
-          processingStatus={item.processing_status}
-          issueStatus={item.issue_status}
-        />
+        <StatusBadge processingStatus={item.processing_status} issueStatus={item.issue_status} />
       </td>
       <td>{item.category ?? "Not yet available"}</td>
       <td>{item.severity_level ?? "Not yet available"}</td>
       <td>
         {item.issue_id ? (
-          <Link
-            to={`/issues/${item.issue_id}`}
-            onClick={(event) => event.stopPropagation()}
-          >
+          <Link to={`/issues/${item.issue_id}`} onClick={(event) => event.stopPropagation()}>
             {item.report_count} supporting report(s)
           </Link>
         ) : (

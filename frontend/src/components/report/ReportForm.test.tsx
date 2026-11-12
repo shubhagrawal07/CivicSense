@@ -7,11 +7,7 @@ import { submitReport } from "../../api/reports";
 // Leaflet doesn't render meaningfully in jsdom; swap LocationPicker for a
 // minimal stub that lets tests set a location without exercising the map.
 vi.mock("./LocationPicker", () => ({
-  LocationPicker: ({
-    onChange,
-  }: {
-    onChange: (value: { lat: number; lng: number }) => void;
-  }) => (
+  LocationPicker: ({ onChange }: { onChange: (value: { lat: number; lng: number }) => void }) => (
     <button type="button" onClick={() => onChange({ lat: 1, lng: 2 })}>
       Set location
     </button>
@@ -29,9 +25,7 @@ describe("ReportForm", () => {
     await userEvent.click(screen.getByText("Set location"));
     await userEvent.click(screen.getByRole("button", { name: /submit report/i }));
 
-    expect(screen.getByRole("alert")).toHaveTextContent(
-      /description, a photo, or both/i,
-    );
+    expect(screen.getByRole("alert")).toHaveTextContent(/description, a photo, or both/i);
     expect(submitReport).not.toHaveBeenCalled();
   });
 
@@ -45,10 +39,7 @@ describe("ReportForm", () => {
 
     render(<ReportForm onSubmitted={onSubmitted} />);
 
-    await userEvent.type(
-      screen.getByLabelText(/description/i),
-      "Pothole on Main St",
-    );
+    await userEvent.type(screen.getByLabelText(/description/i), "Pothole on Main St");
     await userEvent.click(screen.getByText("Set location"));
     await userEvent.click(screen.getByRole("button", { name: /submit report/i }));
 

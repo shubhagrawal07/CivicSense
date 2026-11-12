@@ -6,9 +6,7 @@ import { ErrorBanner } from "../components/common/ErrorBanner";
 import { LoadingSpinner } from "../components/common/LoadingSpinner";
 
 type LoadState =
-  | { kind: "loading" }
-  | { kind: "error"; message: string }
-  | { kind: "ready"; data: DataQuality };
+  { kind: "loading" } | { kind: "error"; message: string } | { kind: "ready"; data: DataQuality };
 
 const CHECKS: { key: keyof DataQuality; label: string }[] = [
   { key: "reports_without_description", label: "Reports without a description" },

@@ -13,11 +13,7 @@ const MOCK_DELAY_DONE_MS = 6000;
 const reports = new Map<string, Report>();
 let nextId = 1;
 
-function demoReport(
-  description: string,
-  status: ProcessingStatus,
-  hoursAgo: number,
-): Report {
+function demoReport(description: string, status: ProcessingStatus, hoursAgo: number): Report {
   return {
     id: String(nextId++),
     description: description,
@@ -116,8 +112,7 @@ export async function mockSubmitReport(
       reports.set(id, {
         ...current,
         processing_status: "FAILED",
-        error: "Mock failure: description contained \"fail\".",
-        processed_at: new Date().toISOString(),
+        error: 'Mock failure: description contained "fail".',
       });
       return;
     }
@@ -126,19 +121,11 @@ export async function mockSubmitReport(
       ...current,
       processing_status: "DONE",
       classification: "pothole",
-      classification_confidence: 0.87,
-      classification_source: payload.image
-        ? payload.description
-          ? "BOTH"
-          : "IMAGE"
-        : "TEXT",
+      classification_source: payload.image ? (payload.description ? "BOTH" : "IMAGE") : "TEXT",
       conflict: false,
-      needs_review: false,
-      predicted_department_id: 1,
-      department_confidence: 0.91,
+      department: { id: 1, name: "Roads and Infrastructure" },
       predicted_severity: "MEDIUM",
       issue: { id },
-      processed_at: new Date().toISOString(),
     });
   }, MOCK_DELAY_DONE_MS);
 
@@ -150,9 +137,7 @@ export async function mockGetMyReports(params: {
   offset: number;
 }): Promise<MyReportsResponse> {
   const newestFirst = Array.from(reports.values()).reverse();
-  const items = newestFirst
-    .slice(params.offset, params.offset + params.limit)
-    .map(toListItem);
+  const items = newestFirst.slice(params.offset, params.offset + params.limit).map(toListItem);
   return { items: items, total: newestFirst.length };
 }
 

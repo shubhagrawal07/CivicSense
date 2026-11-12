@@ -36,7 +36,12 @@ export function PhotoLightbox({ src, alt }: PhotoLightboxProps) {
       {open &&
         createPortal(
           <div className="lightbox-backdrop" onClick={closePhoto} role="dialog" aria-modal="true">
-            <button type="button" className="lightbox-close" onClick={closePhoto} aria-label="Close">
+            <button
+              type="button"
+              className="lightbox-close"
+              onClick={closePhoto}
+              aria-label="Close"
+            >
               ×
             </button>
             <img

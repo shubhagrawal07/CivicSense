@@ -58,11 +58,7 @@ export function AuthoritySection({ issue }: { issue: Issue }) {
         <dt>Department</dt>
         <dd>{department?.name ?? "Not assigned yet"}</dd>
         <dt>Authority</dt>
-        <dd>
-          {authority
-            ? `${authority.name} (${authority.jurisdiction})`
-            : "Not assigned yet"}
-        </dd>
+        <dd>{authority ? `${authority.name} (${authority.jurisdiction})` : "Not assigned yet"}</dd>
       </dl>
       {contacts.length === 0 ? (
         <p>No official contacts are available for this issue yet.</p>

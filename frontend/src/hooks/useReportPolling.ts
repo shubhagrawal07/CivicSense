@@ -30,10 +30,7 @@ export function useReportPolling(id: string): UseReportPollingResult {
         setReport(current);
         setIsLoading(false);
 
-        if (
-          current.processing_status === "DONE" ||
-          current.processing_status === "FAILED"
-        ) {
+        if (current.processing_status === "DONE" || current.processing_status === "FAILED") {
           return;
         }
 

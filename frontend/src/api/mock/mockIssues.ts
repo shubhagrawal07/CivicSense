@@ -61,8 +61,6 @@ export async function mockGetIssue(id: string): Promise<Issue> {
     department: null,
     authority: null,
     contacts: [],
-    status_history: [
-      { status: "NEW", changed_at: report.created_at, note: null },
-    ],
+    status_history: [{ status: "NEW", changed_at: report.created_at, note: null }],
   };
 }

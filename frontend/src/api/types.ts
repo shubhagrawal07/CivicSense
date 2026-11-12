@@ -27,19 +27,33 @@ export interface Report {
   error?: string | null;
 
   classification?: string | null;
-  classification_confidence?: number | null;
   classification_source?: ClassificationSource | null;
   conflict?: boolean;
-  needs_review?: boolean;
 
-  predicted_department_id?: number | null;
-  department_confidence?: number | null;
+  department?: { id: number; name: string } | null;
   predicted_severity?: Severity | null;
 
   issue?: { id: number | string } | null;
 
   created_at: string;
-  processed_at?: string | null;
+}
+
+export interface ReportDetailResponse {
+  id: number;
+  description: string | null;
+  image_url: string | null;
+  location: { lat: number; lng: number };
+  created_at: string;
+  processing_status: ProcessingStatus;
+  error: string | null;
+  classification: {
+    category: string;
+    source: ClassificationSource | null;
+    conflict: boolean;
+  } | null;
+  department: { id: number; name: string } | null;
+  severity: { level: Severity } | null;
+  issue: { id: number } | null;
 }
 
 export type IssueStatus =

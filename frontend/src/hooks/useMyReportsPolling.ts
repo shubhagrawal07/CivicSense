@@ -30,9 +30,7 @@ export function useMyReportsPolling(limit: number, offset: number) {
         setIsLoading(false);
 
         const anyPending = response.items.some(
-          (item) =>
-            item.processing_status === "PENDING" ||
-            item.processing_status === "PROCESSING",
+          (item) => item.processing_status === "PENDING" || item.processing_status === "PROCESSING",
         );
         if (!anyPending) return;
 
