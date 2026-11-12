@@ -8,6 +8,7 @@ import { env } from "../config/env";
 import type {
   MyReportsResponse,
   Report,
+  ReportDetailResponse,
   SubmitReportPayload,
   SubmitReportResponse,
 } from "./types";
@@ -26,12 +27,31 @@ async function realSubmitReport(
     formData,
     { headers: { "Content-Type": "multipart/form-data" } },
   );
-  return data;
+  return { ...data, id: String(data.id) };
+}
+
+export function toReport(data: ReportDetailResponse): Report {
+  return {
+    id: String(data.id),
+    description: data.description,
+    image_path: data.image_url,
+    latitude: data.location.lat,
+    longitude: data.location.lng,
+    processing_status: data.processing_status,
+    error: data.error,
+    classification: data.classification?.category ?? null,
+    classification_source: data.classification?.source ?? null,
+    conflict: data.classification?.conflict ?? false,
+    department: data.department,
+    predicted_severity: data.severity?.level ?? null,
+    issue: data.issue ? { id: data.issue.id } : null,
+    created_at: data.created_at,
+  };
 }
 
 async function realGetReport(id: string): Promise<Report> {
-  const { data } = await client.get<Report>(`/reports/${id}`);
-  return data;
+  const { data } = await client.get<ReportDetailResponse>(`/reports/${id}`);
+  return toReport(data);
 }
 
 export const submitReport: (

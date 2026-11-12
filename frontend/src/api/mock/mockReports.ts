@@ -117,7 +117,6 @@ export async function mockSubmitReport(
         ...current,
         processing_status: "FAILED",
         error: "Mock failure: description contained \"fail\".",
-        processed_at: new Date().toISOString(),
       });
       return;
     }
@@ -126,19 +125,15 @@ export async function mockSubmitReport(
       ...current,
       processing_status: "DONE",
       classification: "pothole",
-      classification_confidence: 0.87,
       classification_source: payload.image
         ? payload.description
           ? "BOTH"
           : "IMAGE"
         : "TEXT",
       conflict: false,
-      needs_review: false,
-      predicted_department_id: 1,
-      department_confidence: 0.91,
+      department: { id: 1, name: "Roads and Infrastructure" },
       predicted_severity: "MEDIUM",
       issue: { id },
-      processed_at: new Date().toISOString(),
     });
   }, MOCK_DELAY_DONE_MS);
 

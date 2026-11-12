@@ -25,11 +25,7 @@ export function ResultCard({ report }: { report: Report }) {
         <dd>{report.predicted_severity ?? "Not yet available"}</dd>
 
         <dt>Department</dt>
-        <dd>
-          {report.predicted_department_id
-            ? `Department #${report.predicted_department_id}`
-            : "Not yet available"}
-        </dd>
+        <dd>{report.department?.name ?? "Not yet available"}</dd>
       </dl>
       {report.issue && (
         <p>
