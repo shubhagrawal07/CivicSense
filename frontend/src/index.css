@@ -204,6 +204,63 @@ dd {
   text-align: left;
 }
 
+.data-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.data-filters input[type="date"] {
+  padding: 6px 10px;
+  font-size: 1rem;
+}
+
+.data-filters select {
+  width: 180px;
+  padding: 6px 28px 6px 10px;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+}
+
+.data-filters button {
+  margin: 0;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 12px;
+}
+
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.issues-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.issues-table th,
+.issues-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.issues-table th {
+  cursor: pointer;
+}
+
 .badge {
   display: inline-block;
   min-width: 36px;

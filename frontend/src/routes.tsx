@@ -4,6 +4,7 @@ import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DataQualityPage } from "./pages/DataQualityPage";
 import { IssueDetailPage } from "./pages/IssueDetailPage";
+import { IssuesTablePage } from "./pages/IssuesTablePage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
 import { LoginPage } from "./pages/LoginPage";
@@ -35,6 +36,7 @@ export function AppRoutes() {
         />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/issues/:id" element={<IssueDetailPage />} />
+        <Route path="/data" element={<IssuesTablePage />} />
         <Route
           path="/my-reports"
           element={

@@ -10,6 +10,7 @@ export function Header() {
       {!isLoading && (
         <nav>
           <Link to="/dashboard">Dashboard</Link>
+          <Link to="/data">Data</Link>
           {user ? (
             <>
               {user.role === "ADMIN" && <Link to="/admin/data-quality">Data quality</Link>}
