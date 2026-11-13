@@ -168,3 +168,18 @@ export interface StatsSummary {
   resolved: number;
   avg_resolution_days: number | null;
 }
+
+export interface CategoryCount {
+  category: string;
+  count: number;
+}
+
+export interface SeverityCount {
+  severity: Severity;
+  count: number;
+}
+
+export interface StatsBreakdown {
+  by_category: CategoryCount[];
+  by_severity: SeverityCount[];
+}

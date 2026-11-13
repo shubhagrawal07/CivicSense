@@ -225,3 +225,19 @@ dd {
 .badge--grey {
   background: #757575;
 }
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.chart-box {
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+.chart-box h3 {
+  margin-top: 0;
+}
