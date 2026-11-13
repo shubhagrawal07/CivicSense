@@ -9,6 +9,7 @@ const stub = vi.hoisted(() => ({
 
 vi.mock("../api/stats", () => ({
   getSummary: () => stub.load(),
+  getBreakdown: () => new Promise(() => {}),
 }));
 
 const summary: StatsSummary = {
@@ -41,9 +42,18 @@ describe("DashboardPage", () => {
   });
 
   it("shows N/A when nothing has been resolved", async () => {
-    stub.load = () => Promise.resolve({ ...summary, resolved: 0, avg_resolution_days: null });
+    stub.load = () =>
+      Promise.resolve({ ...summary, resolved: 0, avg_resolution_days: null });
     render(<DashboardPage />);
     expect(await screen.findByText("N/A")).toBeInTheDocument();
+  });
+
+  it("puts the charts section below the cards", async () => {
+    stub.load = () => Promise.resolve(summary);
+    render(<DashboardPage />);
+
+    await screen.findByText("30");
+    expect(screen.getByText("Loading charts…")).toBeInTheDocument();
   });
 
   it("shows an error message when the request fails", async () => {

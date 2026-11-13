@@ -1,6 +1,6 @@
 import { client } from "./client";
 import { env } from "../config/env";
-import type { StatsSummary } from "./types";
+import type { StatsBreakdown, StatsSummary } from "./types";
 
 async function realGetSummary(): Promise<StatsSummary> {
   const { data } = await client.get<StatsSummary>("/stats/summary");
@@ -21,3 +21,30 @@ async function mockGetSummary(): Promise<StatsSummary> {
 export const getSummary: () => Promise<StatsSummary> = env.useMockApi
   ? mockGetSummary
   : realGetSummary;
+
+async function realGetBreakdown(): Promise<StatsBreakdown> {
+  const { data } = await client.get<StatsBreakdown>("/stats/breakdown");
+  return data;
+}
+
+async function mockGetBreakdown(): Promise<StatsBreakdown> {
+  return {
+    by_category: [
+      { category: "pothole", count: 14 },
+      { category: "garbage", count: 11 },
+      { category: "water leakage", count: 8 },
+      { category: "streetlight", count: 5 },
+      { category: "drainage", count: 4 },
+    ],
+    by_severity: [
+      { severity: "HIGH", count: 15 },
+      { severity: "MEDIUM", count: 17 },
+      { severity: "LOW", count: 7 },
+      { severity: "CRITICAL", count: 3 },
+    ],
+  };
+}
+
+export const getBreakdown: () => Promise<StatsBreakdown> = env.useMockApi
+  ? mockGetBreakdown
+  : realGetBreakdown;

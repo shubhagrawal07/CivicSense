@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getSummary } from "../api/stats";
 import { parseApiError } from "../api/errors";
 import type { StatsSummary } from "../api/types";
+import { BreakdownCharts } from "../components/dashboard/BreakdownCharts";
 import { ErrorBanner } from "../components/common/ErrorBanner";
 import { LoadingSpinner } from "../components/common/LoadingSpinner";
 
@@ -56,6 +57,7 @@ export function DashboardPage() {
         <StatCard label="Resolved" value={String(summary.resolved)} />
         <StatCard label="Avg resolution (days)" value={avg} />
       </div>
+      <BreakdownCharts />
     </div>
   );
 }
