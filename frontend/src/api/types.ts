@@ -137,6 +137,28 @@ export interface IssueStatusChange {
   note: string | null;
 }
 
+export type IssueStatusBucket = "open" | "in_progress" | "resolved";
+
+export interface MapIssueProperties {
+  id: number;
+  category: string;
+  severity: Severity | null;
+  status: IssueStatus;
+  report_count: number;
+  last_reported_at: string;
+}
+
+export interface MapFeature {
+  type: "Feature";
+  geometry: { type: "Point"; coordinates: [number, number] };
+  properties: MapIssueProperties;
+}
+
+export interface MapFeatureCollection {
+  type: "FeatureCollection";
+  features: MapFeature[];
+}
+
 export interface Issue {
   id: number;
   category: string;
