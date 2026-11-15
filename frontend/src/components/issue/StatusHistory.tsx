@@ -1,5 +1,5 @@
 import type { IssueStatusChange } from "../../api/types";
-import { issueStatusLabel } from "../report/StatusBadge";
+import { ISSUE_STATUS_LABEL } from "../report/statusLabels";
 
 export function StatusHistory({ changes }: { changes: IssueStatusChange[] }) {
   if (changes.length === 0) {
@@ -14,7 +14,7 @@ export function StatusHistory({ changes }: { changes: IssueStatusChange[] }) {
     <ol>
       {oldestFirst.map((change, index) => (
         <li key={index}>
-          <strong>{issueStatusLabel(change.status)}</strong>
+          <strong>{ISSUE_STATUS_LABEL[change.status]}</strong>
           {" — "}
           {new Date(change.changed_at).toLocaleString()}
           {change.note && <div>{change.note}</div>}

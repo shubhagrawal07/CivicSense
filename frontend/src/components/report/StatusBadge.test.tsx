@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { statusBadgeLabel } from "./StatusBadge";
+import { statusBadgeLabel } from "./statusLabels";
 
 describe("statusBadgeLabel", () => {
   it("shows an analysing/failed label before the issue status exists", () => {
