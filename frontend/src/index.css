@@ -298,3 +298,58 @@ dd {
 .chart-box h3 {
   margin-top: 0;
 }
+
+.map-container {
+  height: 500px;
+  width: 100%;
+}
+
+.map-marker {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.map-marker--critical {
+  background: #b71c1c;
+}
+
+.map-marker--high {
+  background: #e65100;
+}
+
+.map-marker--medium {
+  background: #f9a825;
+}
+
+.map-marker--low {
+  background: #2e7d32;
+}
+
+.map-marker--unclassified {
+  background: #757575;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.map-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-legend__swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}

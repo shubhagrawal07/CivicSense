@@ -63,6 +63,8 @@ export function sortFeatures(
     const left = a.properties[sort.key];
     const right = b.properties[sort.key];
     if (left === right) return 0;
+    if (left === null) return -1;
+    if (right === null) return 1;
     return left < right ? -1 : 1;
   });
   if (sort.direction === "desc") sorted.reverse();
