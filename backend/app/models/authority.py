@@ -50,11 +50,13 @@ class Authority(Base):
 
 class AuthorityContact(Base):
     __tablename__ = "authority_contacts"
+    __table_args__ = (UniqueConstraint("authority_id", "type", "value"),)
 
     id: Mapped[int] = mapped_column(primary_key=True)
     authority_id: Mapped[int] = mapped_column(ForeignKey("authorities.id"))
     type: Mapped[ContactType] = mapped_column(Enum(ContactType, name="contact_type"))
     value: Mapped[str] = mapped_column(String(500))
+    label: Mapped[str | None] = mapped_column(String(300))
     source_url: Mapped[str | None] = mapped_column(String(1000))
     last_verified: Mapped[date | None] = mapped_column(Date)
     verification_status: Mapped[VerificationStatus] = mapped_column(
