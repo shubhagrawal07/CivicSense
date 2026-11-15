@@ -1,6 +1,6 @@
 import { client } from "./client";
 import { env } from "../config/env";
-import type { StatsBreakdown, StatsSummary } from "./types";
+import type { StatsBreakdown, StatsSummary, TrendInterval, TrendPoint } from "./types";
 
 async function realGetSummary(): Promise<StatsSummary> {
   const { data } = await client.get<StatsSummary>("/stats/summary");
@@ -48,3 +48,35 @@ async function mockGetBreakdown(): Promise<StatsBreakdown> {
 export const getBreakdown: () => Promise<StatsBreakdown> = env.useMockApi
   ? mockGetBreakdown
   : realGetBreakdown;
+
+async function realGetTrend(interval: TrendInterval, category: string): Promise<TrendPoint[]> {
+  const params: Record<string, string> = { interval };
+  if (category) params.category = category;
+  const { data } = await client.get<TrendPoint[]>("/stats/trend", { params });
+  return data;
+}
+
+async function mockGetTrend(interval: TrendInterval, category: string): Promise<TrendPoint[]> {
+  const weekly = [
+    ["2026-09-28", 6],
+    ["2026-10-05", 9],
+    ["2026-10-12", 14],
+    ["2026-10-19", 11],
+    ["2026-10-26", 18],
+    ["2026-11-02", 15],
+  ] as const;
+  const daily = [
+    ["2026-11-02", 2],
+    ["2026-11-03", 4],
+    ["2026-11-04", 1],
+    ["2026-11-06", 5],
+    ["2026-11-07", 3],
+  ] as const;
+  // a chosen category shows a smaller series so the change is visible
+  const scale = category ? 0.4 : 1;
+  const rows = interval === "day" ? daily : weekly;
+  return rows.map(([period, count]) => ({ period, count: Math.round(count * scale) }));
+}
+
+export const getTrend: (interval: TrendInterval, category: string) => Promise<TrendPoint[]> =
+  env.useMockApi ? mockGetTrend : realGetTrend;
