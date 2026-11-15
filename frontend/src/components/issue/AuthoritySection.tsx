@@ -1,4 +1,5 @@
 import type { Issue, IssueContact } from "../../api/types";
+import { formatDate } from "../../utils/date";
 
 const CONTACT_LABEL: Record<string, string> = {
   HELPLINE: "Helpline",
@@ -39,10 +40,7 @@ function ContactItem({ contact }: { contact: IssueContact }) {
           "not recorded"
         )}
         {" · "}
-        Last verified:{" "}
-        {contact.last_verified_at
-          ? new Date(contact.last_verified_at).toLocaleDateString()
-          : "never"}
+        Last verified: {contact.last_verified_at ? formatDate(contact.last_verified_at) : "never"}
       </div>
     </li>
   );

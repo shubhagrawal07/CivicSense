@@ -9,7 +9,8 @@ import { LoadingSpinner } from "../components/common/LoadingSpinner";
 import { AuthoritySection } from "../components/issue/AuthoritySection";
 import { IssueMap } from "../components/issue/IssueMap";
 import { StatusHistory } from "../components/issue/StatusHistory";
-import { issueStatusLabel } from "../components/report/StatusBadge";
+import { ISSUE_STATUS_LABEL } from "../components/report/statusLabels";
+import { formatDate } from "../utils/date";
 
 type LoadState =
   | { kind: "loading" }
@@ -20,10 +21,6 @@ type LoadState =
 function isNotFound(err: unknown): boolean {
   if (isAxiosError(err)) return err.response?.status === 404;
   return (err as { status?: number })?.status === 404;
-}
-
-function formatDate(value: string): string {
-  return new Date(value).toLocaleDateString();
 }
 
 export function IssueDetailPage() {
@@ -87,7 +84,7 @@ export function IssueDetailPage() {
         <dt>Severity</dt>
         <dd>{issue.severity ?? "Not yet available"}</dd>
         <dt>Status</dt>
-        <dd>{issueStatusLabel(issue.status)}</dd>
+        <dd>{ISSUE_STATUS_LABEL[issue.status]}</dd>
         <dt>Supporting reports</dt>
         <dd>{issue.report_count}</dd>
         <dt>First reported</dt>

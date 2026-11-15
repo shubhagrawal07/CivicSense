@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import type { MyReportListItem } from "../../api/types";
 import { PhotoLightbox } from "../common/PhotoLightbox";
 import { StatusBadge } from "./StatusBadge";
+import { formatDate } from "../../utils/date";
 
 interface MyReportRowProps {
   item: MyReportListItem;
@@ -16,7 +17,7 @@ export function MyReportRow({ item }: MyReportRowProps) {
       <td>
         {item.thumbnail_url ? <PhotoLightbox src={item.thumbnail_url} alt="Uploaded photo" /> : "—"}
       </td>
-      <td>{new Date(item.created_at).toLocaleDateString()}</td>
+      <td>{formatDate(item.created_at)}</td>
       <td>
         <StatusBadge processingStatus={item.processing_status} issueStatus={item.issue_status} />
       </td>
