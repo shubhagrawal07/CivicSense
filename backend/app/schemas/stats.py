@@ -31,3 +31,11 @@ class BreakdownOut(BaseModel):
 class TrendPoint(BaseModel):
     period: date
     count: int
+
+
+class WardCount(BaseModel):
+    ward_id: int
+    ward_name: str
+    issue_count: int
+    open_count: int
+    high_severity_count: int

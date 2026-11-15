@@ -2,11 +2,14 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 from fastapi.testclient import TestClient
+from geoalchemy2.shape import from_shape
+from shapely.geometry import MultiPolygon, box
+from sqlalchemy import func
 
 from app.core.db import get_db
 from app.main import app
-from app.models import Issue
-from app.models.enums import IssueStatus, Severity
+from app.models import Issue, Jurisdiction
+from app.models.enums import IssueStatus, JurisdictionStatus, Severity
 
 
 @pytest.fixture
@@ -186,3 +189,56 @@ def test_trend_rejects_bad_parameters(client):
     assert bad_interval.status_code == 422
     backwards = {"from": "2026-10-01", "to": "2026-09-01"}
     assert client.get("/api/stats/trend", params=backwards).status_code == 422
+
+
+def add_ward(db, name, west, south):
+    shape = MultiPolygon([box(west, south, west + 1, south + 1)])
+    ward = Jurisdiction(
+        name=name,
+        type="ward",
+        boundary=from_shape(shape, srid=4326),
+        status=JurisdictionStatus.APPROVED,
+    )
+    db.add(ward)
+    db.flush()
+    return ward
+
+
+def add_issue_at(db, lng, lat, category, status, severity):
+    db.add(
+        Issue(
+            category=category,
+            status=status,
+            severity=severity,
+            first_reported_at=datetime(2026, 9, 1, tzinfo=timezone.utc),
+            location=func.ST_SetSRID(func.ST_MakePoint(lng, lat), 4326),
+        )
+    )
+    db.flush()
+
+
+def test_by_ward_counts_issues_in_each_ward(client, db):
+    ward_a = add_ward(db, "Test Ward A", 10, 10)
+    ward_b = add_ward(db, "Test Ward B", 20, 20)
+    ward_c = add_ward(db, "Test Ward C", 30, 30)
+    add_issue_at(db, 10.5, 10.5, "pothole", IssueStatus.NEW, Severity.HIGH)
+    add_issue_at(db, 10.6, 10.6, "pothole", IssueStatus.RESOLVED, Severity.LOW)
+    add_issue_at(db, 10.7, 10.7, "garbage", IssueStatus.NEW, Severity.CRITICAL)
+    add_issue_at(db, 20.5, 20.5, "pothole", IssueStatus.IN_PROGRESS, Severity.MEDIUM)
+    add_issue_at(db, 50.5, 50.5, "pothole", IssueStatus.NEW, Severity.HIGH)
+
+    def counts(params=None):
+        response = client.get("/api/stats/by-ward", params=params)
+        assert response.status_code == 200
+        rows = {row["ward_id"]: row for row in response.json()}
+        return [
+            (
+                rows[ward.id]["issue_count"],
+                rows[ward.id]["open_count"],
+                rows[ward.id]["high_severity_count"],
+            )
+            for ward in (ward_a, ward_b, ward_c)
+        ]
+
+    assert counts() == [(3, 2, 2), (1, 0, 0), (0, 0, 0)]
+    assert counts({"category": "garbage"}) == [(1, 1, 1), (0, 0, 0), (0, 0, 0)]
