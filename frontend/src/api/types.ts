@@ -205,3 +205,10 @@ export interface StatsBreakdown {
   by_category: CategoryCount[];
   by_severity: SeverityCount[];
 }
+
+export type TrendInterval = "day" | "week";
+
+export interface TrendPoint {
+  period: string;
+  count: number;
+}

@@ -8,6 +8,7 @@ import { IssuesTablePage } from "./pages/IssuesTablePage";
 import { MapPage } from "./pages/MapPage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
+import { TrendsPage } from "./pages/TrendsPage";
 import { LoginPage } from "./pages/LoginPage";
 import { MyReportsPage } from "./pages/MyReportsPage";
 import { RegisterPage } from "./pages/RegisterPage";
@@ -36,6 +37,7 @@ export function AppRoutes() {
           }
         />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/trends" element={<TrendsPage />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/issues/:id" element={<IssueDetailPage />} />
         <Route path="/data" element={<IssuesTablePage />} />
