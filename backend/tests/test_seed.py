@@ -1,3 +1,4 @@
+import pytest
 from sqlalchemy import func, select
 
 from app.core.security import verify_password
@@ -52,3 +53,12 @@ def test_admin_seed_is_repeatable_and_keeps_the_existing_user(db):
     assert again is False
     assert count == 1
     assert name == "Demo Admin"
+
+
+def test_admin_seed_rejects_an_address_the_login_api_would_refuse(db):
+    email = "seed-test@civicsense.local"
+
+    with pytest.raises(SystemExit):
+        seed_admin(db, "Demo Admin", email, "demo-password-1")
+
+    assert db.scalar(select(User.id).where(User.email == email)) is None
