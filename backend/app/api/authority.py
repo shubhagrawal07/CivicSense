@@ -1,13 +1,20 @@
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.schemas.authority import AuthorityInfoOut, ContactOut
+from app.models import Department
+from app.schemas.authority import AuthorityInfoOut, ContactOut, DepartmentOut
 from app.services.authority import DepartmentNotFound, lookup_authority
 
 router = APIRouter(prefix="/api")
+
+
+@router.get("/departments", response_model=list[DepartmentOut])
+def departments(db: Annotated[Session, Depends(get_db)]):
+    return db.scalars(select(Department).order_by(Department.id)).all()
 
 
 @router.get("/authority-info", response_model=AuthorityInfoOut)
