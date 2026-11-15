@@ -133,7 +133,7 @@ def seed_admin(db, name, email, password):
     try:
         validate_email(email)
     except ValueError:
-        raise SystemExit(f"ADMIN_EMAIL {email} is not a valid email address")
+        raise SystemExit(f"ADMIN_EMAIL {email} is not a valid email address") from None
     if db.scalar(select(User.id).where(User.email == email)):
         return False
     db.add(
