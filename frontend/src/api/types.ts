@@ -205,3 +205,46 @@ export interface StatsBreakdown {
   by_category: CategoryCount[];
   by_severity: SeverityCount[];
 }
+
+export type TrendInterval = "day" | "week";
+
+export interface TrendPoint {
+  period: string;
+  count: number;
+}
+
+export interface Department {
+  id: number;
+  name: string;
+}
+
+export interface AuthorityRef {
+  id: number;
+  name: string;
+  jurisdiction: string;
+}
+
+export interface AuthorityContact {
+  type: string;
+  value: string;
+  source_url: string | null;
+  last_verified_at: string | null;
+  verified: boolean;
+}
+
+export interface AuthorityInfo {
+  department: Department;
+  authority: AuthorityRef | null;
+  contacts: AuthorityContact[];
+  is_fallback: boolean;
+  needs_review: boolean;
+  other_matches: AuthorityRef[];
+}
+
+export interface JurisdictionAt {
+  id: number;
+  name: string;
+  type: string;
+  priority: number;
+  authority: AuthorityRef | null;
+}

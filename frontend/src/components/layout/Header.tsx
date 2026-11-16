@@ -10,7 +10,9 @@ export function Header() {
       {!isLoading && (
         <nav>
           <Link to="/dashboard">Dashboard</Link>
+          <Link to="/trends">Trends</Link>
           <Link to="/map">Map</Link>
+          <Link to="/authorities">Authorities</Link>
           <Link to="/data">Data</Link>
           {user ? (
             <>

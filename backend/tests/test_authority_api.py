@@ -29,6 +29,17 @@ def get(client, db, dept_name, point, **extra):
     return client.get("/api/authority-info", params=params)
 
 
+def test_departments_are_listed_by_id_with_only_id_and_name(client, db):
+    response = client.get("/api/departments")
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body == sorted(body, key=lambda row: row["id"])
+    assert all(set(row) == {"id", "name"} for row in body)
+    names = {row["name"] for row in body}
+    assert {"Water Supply", "General Grievance"} <= names
+
+
 def test_response_has_the_documented_shape(client, db):
     response = get(client, db, "Roads / Public Works", MAIN_BUILDING)
 

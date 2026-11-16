@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
+import { AuthoritiesPage } from "./pages/AuthoritiesPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DataQualityPage } from "./pages/DataQualityPage";
 import { IssueDetailPage } from "./pages/IssueDetailPage";
@@ -8,6 +9,7 @@ import { IssuesTablePage } from "./pages/IssuesTablePage";
 import { MapPage } from "./pages/MapPage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
+import { TrendsPage } from "./pages/TrendsPage";
 import { LoginPage } from "./pages/LoginPage";
 import { MyReportsPage } from "./pages/MyReportsPage";
 import { RegisterPage } from "./pages/RegisterPage";
@@ -36,7 +38,9 @@ export function AppRoutes() {
           }
         />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/trends" element={<TrendsPage />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/authorities" element={<AuthoritiesPage />} />
         <Route path="/issues/:id" element={<IssueDetailPage />} />
         <Route path="/data" element={<IssuesTablePage />} />
         <Route

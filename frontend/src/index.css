@@ -353,3 +353,45 @@ dd {
   border: 1px solid #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
+.trend-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.interval-toggle button[aria-pressed="true"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.map-marker--picked {
+  background: #1565c0;
+}
+
+.authority-section {
+  margin-top: 24px;
+}
+
+.contact-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.unverified-tag {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border: 1px solid #e65100;
+  border-radius: 8px;
+  color: #e65100;
+  font-size: 0.75rem;
+}
