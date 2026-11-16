@@ -34,7 +34,13 @@ export function featurePosition(feature: MapFeature): [number, number] {
   return [lat, lng];
 }
 
-export function IssuesMap({ features }: { features: MapFeature[] }) {
+export function IssuesMap({
+  features,
+  children,
+}: {
+  features: MapFeature[];
+  children?: React.ReactNode;
+}) {
   return (
     <MapContainer center={MUMBAI_CENTER} zoom={11} className="map-container">
       <TileLayer
@@ -64,6 +70,7 @@ export function IssuesMap({ features }: { features: MapFeature[] }) {
           </Marker>
         ))}
       </MarkerClusterGroup>
+      {children}
     </MapContainer>
   );
 }

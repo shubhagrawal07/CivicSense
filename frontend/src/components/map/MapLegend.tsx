@@ -1,9 +1,11 @@
-import { SEVERITY_LEGEND } from "./severity";
+interface MapLegendProps {
+  entries: { label: string; color: string }[];
+}
 
-export function MapLegend() {
+export function MapLegend({ entries }: MapLegendProps) {
   return (
     <ul className="map-legend">
-      {SEVERITY_LEGEND.map((entry) => (
+      {entries.map((entry) => (
         <li key={entry.label}>
           <span className="map-legend__swatch" style={{ background: entry.color }} />
           {entry.label}
