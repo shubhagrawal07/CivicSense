@@ -12,6 +12,7 @@ export function Header() {
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/trends">Trends</Link>
           <Link to="/map">Map</Link>
+          <Link to="/ward-map">Ward map</Link>
           <Link to="/authorities">Authorities</Link>
           <Link to="/data">Data</Link>
           {user ? (
