@@ -1,3 +1,5 @@
+import type { MultiPolygon, Polygon } from "geojson";
+
 export type ProcessingStatus = "PENDING" | "PROCESSING" | "DONE" | "FAILED";
 
 export type ClassificationSource = "TEXT" | "IMAGE" | "BOTH";
@@ -247,4 +249,30 @@ export interface JurisdictionAt {
   type: string;
   priority: number;
   authority: AuthorityRef | null;
+}
+
+export interface WardProperties {
+  id: number;
+  name: string;
+  type: string;
+  authority_name: string | null;
+}
+
+export interface WardFeature {
+  type: "Feature";
+  geometry: Polygon | MultiPolygon;
+  properties: WardProperties;
+}
+
+export interface WardFeatureCollection {
+  type: "FeatureCollection";
+  features: WardFeature[];
+}
+
+export interface WardCount {
+  ward_id: number;
+  ward_name: string;
+  issue_count: number;
+  open_count: number;
+  high_severity_count: number;
 }
