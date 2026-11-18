@@ -248,3 +248,10 @@ export interface JurisdictionAt {
   priority: number;
   authority: AuthorityRef | null;
 }
+
+export interface HotspotCell {
+  lat: number;
+  lng: number;
+  count: number;
+  score: number;
+}
