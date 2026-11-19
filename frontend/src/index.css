@@ -401,3 +401,16 @@ dd {
   height: 14px;
   border: 1px solid #555;
 }
+
+.nav-button {
+  padding: 6px 14px;
+  border-radius: 4px;
+  background: #1565c0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  background: #0d47a1;
+}

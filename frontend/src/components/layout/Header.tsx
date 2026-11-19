@@ -9,6 +9,9 @@ export function Header() {
       <strong>CivicSense</strong>
       {!isLoading && (
         <nav>
+          <Link className="nav-button" to="/report/new">
+            Report an issue
+          </Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/trends">Trends</Link>
           <Link to="/map">Map</Link>
