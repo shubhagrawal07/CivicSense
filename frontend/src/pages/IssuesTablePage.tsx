@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { getMapIssues } from "../api/map";
 import { parseApiError } from "../api/errors";
 import { env } from "../config/env";
-import type { MapFeature, MapFeatureCollection } from "../api/types";
+import type { MapFeatureCollection } from "../api/types";
 import { ErrorBanner } from "../components/common/ErrorBanner";
 import { LoadingSpinner } from "../components/common/LoadingSpinner";
 import { Pagination } from "../components/common/Pagination";
 import { IssueFilters } from "../components/filters/IssueFilters";
-import { EMPTY_FILTERS, toMapIssuesFilters } from "../components/filters/filters";
+import { EMPTY_FILTERS, buildFilterQuery, toMapIssuesFilters } from "../components/filters/filters";
+import { sortFeatures } from "./issuesTable";
+import type { SortState } from "./issuesTable";
 import type { AppliedFilters } from "../components/filters/filters";
 
 type LoadState =
@@ -16,35 +18,7 @@ type LoadState =
   | { kind: "error"; message: string }
   | { kind: "ready"; data: MapFeatureCollection };
 
-interface SortState {
-  key: "id" | "category" | "severity" | "status" | "report_count" | "last_reported_at";
-  direction: "asc" | "desc";
-}
-
 const PAGE_SIZE = 25;
-
-export function sortFeatures(features: MapFeature[], sort: SortState): MapFeature[] {
-  const sorted = [...features].sort((a, b) => {
-    const left = a.properties[sort.key];
-    const right = b.properties[sort.key];
-    if (left === right) return 0;
-    if (left === null) return -1;
-    if (right === null) return 1;
-    return left < right ? -1 : 1;
-  });
-  if (sort.direction === "desc") sorted.reverse();
-  return sorted;
-}
-
-export function buildFilterQuery(filters: AppliedFilters): string {
-  const params = new URLSearchParams();
-  if (filters.category) params.append("category", filters.category);
-  for (const value of filters.severity) params.append("severity", value);
-  for (const value of filters.status) params.append("status", value);
-  if (filters.from) params.append("from", filters.from);
-  if (filters.to) params.append("to", filters.to);
-  return params.toString();
-}
 
 export function IssuesTablePage() {
   const [filters, setFilters] = useState<AppliedFilters>(EMPTY_FILTERS);

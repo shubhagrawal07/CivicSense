@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { geoErrorMessage } from "./LocationPicker";
+import { geoErrorMessage } from "./geoErrors";
 
 describe("geoErrorMessage", () => {
   it("explains how to unblock a denied permission", () => {
