@@ -4,6 +4,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import { Link } from "react-router-dom";
 import type { MapFeature, Severity } from "../../api/types";
 import { ISSUE_STATUS_LABEL } from "../report/statusLabels";
+import { featurePosition } from "./position";
 
 const MUMBAI_CENTER: [number, number] = [19.076, 72.8777];
 
@@ -27,11 +28,6 @@ const UNCLASSIFIED_ICON = buildIcon("unclassified");
 
 function markerIcon(severity: Severity | null): L.DivIcon {
   return severity ? SEVERITY_ICONS[severity] : UNCLASSIFIED_ICON;
-}
-
-export function featurePosition(feature: MapFeature): [number, number] {
-  const [lng, lat] = feature.geometry.coordinates;
-  return [lat, lng];
 }
 
 export function IssuesMap({

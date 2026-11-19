@@ -161,6 +161,13 @@ export interface MapFeatureCollection {
   features: MapFeature[];
 }
 
+export interface HotspotCell {
+  lat: number;
+  lng: number;
+  count: number;
+  score: number;
+}
+
 export interface Issue {
   id: number;
   category: string;

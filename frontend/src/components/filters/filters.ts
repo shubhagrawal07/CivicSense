@@ -47,3 +47,13 @@ export function toMapIssuesFilters(filters: AppliedFilters): MapIssuesFilters {
     to: filters.to || undefined,
   };
 }
+
+export function buildFilterQuery(filters: AppliedFilters): string {
+  const params = new URLSearchParams();
+  if (filters.category) params.append("category", filters.category);
+  for (const value of filters.severity) params.append("severity", value);
+  for (const value of filters.status) params.append("status", value);
+  if (filters.from) params.append("from", filters.from);
+  if (filters.to) params.append("to", filters.to);
+  return params.toString();
+}

@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
+import { useEffect, useState } from "react";
+import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from "react-leaflet";
+import { GEO_OPTIONS, geoErrorMessage } from "./geoErrors";
 
 export interface LatLng {
   lat: number;
@@ -22,33 +23,48 @@ function ClickHandler({ onChange }: { onChange: (value: LatLng) => void }) {
   return null;
 }
 
+function Recenter({ value }: { value: LatLng | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (value) {
+      map.setView([value.lat, value.lng], map.getZoom());
+    }
+  }, [map, value]);
+  return null;
+}
+
 export function LocationPicker({ value, onChange }: LocationPickerProps) {
   const [geoError, setGeoError] = useState<string | null>(null);
+  const [searching, setSearching] = useState(false);
 
-  function useCurrentLocation() {
+  function findCurrentLocation() {
     if (!navigator.geolocation) {
-      setGeoError("Location is not supported on this device.");
+      setGeoError("Location is not supported on this device. Click the map instead.");
       return;
     }
+    setGeoError(null);
+    setSearching(true);
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setGeoError(null);
+        setSearching(false);
         onChange({
           lat: position.coords.latitude,
           lng: position.coords.longitude,
         });
       },
-      () => {
-        setGeoError("Could not access your location. Click the map instead.");
+      (error) => {
+        setSearching(false);
+        setGeoError(geoErrorMessage(error.code));
       },
+      GEO_OPTIONS,
     );
   }
 
   return (
     <div>
       <label>Location</label>
-      <button type="button" onClick={useCurrentLocation}>
-        Use my current location
+      <button type="button" onClick={findCurrentLocation} disabled={searching}>
+        {searching ? "Finding your location…" : "Use my current location"}
       </button>
       {geoError && <p role="alert">{geoError}</p>}
       <MapContainer
@@ -61,6 +77,7 @@ export function LocationPicker({ value, onChange }: LocationPickerProps) {
           attribution="&copy; OpenStreetMap contributors"
         />
         <ClickHandler onChange={onChange} />
+        <Recenter value={value} />
         {value && <Marker position={value} />}
       </MapContainer>
     </div>

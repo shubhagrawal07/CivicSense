@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { buildFilterQuery, sortFeatures } from "./IssuesTablePage";
+import { buildFilterQuery } from "../components/filters/filters";
+import { sortFeatures } from "./issuesTable";
 import type { MapFeature } from "../api/types";
 
 function feature(
@@ -71,8 +72,6 @@ describe("buildFilterQuery", () => {
       to: "2026-01-31",
     });
 
-    expect(query).toBe(
-      "severity=HIGH&severity=CRITICAL&status=open&from=2026-01-01&to=2026-01-31",
-    );
+    expect(query).toBe("severity=HIGH&severity=CRITICAL&status=open&from=2026-01-01&to=2026-01-31");
   });
 });

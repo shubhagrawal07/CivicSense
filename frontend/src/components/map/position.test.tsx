@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { featurePosition } from "./IssuesMap";
+import { featurePosition } from "./position";
 import type { MapFeature } from "../../api/types";
 
 function feature(coordinates: [number, number]): MapFeature {
