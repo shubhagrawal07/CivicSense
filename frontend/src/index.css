@@ -395,3 +395,9 @@ dd {
   color: #e65100;
   font-size: 0.75rem;
 }
+
+.ward-swatch {
+  width: 18px;
+  height: 14px;
+  border: 1px solid #555;
+}
