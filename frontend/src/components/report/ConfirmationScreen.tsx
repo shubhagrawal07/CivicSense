@@ -10,13 +10,17 @@ export function ConfirmationScreen({ reportId, onSubmitAnother }: ConfirmationSc
     <div>
       <h2>Your report has been received and is being analysed</h2>
       <p>Report ID: {reportId}</p>
-      <Link to={`/reports/${reportId}`}>View this report</Link>
-      {/* /my-reports doesn't exist until SL-27 lands; linking now keeps the
-          confirmation screen's shape stable for that ticket to slot into. */}
-      <Link to="/my-reports">My reports</Link>
-      <button type="button" onClick={onSubmitAnother}>
-        Submit another
-      </button>
+      <div className="button-row">
+        <Link to={`/reports/${reportId}`} className="nav-button">
+          View this report
+        </Link>
+        <Link to="/my-reports" className="nav-button">
+          My reports
+        </Link>
+        <button type="button" className="nav-button" onClick={onSubmitAnother}>
+          Submit another
+        </button>
+      </div>
     </div>
   );
 }

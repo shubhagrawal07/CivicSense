@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { isAxiosError } from "axios";
 import { getIssue } from "../api/issues";
+import { useAuth } from "../auth/AuthContext";
 import { parseApiError } from "../api/errors";
 import type { Issue } from "../api/types";
 import { ErrorBanner } from "../components/common/ErrorBanner";
 import { LoadingSpinner } from "../components/common/LoadingSpinner";
 import { AuthoritySection } from "../components/issue/AuthoritySection";
 import { IssueMap } from "../components/issue/IssueMap";
+import { StatusForm } from "../components/issue/StatusForm";
 import { StatusHistory } from "../components/issue/StatusHistory";
 import { ISSUE_STATUS_LABEL } from "../components/report/statusLabels";
 import { formatDate } from "../utils/date";
@@ -25,6 +27,7 @@ function isNotFound(err: unknown): boolean {
 
 export function IssueDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const { user } = useAuth();
   const [state, setState] = useState<LoadState>({ kind: "loading" });
 
   useEffect(() => {
@@ -75,6 +78,10 @@ export function IssueDetailPage() {
 
   const { issue } = state;
 
+  function reloadIssue() {
+    getIssue(String(issue.id)).then((fresh) => setState({ kind: "ready", issue: fresh }));
+  }
+
   return (
     <div>
       <h2>Issue #{issue.id}</h2>
@@ -98,6 +105,13 @@ export function IssueDetailPage() {
 
       <h3>Status history</h3>
       <StatusHistory changes={issue.status_history} />
+
+      {user?.role === "ADMIN" && (
+        <>
+          <h3>Update status</h3>
+          <StatusForm issueId={issue.id} currentStatus={issue.status} onUpdated={reloadIssue} />
+        </>
+      )}
 
       <AuthoritySection issue={issue} />
     </div>
