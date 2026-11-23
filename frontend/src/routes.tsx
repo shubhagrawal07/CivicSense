@@ -6,6 +6,7 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { DataQualityPage } from "./pages/DataQualityPage";
 import { IssueDetailPage } from "./pages/IssueDetailPage";
 import { IssuesTablePage } from "./pages/IssuesTablePage";
+import { LandingPage } from "./pages/LandingPage";
 import { MapPage } from "./pages/MapPage";
 import { ReportDetailPage } from "./pages/ReportDetailPage";
 import { ReportNewPage } from "./pages/ReportNewPage";
@@ -20,6 +21,7 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route
