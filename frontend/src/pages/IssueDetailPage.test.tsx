@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { Issue } from "../api/types";
@@ -13,6 +13,8 @@ vi.mock("react-leaflet", () => ({
 }));
 
 const stub = vi.hoisted(() => ({
+  role: "CITIZEN",
+  update: vi.fn(),
   calls: 0,
   load: (() => new Promise(() => {})) as (id: string) => Promise<unknown>,
 }));
@@ -22,6 +24,14 @@ vi.mock("../api/issues", () => ({
     stub.calls += 1;
     return stub.load(id);
   },
+}));
+
+vi.mock("../auth/AuthContext", () => ({
+  useAuth: () => ({ user: { id: 1, name: "Tester", role: stub.role } }),
+}));
+
+vi.mock("../api/admin", () => ({
+  updateIssueStatus: (...args: unknown[]) => stub.update(...args),
 }));
 
 const issue: Issue = {
@@ -70,6 +80,9 @@ function renderAt(path: string) {
 describe("IssueDetailPage", () => {
   beforeEach(() => {
     stub.calls = 0;
+    stub.role = "CITIZEN";
+    stub.update.mockReset();
+    stub.update.mockResolvedValue(undefined);
   });
 
   it("shows the issue, its history in order and contact sources", async () => {
@@ -103,5 +116,20 @@ describe("IssueDetailPage", () => {
     stub.load = () => Promise.reject(new Error("boom"));
     renderAt("/issues/7");
     expect(await screen.findByRole("alert")).toBeInTheDocument();
+  });
+
+  it("lets an admin change the status, and hides the form from citizens", async () => {
+    stub.load = () => Promise.resolve(issue);
+    renderAt("/issues/7");
+    await screen.findByText("Issue #7");
+    expect(screen.queryByText("Update status")).not.toBeInTheDocument();
+
+    stub.role = "ADMIN";
+    renderAt("/issues/7");
+    const select = await screen.findByLabelText("New status");
+    fireEvent.change(select, { target: { value: "RESOLVED" } });
+    fireEvent.click(screen.getByRole("button", { name: "Update status" }));
+
+    await waitFor(() => expect(stub.update).toHaveBeenCalledWith(7, "RESOLVED", ""));
   });
 });

@@ -1,6 +1,6 @@
 import { client } from "./client";
 import { env } from "../config/env";
-import type { DataQuality } from "./types";
+import type { DataQuality, IssueStatus } from "./types";
 
 async function realGetDataQuality(): Promise<DataQuality> {
   const { data } = await client.get<DataQuality>("/admin/data-quality");
@@ -21,3 +21,12 @@ async function mockGetDataQuality(): Promise<DataQuality> {
 export const getDataQuality: () => Promise<DataQuality> = env.useMockApi
   ? mockGetDataQuality
   : realGetDataQuality;
+
+async function realUpdateIssueStatus(id: number, status: IssueStatus, note: string): Promise<void> {
+  await client.patch(`/admin/issues/${id}/status`, { status, note: note || null });
+}
+
+async function mockUpdateIssueStatus(): Promise<void> {}
+
+export const updateIssueStatus: (id: number, status: IssueStatus, note: string) => Promise<void> =
+  env.useMockApi ? mockUpdateIssueStatus : realUpdateIssueStatus;
